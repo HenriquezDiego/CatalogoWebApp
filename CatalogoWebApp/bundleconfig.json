@@ -1,0 +1,92 @@
+[
+  {
+    "outputFileName": "wwwroot/css/lib/admin-lte/css/skins/skin-black.min.css",
+    "inputFiles": [
+      "wwwroot/css/lib/admin-lte/css/skins/skin-black.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-black.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-black.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-black-light.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-black-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-blue.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-blue.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-blue-light.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-blue-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-green.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-green.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-green-light.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-green-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-purple.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-purple.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-purple-light.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-purple-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-red.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-red.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-red-light.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-red-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-yellow.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-yellow.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/admin-lte/css/skins/skin-yellow-light.min.css",
+    "inputFiles": [
+      "wwwroot/lib/admin-lte/css/skins/skin-yellow-light.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ]
+  }
+]

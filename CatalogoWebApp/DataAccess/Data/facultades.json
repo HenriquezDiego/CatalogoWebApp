@@ -1,0 +1,38 @@
+{
+  "Facultades": [
+    {
+      "FacultadId": 1,
+      "Nombre": "NO ASIGNADA",
+      "Codigo": "NA"
+    },
+    {
+      "FacultadId": 100,
+      "Nombre": "CIENCIAS  Y HUMANIDADES",
+      "Codigo": "100"
+    },
+    {
+      "FacultadId": 500,
+      "Nombre": "FACULTAD DE CIENCIAS DE LA SALUD",
+      "Codigo": "500"
+    },
+    {
+      "FacultadId": 600,
+      "Nombre": "INGENIERIA Y ARQUITECTURA",
+      "Codigo": "600"
+    },
+    {
+      "FacultadId": 800,
+      "Nombre": "CIENCIAS EMPRESARIALES",
+      "Codigo": "800"
+    },
+    {
+      "FacultadId": 900,
+      "Nombre": "DEPARTAMENTO DE IDIOMAS",
+      "Codigo": "900"
+    },
+    {
+      "FacultadId": 906,
+      "Nombre": "BIBLIOTECA"
+    }
+  ]
+}
