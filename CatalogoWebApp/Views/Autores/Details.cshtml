@@ -1,0 +1,50 @@
+﻿@model CatalogoWebApp.Models.Autor
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <hr />
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <h3 class="text-center">Informacion del autor</h3>
+        <dl class="dl-horizontal info-detail">
+            <dt>
+                @Html.DisplayNameFor(model => model.Codigo):
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Codigo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nombres):
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nombres)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Apellidos):
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Apellidos)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Carrera):
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Carrera.Nombre)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Carrera.Facultad):
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Carrera.Facultad.Nombre)
+            </dd>
+        </dl>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AutorId">Editar</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

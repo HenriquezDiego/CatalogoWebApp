@@ -1188,3 +1188,7 @@ table.dataTable.compact tbody td {
     font-size: 15px !important;
     margin-bottom: 10px;
 }
+
+.info-detail {
+    font-size: 20px
+}
