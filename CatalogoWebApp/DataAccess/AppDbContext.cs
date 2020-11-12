@@ -11,6 +11,7 @@ namespace CatalogoWebApp.DataAccess
         public DbSet<Facultad> Facultades { get; set; }
         public DbSet<Tipo> Tipos { get; set; }
         public DbSet<TrabajoDeGraduacion> TrabajosDeGraduacion { get; set; }
+        public DbSet<Autor> Autores { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options,
             IHostEnvironment hostEnvironment) : base(options)
