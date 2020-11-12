@@ -60,7 +60,8 @@
 .skin-unicaes .wrapper,
 .skin-unicaes .main-sidebar,
 .skin-unicaes .left-side {
-    background-color: #edbd3f;
+    /*sidebar color*/
+    background-color: #F6F6F6;
 }
 .skin-unicaes .user-panel > .info,
 .skin-unicaes .user-panel > .info > a {
@@ -87,7 +88,10 @@
     background: #880c09;
 }
 .skin-unicaes .sidebar a {
-  color: #f7f7f7;
+    /*color font*/
+    color: #000000;
+    font-size: 15px;
+    font-style: normal;
 }
 .skin-unicaes .sidebar a:hover {
   text-decoration: none;

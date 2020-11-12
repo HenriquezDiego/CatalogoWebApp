@@ -1,11 +1,13 @@
-﻿using CatalogoWebApp.DataAccess;
+﻿using AutoMapper;
+using CatalogoWebApp.DataAccess;
+using ContaWebApi.Api.Infrastructure;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using TransaccionesWebApi.Services;
 
 namespace AdminLTE
 {
@@ -22,6 +24,7 @@ namespace AdminLTE
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddDbContext<AppDbContext>(cfg =>
             {
                 cfg.UseSqlServer(_configuration.GetConnectionString("SqlServerConnection"), builder =>
@@ -29,6 +32,8 @@ namespace AdminLTE
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
                 });
             });
+
+            services.AddTransient<IFileService, FileService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

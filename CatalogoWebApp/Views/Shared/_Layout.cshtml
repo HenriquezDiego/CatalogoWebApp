@@ -64,7 +64,8 @@
                     <li class="header">HEADER</li>
                     <!-- Optionally, you can add icons to the links -->
                     <li><a href="#"><i class="fa fa-link"></i> <span>Inicio</span></a></li>
-                    <li><a asp-action="Table" asp-controller="Home"><i class="fa fa-link"></i> <span>Catalogo</span></a></li>
+                    @*<li><a asp-action="Table" asp-controller="Home"><i class="fa fa-link"></i> <span>Catalogo</span></a></li>*@
+                    <li><a asp-action="Index" asp-controller="TrabajosDeGraduacion"><i class="fa fa-link"></i> <span>Catalogo</span></a></li>
                     <li><a asp-action="Index" asp-controller="Autores"><i class="fa fa-link"></i> <span>Autores</span></a></li>
                     <li class="treeview">
                         <a href="#">
@@ -84,9 +85,9 @@
             <!-- /.sidebar -->
         </aside>
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="background-color: #ffffff !important">
             <!-- Content Header (Page header) -->
-            <section class="content-header">
+            <section class="content-header" style="background-color: #ffffff !important">
                 <h1>
                     Page Header
                     <small>Optional description</small>
@@ -97,7 +98,7 @@
                 </ol>
             </section>
             <!-- Main content -->
-            <section class="content container-fluid">
+            <section class="content container-fluid" style="background-color: #ffffff !important">
                 <!--------------------------
                   | Your Page Content Here |
                   -------------------------->

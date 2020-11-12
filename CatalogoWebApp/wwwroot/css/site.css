@@ -1192,3 +1192,7 @@ table.dataTable.compact tbody td {
 .info-detail {
     font-size: 20px
 }
+
+.content .container-fluid {
+    background-color: #ffffff !important;
+}
