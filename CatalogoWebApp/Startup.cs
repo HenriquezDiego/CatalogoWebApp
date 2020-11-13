@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using CatalogoWebApp.Services;
 using TransaccionesWebApi.Services;
 
 namespace AdminLTE
@@ -33,7 +34,9 @@ namespace AdminLTE
                 });
             });
 
+            services.AddHttpContextAccessor();
             services.AddTransient<IFileService, FileService>();
+            services.AddTransient<IPathResolver,PathResolver>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

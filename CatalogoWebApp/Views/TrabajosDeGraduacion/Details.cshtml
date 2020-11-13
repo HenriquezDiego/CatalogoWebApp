@@ -1,8 +1,11 @@
-﻿@model CatalogoWebApp.Models.TrabajoDeGraduacion
+﻿@using CatalogoWebApp.Services
+@model CatalogoWebApp.Models.TrabajoDeGraduacion
+@inject IPathResolver PathResolver
 
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var imgUrl = PathResolver.GetUrl(Model.PathImagen);
 }
 
 <h2>Details</h2>
@@ -10,6 +13,7 @@
 <div>
     <h4>TrabajoDeGraduacion</h4>
     <hr />
+    <a href="@imgUrl"><img src="@imgUrl" alt="Alternate Text" style="width: 30%;height:25%"/></a>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Titulo)
@@ -29,12 +33,16 @@
         <dd>
             @Html.DisplayFor(model => model.Descripcion)
         </dd>
-        @*<dt>
+        <!--<dt>
             @Html.DisplayNameFor(model => model.PathImagen)
         </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PathImagen)
-        </dd>*@
+        <dd>-->
+            @*@{
+                var url = PathResolver.GetUrl(Model.PathImagen);
+                @Html.DisplayFor(x=>url)
+            }*@
+            @*@Html.DisplayFor(model => model.PathImagen)*@
+        <!--</dd>-->
         <dt>
             @Html.DisplayNameFor(model => model.Fecha)
         </dt>
