@@ -1196,3 +1196,8 @@ table.dataTable.compact tbody td {
 .content .container-fluid {
     background-color: #ffffff !important;
 }
+
+.img-info {
+    width: 350px;
+    height: 410px
+}

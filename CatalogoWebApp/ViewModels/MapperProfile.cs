@@ -14,7 +14,11 @@ namespace CatalogoWebApp.ViewModels
 
             CreateMap<TrabajoDeGraduacion, TrabajoDeGraduacionInput>()
                 .ReverseMap()
-                .ForMember(i=>i.PathImagen,opt=>opt.Ignore());
+                .ForMember(i=>i.PathImagen, opt =>
+                {
+                    opt.PreCondition(x=>x.Imagen==null);
+                    opt.UseDestinationValue();
+                });
         }
     }
 }

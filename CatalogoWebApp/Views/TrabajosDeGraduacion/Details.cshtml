@@ -10,54 +10,67 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>TrabajoDeGraduacion</h4>
+<div class="row">
+    <h4 class="text-center">TrabajoDeGraduacion</h4>
     <hr />
-    <a href="@imgUrl"><img src="@imgUrl" alt="Alternate Text" style="width: 30%;height:25%"/></a>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Autor.AutorId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <!--<dt>
-            @Html.DisplayNameFor(model => model.PathImagen)
-        </dt>
-        <dd>-->
-            @*@{
-                var url = PathResolver.GetUrl(Model.PathImagen);
-                @Html.DisplayFor(x=>url)
-            }*@
-            @*@Html.DisplayFor(model => model.PathImagen)*@
-        <!--</dd>-->
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Tipo.TipoId)
-        </dd>
-    </dl>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-4">
+        <a href="@imgUrl">
+            <img class="img-responsive img-info"
+                 src="@imgUrl" alt="Alternate Text" />
+        </a>
+    </div>
+    <div class="col-md-6">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Titulo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Autor)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Autor.AutorId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+            <dt>
+                Año de publicacion
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Fecha.Year)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Tipo.TipoId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Autor.Carrera)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Autor.Carrera.Nombre)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Autor.Carrera.Facultad)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Autor.Carrera.Facultad.Nombre)
+            </dd>
+        </dl>
+    </div>
 </div>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model.TrabajoDeGraduacionId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Regresar</a>
 </div>

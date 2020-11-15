@@ -47,6 +47,8 @@ namespace CatalogoWebApp.Controllers
 
             var trabajoDeGraduacion = await _context.TrabajosDeGraduacion
                 .Include(t => t.Autor)
+                .ThenInclude(t=>t.Carrera)
+                .ThenInclude(t=>t.Facultad)
                 .Include(t => t.Tipo)
                 .FirstOrDefaultAsync(m => m.TrabajoDeGraduacionId == id);
             if (trabajoDeGraduacion == null)
@@ -75,7 +77,11 @@ namespace CatalogoWebApp.Controllers
             if (ModelState.IsValid)
             {
                 var trabajoDeGraduacion = _mapper.Map<TrabajoDeGraduacion>(model);
-                var fileName = await _file.Upload(model.Imagen, model.Titulo);
+                var fileName = string.Empty;
+                if (model.Imagen != null)
+                {
+                    fileName = await _file.Upload(model.Imagen, model.Titulo);
+                }
                 trabajoDeGraduacion.PathImagen = fileName;
                 _context.Add(trabajoDeGraduacion);
                 await _context.SaveChangesAsync();
@@ -110,7 +116,7 @@ namespace CatalogoWebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,TrabajoDeGraduacionInput trabajoDeGraduacion)
+        public async Task<IActionResult> Edit(int id,TrabajoDeGraduacionInput model)
         {
             var trabajoDeGraduacionOld = await _context.TrabajosDeGraduacion.FindAsync(id);
             if (trabajoDeGraduacionOld == null)
@@ -120,15 +126,20 @@ namespace CatalogoWebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                var fileName = await _file.Upload(trabajoDeGraduacion.Imagen, trabajoDeGraduacion.Titulo);
-                _mapper.Map(trabajoDeGraduacion, trabajoDeGraduacionOld);
-                trabajoDeGraduacionOld.PathImagen = fileName;
+                
+                _mapper.Map(model, trabajoDeGraduacionOld);
+                var fileName = string.Empty;
+                if (model.Imagen != null)
+                {
+                    fileName = await _file.Upload(model.Imagen, model.Titulo);
+                    trabajoDeGraduacionOld.PathImagen = fileName;
+                }
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", trabajoDeGraduacion.AutorId);
-            ViewData["TipoId"] = new SelectList(_context.Tipos, "TipoId", "TipoId", trabajoDeGraduacion.TipoId);
-            var value = _mapper.Map<TrabajoDeGraduacionInput>(trabajoDeGraduacion);
+            ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", model.AutorId);
+            ViewData["TipoId"] = new SelectList(_context.Tipos, "TipoId", "TipoId", model.TipoId);
+            var value = _mapper.Map<TrabajoDeGraduacionInput>(model);
             return View(value);
         }
 
