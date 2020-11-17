@@ -1201,3 +1201,9 @@ table.dataTable.compact tbody td {
     width: 350px;
     height: 410px
 }
+
+.main-footer {
+    margin-bottom: 0;
+    background-color: #880c09;
+    color: #ffffff;
+}

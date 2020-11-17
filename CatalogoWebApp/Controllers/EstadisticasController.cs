@@ -16,7 +16,7 @@ namespace CatalogoWebApp.Controllers
             _appDbContext = appDbContext;
         }
 
-        public IActionResult Bar()
+        public IActionResult Facultad()
         {
             var trabajos = _appDbContext.TrabajosDeGraduacion
                 .Include(t=>t.Autor)
@@ -74,24 +74,6 @@ namespace CatalogoWebApp.Controllers
             return View(lstModel);
         }
 
-        //[HttpGet("{facultadId}")]
-        //public IActionResult FacultadCarrera(int facultadId)
-        //{
-        //    var carreras = _appDbContext.Carreras.Where(c => c.FacultadId == facultadId)
-        //        .OrderBy(t=>t.Nombre)
-        //        .ToList();
-
-        //    var trabajos = _appDbContext.TrabajosDeGraduacion
-        //        .Include(t=>t.Autor)
-        //        .ThenInclude(t=>t.Carrera)
-        //        .Where(t=>t.Autor.Carrera.FacultadId == facultadId)
-        //        .OrderBy(t => t.Autor.Carrera.Nombre)
-        //        .ToList();
-
-        //    var cantidades = carreras.Select(c => trabajos.Count(t => t.Autor.CarreraId == c.CarreraId)).ToList();
-
-        //    return Json(new {carreras,cantidades});
-        //}
     }
 }
 

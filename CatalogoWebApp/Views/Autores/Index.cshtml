@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    <link href="~/lib/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -10,8 +11,9 @@
 <p>
     <a asp-action="Create">Agregar</a>
 </p>
-<table class="table">
-    <thead>
+<div class="container-fluid">
+    <table id="autores" class="table table-striped table-bordered">
+        <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Codigo)
@@ -27,28 +29,63 @@
             </th>
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
+        </thead>
+        <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Carrera.Nombre)
+                </td>
+                <td>
+                
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.AutorId"><i class="fa fa-edit"></i><span></span></a> 
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.AutorId"><i class="fa fa-list"></i><span></span></a> 
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.AutorId"><i class="fa fa-remove"></i><span></span></a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Codigo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombres)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apellidos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Carrera.Nombre)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AutorId">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.AutorId">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.AutorId">Borrar</a>
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carrera)
+            </th>
+            <th></th>
         </tr>
+        </tfoot>
+    </table>
+</div>
+
+@section script {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#autores').DataTable({
+                'columnDefs': [ {
+                    'targets': [4], 
+                    'orderable': false
+                }]
+            });
+        });
+    </script>
+
 }
-    </tbody>
-</table>

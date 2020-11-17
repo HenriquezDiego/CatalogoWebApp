@@ -37,8 +37,12 @@
                         <dd>
                             @item.Autor.Carrera?.Nombre
                         </dd>
-                        <dt>
-                            <a asp-controller="TrabajosDeGraduacion" asp-action="Details" asp-route-id="@item.AutorId">Ver</a>
+                        <dt class="justify-content-center">
+                            <br />
+                            <a class="btn btn-default" asp-controller="TrabajosDeGraduacion"
+                               asp-action="Details"
+                               asp-route-id="@item.AutorId"> <i class="fa fa-list"></i><span> Detalles</span></a>
+
                         </dt>
                     </dl>
                 </div>
