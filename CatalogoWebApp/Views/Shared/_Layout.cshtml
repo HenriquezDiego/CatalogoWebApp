@@ -63,8 +63,7 @@
                 <ul id="myDIV" class="sidebar-menu" data-widget="tree">
                     <li class="header">HEADER</li>
                     <!-- Optionally, you can add icons to the links -->
-                    <li><a href="#"><i class="fa fa-link"></i> <span>Inicio</span></a></li>
-                    @*<li><a asp-action="Table" asp-controller="Home"><i class="fa fa-link"></i> <span>Catalogo</span></a></li>*@
+                    <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
                     <li><a asp-action="Index" asp-controller="TrabajosDeGraduacion"><i class="fa fa-book"></i> <span>Catalogo</span></a></li>
                     <li><a asp-action="Index" asp-controller="Autores"><i class="fa fa-id-badge"></i><span>Autores</span></a></li>
                     <li class="treeview">
@@ -75,8 +74,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="#">Link in level 2</a></li>
-                            <li><a href="#">Link in level 2</a></li>
+                            <li><a asp-controller="Estadisticas" asp-action="Bar">Por Facultad</a></li>
+                            <li><a asp-controller="Estadisticas" asp-action="FacultadCarrera">Por Carreras</a></li>
+                            <li><a asp-controller="Estadisticas" asp-action="FacultadCarrera">Por Años</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -111,10 +111,10 @@
         <footer class="main-footer">
             <!-- To the right -->
             <div class="pull-right hidden-xs">
-                Anything you want
+                <b>DF</b>
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2018 <a href="#">Company</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2020 <a href="#">UNICAES</a>.</strong> All rights reserved.
         </footer>
         <!-- Add the sidebar's background. This div must be placed
         immediately after the control sidebar -->
@@ -122,16 +122,16 @@
     </div>
 
 
-    <script src="~/lib/jquery/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/lib/admin-lte/js/adminlte.js"></script>
+
+<script src="~/lib/jquery/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/lib/admin-lte/js/adminlte.js"></script>
 <script>
-        $(document).ready(function () {
-            $("#body").addClass("fixed");
-        });
+    $(document).ready(function () {
+        $("#body").addClass("fixed");
+    });
 
-    </script>
-
-    @await RenderSectionAsync("script", false);
+</script>
+@await RenderSectionAsync("script", false)
 </body>
 </html>

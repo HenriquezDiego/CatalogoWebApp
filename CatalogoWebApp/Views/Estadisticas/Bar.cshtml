@@ -1,0 +1,95 @@
+﻿
+@model List<SimpleReportViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var xLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.DimensionOne).ToList());
+    var yValues = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Quantity).ToList());
+    ViewData["Title"] = "Trabajos de graduacion por facultades";
+}
+
+<div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+        <div class="chart">
+            <canvas id="chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+    $(function() {
+        var barChartCanvas = $('#chart').get(0).getContext('2d');
+        var data = {
+            labels: @Html.Raw(xLabels),
+            datasets: [{
+                label: "Trabajos de Graduacion",
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 0, 0)',
+                    'rgba(0, 255, 0)',
+                    'rgba(0, 0, 255)',
+                    'rgba(192, 192, 192)',
+                    'rgba(255, 255, 0)',
+                    'rgba(255, 0, 255)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 0, 0)',
+                    'rgba(0, 255, 0)',
+                    'rgba(0, 0, 255)',
+                    'rgba(192, 192, 192)',
+                    'rgba(255, 255, 0)',
+                    'rgba(255, 0, 255)'
+                ],
+                borderWidth: 1,
+                data: @Html.Raw(yValues) }]
+        };
+
+        var chartOptions = {
+            maintainAspectRatio     : false,
+            datasetFill             : false,
+            legend: {
+                display: true,
+                position: 'top',
+                labels: {
+                    boxWidth: 80,
+                    fontColor: 'black'
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        steps: 1
+                    }
+                }]
+            }
+        };
+
+        var barChart = new Chart(barChartCanvas,
+            {
+                type: 'bar',
+                data: data,
+                options: chartOptions
+            });
+
+    });
+
+</script>
+

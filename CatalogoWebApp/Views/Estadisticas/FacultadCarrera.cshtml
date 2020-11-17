@@ -1,0 +1,141 @@
+﻿@model List<SimpleReportViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var xLabels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.DimensionOne).ToList());
+    var yValues = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Quantity).ToList());
+    ViewData["Title"] = "Trabajos de graduacion por facultades";
+}
+
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-3">
+                <select id="facultadId" class="form-control" asp-items="ViewBag.FacultadId"></select>
+                <br />
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="chart">
+            <canvas id="chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+        </div>
+    </div>
+</div>
+
+@section script
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function() {
+            var barChartCanvas = $('#chart').get(0).getContext('2d');
+            var chartData = {
+                labels: @Html.Raw(xLabels),
+                datasets: [{
+                    label: "Trabajos de Graduacion",
+                    backgroundColor: [
+                        '#d50000',
+                        '#00796b',
+                        '#ff3d00',
+                        '#4fc3f7',
+                        '#ffff00',
+                        '#DF4CDC',
+                        '#3d5afe',
+                        '#388e3c',
+                        '#8F2343',
+                        '#EBE0AC',
+                        '#d4e157',
+                        '#795548',
+                        '#78909c',
+                        '#43A3F0',
+                        '#311b92'
+                    ],
+                    borderWidth: 1,
+                    data: @Html.Raw(yValues) }]
+            };
+
+            var chartOptions = {
+                maintainAspectRatio     : false,
+                datasetFill             : false,
+                legend: {
+                    display: true,
+                    position: 'top',
+                    labels: {
+                        boxWidth: 80,
+                        fontColor: 'black'
+                    }
+                }
+            };
+
+            var barChart = new Chart(barChartCanvas,
+                {
+                    type: 'pie',
+                    data: chartData,
+                    options: chartOptions
+                });
+
+
+            $(document).ready(function () {
+                $("#facultadId").change(function () {
+                    console.log($("#facultadId").val());
+                    $.get("/estadisticas/facultadcarrera", { facultadId: $("#facultadId").val() }, function (data) {
+
+                        var barChartCanvas = $('#chart').get(0).getContext('2d');
+                        var chartData = {
+                            labels: data.carreras,
+                            datasets: [{
+                                label: "Trabajos de Graduacion",
+                                backgroundColor: [
+                                    '#d50000',
+                                    '#00796b',
+                                    '#ff3d00',
+                                    '#4fc3f7',
+                                    '#ffff00',
+                                    '#DF4CDC',
+                                    '#3d5afe',
+                                    '#388e3c',
+                                    '#8F2343',
+                                    '#EBE0AC',
+                                    '#d4e157',
+                                    '#795548',
+                                    '#78909c',
+                                    '#43A3F0',
+                                    '#311b92'
+                                ],
+                                borderWidth: 1,
+                                data: data.cantidades }]
+                        };
+
+                        var chartOptions = {
+                            maintainAspectRatio     : false,
+                            datasetFill             : false,
+                            legend: {
+                                display: true,
+                                position: 'top',
+                                labels: {
+                                    boxWidth: 80,
+                                    fontColor: 'black'
+                                }
+                            }
+                        };
+
+                        var barChart = new Chart(barChartCanvas,
+                            {
+                                type: 'pie',
+                                data: chartData,
+                                options: chartOptions
+                            });
+                    });
+                });
+            });
+        });
+
+    </script>
+}
+

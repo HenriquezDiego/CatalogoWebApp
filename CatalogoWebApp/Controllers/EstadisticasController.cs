@@ -1,10 +1,12 @@
-﻿using System.Linq;
-using CatalogoWebApp.DataAccess;
+﻿using CatalogoWebApp.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CatalogoWebApp.Controllers
 {
+    [Controller]
     public class EstadisticasController : Controller 
     {
         private readonly AppDbContext _appDbContext;
@@ -14,33 +16,87 @@ namespace CatalogoWebApp.Controllers
             _appDbContext = appDbContext;
         }
 
-        public IActionResult PorFacultad()
+        public IActionResult Bar()
         {
             var trabajos = _appDbContext.TrabajosDeGraduacion
-                .Include(t=> t.Autor)
+                .Include(t=>t.Autor)
                 .ThenInclude(t=>t.Carrera)
                 .ToList();
-            var facultades = _appDbContext.Facultades
-                .OrderBy(f=>f.Nombre)
-                .Select(f=>f.Nombre)
+            var lstModel = _appDbContext.Facultades
+                .ToList().Select(x => new SimpleReportViewModel()
+            {
+                DimensionOne = x.Nombre,
+                Quantity = trabajos.Count(t => t.Autor.Carrera.FacultadId == x.FacultadId)
+            }).ToList();
+            return View(lstModel);
+        }
+
+
+        public IActionResult FacultadCarrera(int facultadId)
+        {
+            if (facultadId > 0)
+            {
+                var carreras = _appDbContext.Carreras.Where(c => c.FacultadId == facultadId)
+                    .OrderBy(t=>t.Nombre)
+                    .ToList();
+
+                var trabajoss = _appDbContext.TrabajosDeGraduacion
+                    .Include(t=>t.Autor)
+                    .ThenInclude(t=>t.Carrera)
+                    .Where(t=>t.Autor.Carrera.FacultadId == facultadId)
+                    .OrderBy(t => t.Autor.Carrera.Nombre)
+                    .ToList();
+
+                var cantidades = carreras.Select(c => trabajoss.Count(t => t.Autor.CarreraId == c.CarreraId)).ToList();
+
+                
+                return Json(new {carreras = carreras.Select(c => c.Nombre).ToList(),cantidades});
+            }
+            var trabajos = _appDbContext.TrabajosDeGraduacion
+                .Include(t => t.Autor)
+                .ThenInclude(t => t.Carrera)
                 .ToList();
 
-            var data = _appDbContext.Facultades
-                .OrderBy(f=>f.Nombre)
+            var lstModel = _appDbContext.Carreras
+                .Where(c => c.FacultadId == 600)
                 .ToList()
-                    .Select(f => new
-                    {
-                        TrabajosDeGraduacion = trabajos
-                        .Count(t=> t.Autor.Carrera.FacultadId == f.FacultadId)
-                    });
+                .Select(x => new SimpleReportViewModel()
+                {
+                    DimensionOne = x.Nombre,
+                    Quantity = trabajos.Count(t => t.Autor.CarreraId == x.CarreraId)
+                })
+                .OrderBy(f => f.DimensionOne)
+                .ToList();
 
-            return Json(new { facultades, data });
+            var facultades = _appDbContext.Facultades.ToList().OrderBy(f => f.Nombre);
+
+            ViewData["FacultadId"] = new SelectList(facultades, "FacultadId", "Nombre",600);
+            return View(lstModel);
         }
 
-        public IActionResult Grafico()
-        {
-            return View("PorFacultad");
-        }
+        //[HttpGet("{facultadId}")]
+        //public IActionResult FacultadCarrera(int facultadId)
+        //{
+        //    var carreras = _appDbContext.Carreras.Where(c => c.FacultadId == facultadId)
+        //        .OrderBy(t=>t.Nombre)
+        //        .ToList();
 
+        //    var trabajos = _appDbContext.TrabajosDeGraduacion
+        //        .Include(t=>t.Autor)
+        //        .ThenInclude(t=>t.Carrera)
+        //        .Where(t=>t.Autor.Carrera.FacultadId == facultadId)
+        //        .OrderBy(t => t.Autor.Carrera.Nombre)
+        //        .ToList();
+
+        //    var cantidades = carreras.Select(c => trabajos.Count(t => t.Autor.CarreraId == c.CarreraId)).ToList();
+
+        //    return Json(new {carreras,cantidades});
+        //}
     }
 }
+
+public class SimpleReportViewModel
+{
+    public string DimensionOne { get; set; }  
+    public int Quantity { get; set; }  
+}  
