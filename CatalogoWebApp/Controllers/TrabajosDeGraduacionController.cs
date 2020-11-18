@@ -33,7 +33,9 @@ namespace CatalogoWebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.TrabajosDeGraduacion
-                .Include(t => t.Autor).Include(t => t.Tipo);
+                .Include(t => t.Autor)
+                .ThenInclude(t=>t.Carrera)
+                .Include(t => t.Tipo);
             return View(await appDbContext.ToListAsync());
         }
 

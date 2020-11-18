@@ -31,7 +31,6 @@ namespace CatalogoWebApp.Controllers
             return View(lstModel);
         }
 
-
         public IActionResult FacultadCarrera(int facultadId)
         {
             if (facultadId > 0)
@@ -72,6 +71,20 @@ namespace CatalogoWebApp.Controllers
 
             ViewData["FacultadId"] = new SelectList(facultades, "FacultadId", "Nombre",600);
             return View(lstModel);
+        }
+
+        public IActionResult Year()
+        {
+            var report = _appDbContext.TrabajosDeGraduacion
+                .OrderBy(t=>t.Fecha.Year)
+                .ToList()
+                .GroupBy(t => t.Fecha.Year)
+                .Select((x) => new SimpleReportViewModel()
+                {
+                    DimensionOne = x.Key.ToString(),
+                    Quantity = x.Count(t=>t.Fecha.Year == x.Key)
+                }).ToList();
+            return Ok(report);
         }
 
     }

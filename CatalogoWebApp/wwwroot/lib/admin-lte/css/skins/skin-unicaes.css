@@ -1,9 +1,11 @@
 /*
  * Skin: unicaes
  * ---------
+ * #A00402
+ * #880C09
  */
 .skin-unicaes .main-header .navbar {
-    background-color: #880c09;
+    background-color: #A00402;
 }
 .skin-unicaes .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -24,13 +26,13 @@
 }
     .skin-unicaes .main-header .navbar .sidebar-toggle:hover {
         color: #f6f6f6;
-        background: #880c09;
+        background: #A00402;
     }
 .skin-unicaes .main-header .navbar .sidebar-toggle {
   color: #fff;
 }
     .skin-unicaes .main-header .navbar .sidebar-toggle:hover {
-        background-color: #880c09;
+        background-color: #A00402;
     }
 @media (max-width: 767px) {
   .skin-unicaes .main-header .navbar .dropdown-menu li.divider {
@@ -40,19 +42,19 @@
     color: #fff;
   }
     .skin-unicaes .main-header .navbar .dropdown-menu li a:hover {
-        background: #880c09;
+        background: #A00402;
     }
 }
 .skin-unicaes .main-header .logo {
-    background-color: #880c09;
+    background-color: #A00402;
     color: #ffffff;
     border-bottom: 0 solid transparent;
 }
     .skin-unicaes .main-header .logo:hover {
-        background-color: #880c09;
+        background-color: #A00402;
     }
 .skin-unicaes .main-header li.user-header {
-    background-color: #880c09;
+    background-color: #A00402;
 }
 .skin-unicaes .content-header {
   background: transparent;
@@ -69,23 +71,24 @@
 }
 .skin-unicaes .sidebar-menu > li.header {
     color: #ffffff;
-    background: #880c09;
+    background: #A00402;
 }
 .skin-unicaes .sidebar-menu > li > a {
   border-left: 3px solid transparent;
 }
+
 .skin-unicaes .sidebar-menu > li:hover > a,
 .skin-unicaes .sidebar-menu > li.active > a,
 .skin-unicaes .sidebar-menu > li.menu-open > a {
     color: #ffffff;
-    background: #880c09;
+    background: #A00402;
 }
 .skin-unicaes .sidebar-menu > li.active > a {
     border-left-color: #dab85e;
 }
 .skin-unicaes .sidebar-menu > li > .treeview-menu {
     margin: 0 1px;
-    background: #880c09;
+    background: #A00402;
 }
 .skin-unicaes .sidebar a {
     /*color font*/

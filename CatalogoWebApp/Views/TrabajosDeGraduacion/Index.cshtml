@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    <link href="~/lib/datatables/css/dataTables.bootstrap.css" rel="stylesheet" />
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -10,57 +11,83 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Autor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descripcion)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.PathImagen)
-            </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.Fecha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tipo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Autor.AutorId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descripcion)
-            </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.PathImagen)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Fecha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tipo.TipoId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TrabajoDeGraduacionId">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.TrabajoDeGraduacionId">Ver</a> |
-                <a asp-action="Delete" asp-route-id="@item.TrabajoDeGraduacionId">Eliminar</a>
-            </td>
-        </tr>
+
+<div class="container-fluid">
+    <table id="trabajos" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Autor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Autor.Carrera)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Autor.Nombres)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tipo.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Autor.Carrera.Nombre)
+                    </td>
+                    <td class="text-center">
+
+                        <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-edit"></i><span></span></a>
+                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-list"></i><span></span></a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-remove"></i><span></span></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Autor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Autor.Carrera)
+                </th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+@section script {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#trabajos').DataTable({
+                'columnDefs': [{
+                    'targets': [4],
+                    'orderable': false
+                }]
+            });
+        });
+    </script>
+
 }
-    </tbody>
-</table>
