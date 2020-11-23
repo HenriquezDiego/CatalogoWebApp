@@ -19,6 +19,7 @@ namespace CatalogoWebApp.Controllers
         private readonly IMapper _mapper;
         private readonly IFileService _file;
         private readonly List<AutorViewModel> _autores;
+        private readonly List<int> _years;
         public TrabajosDeGraduacionController(AppDbContext context, 
             IMapper mapper,
             IFileService file)
@@ -27,6 +28,13 @@ namespace CatalogoWebApp.Controllers
             _mapper = mapper;
             _file = file;
             _autores = mapper.Map<List<AutorViewModel>>(_context.Autores.ToList());
+            _years =  Enumerable.Repeat(0, 20).ToList();
+            var init = 1995;
+            _years = _years.Select(x =>
+            {
+                init += 1;
+                return init;
+            }).ToList();
         }
 
         // GET: TrabajosDeGraduacion
@@ -66,6 +74,7 @@ namespace CatalogoWebApp.Controllers
         {
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info");
             ViewData["TipoId"] = new SelectList(_context.Tipos, "TipoId", "TipoId");
+            ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
             return View();
         }
 
@@ -91,6 +100,7 @@ namespace CatalogoWebApp.Controllers
             }
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", model.AutorId);
             ViewData["TipoId"] = new SelectList(_context.Tipos, "TipoId", "TipoId", model.TipoId);
+            ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
             return View(model);
         }
 
@@ -109,6 +119,7 @@ namespace CatalogoWebApp.Controllers
             }
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", trabajoDeGraduacion.AutorId);
             ViewData["TipoId"] = new SelectList(_context.Tipos, "TipoId", "TipoId", trabajoDeGraduacion.TipoId);
+            ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
             var value = _mapper.Map<TrabajoDeGraduacionInput>(trabajoDeGraduacion);
             return View(value);
         }
