@@ -1,11 +1,11 @@
-﻿using System;
+﻿using CatalogoWebApp.Models;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CatalogoWebApp.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace CatalogoWebApp.DataAccess
 {
@@ -32,6 +32,40 @@ namespace CatalogoWebApp.DataAccess
             return facultades;
         }
 
+        public static IEnumerable<Autor> GetAutores(IHostEnvironment hosting)
+        {
+            var filepath = Path.Combine(hosting.ContentRootPath, @"DataAccess\Data\autores.json");
+            var json = JObject.Parse(File.ReadAllText(filepath));
+            var jsonResult = JsonConvert.DeserializeObject<IEnumerable<AutorJson>>(json["Autores"]
+                .ToString(Formatting.None));
+
+            var id = 2;
+            return jsonResult.Select(x =>
+            {
+                var nombreCompleto = x.Nombre;
+                if (!string.IsNullOrEmpty(nombreCompleto))
+                {
+                    var nombreSplit = nombreCompleto.Split(" ");
+                    if (nombreSplit.Length > 2)
+                    {
+                        id += 1;
+                        return new Autor
+                        {
+                            AutorId = id,
+                            Codigo = x.Codigo,
+                            Nombres = nombreSplit.Take(2)
+                                .Aggregate((partialPhrase, word)=>$"{partialPhrase} {word}"),
+                            Apellidos = nombreSplit.Skip(2)
+                                .Aggregate((partialPhrase, word)=>$"{partialPhrase} {word}"),
+                            CarreraId = int.Parse(x.CarreraId)
+                        };
+                    }
+                }
+
+                return null;
+            });
+        }
+
         public static readonly List<Tipo> Tipos
             = Enum.GetValues(typeof(TipoId))
                 .Cast<TipoId>()
@@ -40,5 +74,12 @@ namespace CatalogoWebApp.DataAccess
                     TipoId = e,
                     Nombre = e.ToString()
                 }).ToList();
+    }
+
+    public class AutorJson
+    {
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string CarreraId { get; set; }
     }
 }

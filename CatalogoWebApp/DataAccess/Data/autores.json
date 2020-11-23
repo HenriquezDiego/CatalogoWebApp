@@ -1,0 +1,754 @@
+{
+  "Autores": [
+    {
+      "Codigo": "2000-CR-602",
+      "Nombre": "Karla Iliana Castillo Ramos",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "1995-GV-401",
+      "Nombre": "Marco Tulio Gonzalez Velasquez",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2011-VD-101",
+      "Nombre": "Joel Ernesto Vega Dueñas",
+      "CarreraId": 10
+    },
+    {
+      "Codigo": "1998-TG-601",
+      "Nombre": "Mario Ernesto Torres Gonzalez",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "1999-CS-302",
+      "Nombre": "Keveen Manolo Calderon Sarmiento",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2014-RA-502",
+      "Nombre": "Sonia Irene Rivas Ascencio",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2012-SO-801",
+      "Nombre": "Karla Isamar Sermeño Ortiz",
+      "CarreraId": 42
+    },
+    {
+      "Codigo": "1996-SS-602",
+      "Nombre": "Manrique Alonso Salguero",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2005-MG-605",
+      "Nombre": "Mario Ademir Martinez Godinez",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2012-AM-102",
+      "Nombre": "Juan Ramon Aguilar Moran",
+      "CarreraId": 20
+    },
+    {
+      "Codigo": "2005-MM-610",
+      "Nombre": "Jimmy Patricia Miranda",
+      "CarreraId": 31
+    },
+    {
+      "Codigo": "2014-RO-102",
+      "Nombre": "Erika Magaly Roman Ortiz",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2002-PM-603",
+      "Nombre": "Denice Beatriz Perez Moran",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2006-TE-101",
+      "Nombre": "Xinia Liliana Trinidad Espino",
+      "CarreraId": 14
+    },
+    {
+      "Codigo": "2006-SA-302",
+      "Nombre": "Ana Vilma Sandoval Alvarado",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2005-EC-603",
+      "Nombre": "Glenda Maritza España Canalez",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2004-CO-101",
+      "Nombre": "Kenia Magdalena Cabrera Orantes",
+      "CarreraId": 14
+    },
+    {
+      "Codigo": "2007-EH-101",
+      "Nombre": "Manuel Gonzalo Escobar Hernandez",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2000-MA-802",
+      "Nombre": "Maria Emilia Martinez Arce",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2007-CD-101",
+      "Nombre": "Claribel Yasmin Chilin Duran",
+      "CarreraId": 11
+    },
+    {
+      "Codigo": "1994-AG-602",
+      "Nombre": "Jose Francisco Andaluz Guzman",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "1997-SF-401",
+      "Nombre": "Maria Ladys Sierra Fuentes",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2007-AP-103",
+      "Nombre": "Jose Alejandro Alvarado Pintin",
+      "CarreraId": 7
+    },
+    {
+      "Codigo": "2005-MM-108",
+      "Nombre": "Jose Rainiero Melendez Mojica",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "2005-BR-601",
+      "Nombre": "Joseias Armando Bolaños Rivas",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2014-QR-101",
+      "Nombre": "Carlos Ernesto Quijano Rodriguez",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2005-LC-101",
+      "Nombre": "Raquel Esmeralda Lemus Caballero",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2013-FZ-801",
+      "Nombre": "Stephanie Beatriz Flores Zaldaña",
+      "CarreraId": 43
+    },
+    {
+      "Codigo": "2012-TP-801",
+      "Nombre": "Jose Francisco Tenas Perez",
+      "CarreraId": 41
+    },
+    {
+      "Codigo": "2015-CS-804",
+      "Nombre": "Elias Vladimir Calles Sanchez",
+      "CarreraId": 43
+    },
+    {
+      "Codigo": "2008-JR-101",
+      "Nombre": "Adriana Margarita Jimenez Romero",
+      "CarreraId": 10
+    },
+    {
+      "Codigo": "2015-ML-607",
+      "Nombre": "William Enrique Martinez Lopez",
+      "CarreraId": 35
+    },
+    {
+      "Codigo": "2008-MP-802",
+      "Nombre": "Adriana Maria Martinez Pineda",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "1995-RA-301",
+      "Nombre": "Hugo Nelson Ramos Acu¥a",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2005-CH-101",
+      "Nombre": "Jorge Ernesto Cienfuegos Hernandez",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2016-RS-151",
+      "Nombre": "Marcos Alexander Ramirez Santamaria",
+      "CarreraId": 16
+    },
+    {
+      "Codigo": "2009-DT-101",
+      "Nombre": "Joselin Yanira Duran Tobar",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2005-OR-601",
+      "Nombre": "Marvin Ernesto Orellana Recinos",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2004-MC-302",
+      "Nombre": "Claudia Mariela Mancia Cabrera",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2007-HN-101",
+      "Nombre": "Rosa Maria Herrera Noches",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "2011-PO-101",
+      "Nombre": "Brenda Lizeth Perez Orellana",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "1998-MR-202",
+      "Nombre": "Julio Eduardo Moreno Rodriguez",
+      "CarreraId": 35
+    },
+    {
+      "Codigo": "2015-LC-101",
+      "Nombre": "Adan Lopez Chicas",
+      "CarreraId": 10
+    },
+    {
+      "Codigo": "1993-BH-801",
+      "Nombre": "Carmen Elena Barrera Hernandez",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2006-ME-303",
+      "Nombre": "Lili Patricia Mancia Abrego De Esquivel",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2009-CV-801",
+      "Nombre": "Veronica Yaneth Caballero Vidal",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "1993-GM-802",
+      "Nombre": "Juan Carlos Guzman Moran",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "1995-CH-301",
+      "Nombre": "Levy Davina Cruz Hernandez",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2016-PT-151",
+      "Nombre": "Jefferson Oswaldo Pop Teni",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "1999-DM-601",
+      "Nombre": "Idalia Elizabeth Dueñas Marroquin",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "1989-MB-402",
+      "Nombre": "Sandra Lissette Marquez Beltran",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2004-CM-101",
+      "Nombre": "Julio Ruben Castro Muñoz",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "1999-SA-301",
+      "Nombre": "Gustavo Antonio Sicilia Avila",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "1996-GM-301",
+      "Nombre": "Rebeca Fernandina Garcia Mendez",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2009-MZ-102",
+      "Nombre": "Karla Veronica Mejia Zeceña",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2009-GM-107",
+      "Nombre": "Maritza Janeth Garcia Medina",
+      "CarreraId": 11
+    },
+    {
+      "Codigo": "2000-AS-602",
+      "Nombre": "Miguel Enrique Acuña Sandoval",
+      "CarreraId": 31
+    },
+    {
+      "Codigo": "2005-PR-803",
+      "Nombre": "Jorge Alberto Paz Romero",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2000-AQ-604",
+      "Nombre": "Taufick Salvador Alabi Quinteros",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2001-AP-602",
+      "Nombre": "Alvaro Ernesto Aguilar Peñate",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "1997-BP-801",
+      "Nombre": "Maria Ofelia Bonilla Portillo",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2014-AP-502",
+      "Nombre": "Liliana Beatriz Aviles De Perez",
+      "CarreraId": 9
+    },
+    {
+      "Codigo": "2015-LV-101",
+      "Nombre": "Jacqueline Guadalupe Lopez Vasquez",
+      "CarreraId": 10
+    },
+    {
+      "Codigo": "2015-MO-601",
+      "Nombre": "William Alexander Martinez Orellana",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2000-BL-101",
+      "Nombre": "Daysi Eugenia Burgos Garcia De Lopez",
+      "CarreraId": 11
+    },
+    {
+      "Codigo": "2013-RP-601",
+      "Nombre": "Rene Antonio Ramos Perez",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2015-ML-802",
+      "Nombre": "Jorge Armando Molina Luna",
+      "CarreraId": 42
+    },
+    {
+      "Codigo": "2013-GM-603",
+      "Nombre": "Francisco Gerardo Gonzalez Magaña",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "1999-MF-801",
+      "Nombre": "Dinora Carolina Mendoza Flores",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "1998-LF-802",
+      "Nombre": "Dalila Lissette Lopez Fuentes",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "1999-CM-607",
+      "Nombre": "Camilo Canizalez Martinez",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2007-MB-103",
+      "Nombre": "Gustavo Adolfo Majico Blanco",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2014-GR-104",
+      "Nombre": "Tatiana Maribel Guzman Rosales",
+      "CarreraId": 15
+    },
+    {
+      "Codigo": "1998-CS-601",
+      "Nombre": "Helen Jeamileth Chavez Sandoval",
+      "CarreraId": 31
+    },
+    {
+      "Codigo": "2000-CV-802",
+      "Nombre": "Brenda Maria Cañas Velasquez",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2013-SQ-601",
+      "Nombre": "Sandra Karina Santana Quintanilla",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2003-LL-301",
+      "Nombre": "Nelson Oliverio Leiva",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2005-AM-103",
+      "Nombre": "Marvin Daniel Acu Muñoz",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "2013-ML-803",
+      "Nombre": "Jose Mauricio Magaña Lopez",
+      "CarreraId": 42
+    },
+    {
+      "Codigo": "2006-SZ-101",
+      "Nombre": "Evelyn Xiomara Soriano Zelaya",
+      "CarreraId": 14
+    },
+    {
+      "Codigo": "2012-AS-106",
+      "Nombre": "Jancy Magali Aragon Romero De Suarez",
+      "CarreraId": 20
+    },
+    {
+      "Codigo": "2005-BB-101",
+      "Nombre": "Sandra Rubidia Batres De Torres",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2004-TP-601",
+      "Nombre": "Carlos Antonio Turcios Perez",
+      "CarreraId": 32
+    },
+    {
+      "Codigo": "2017-SM-151",
+      "Nombre": "Manuel Antonio Sicilia Molina",
+      "CarreraId": 19
+    },
+    {
+      "Codigo": "2010-ED-301",
+      "Nombre": "Jorge Alberto Espinoza De Paz",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "1997-GA-202",
+      "Nombre": "Jose Mauricio Guerrero Azucena",
+      "CarreraId": 35
+    },
+    {
+      "Codigo": "2012-CC-809",
+      "Nombre": "Jenifer Eugenia Cerna Castillo",
+      "CarreraId": 41
+    },
+    {
+      "Codigo": "2013-MG-109",
+      "Nombre": "Eylin Adriana Mejia Guevara",
+      "CarreraId": 23
+    },
+    {
+      "Codigo": "2008-SL-101",
+      "Nombre": "Karla Maria Serrano Lopez",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "2008-MF-603",
+      "Nombre": "Carlos Raul Montes Fajardo",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2008-HH-801",
+      "Nombre": "Henry Arnoldo Hernandez",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2011-PA-103",
+      "Nombre": "Jose Amilcar Portillo Arbues",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "2003-PP-601",
+      "Nombre": "Rosa Agueda Yamileth Pineda Peña",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2012-AR-607",
+      "Nombre": "Jose Miguel Avalos Ramos",
+      "CarreraId": 31
+    },
+    {
+      "Codigo": "2008-FR-601",
+      "Nombre": "Salvador Alberto Flores Reyes",
+      "CarreraId": 32
+    },
+    {
+      "Codigo": "2008-VF-801",
+      "Nombre": "Francisco Alfredo Velasquez Flores",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2010-SR-101",
+      "Nombre": "Luis Miguel Sandoval Ramirez",
+      "CarreraId": 10
+    },
+    {
+      "Codigo": "2008-MA-104",
+      "Nombre": "Marvin Alfonso Mejia Aguilar",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "2013-MC-806",
+      "Nombre": "Ronald Edgardo Marroquin Chavez",
+      "CarreraId": 42
+    },
+    {
+      "Codigo": "1998-GB-801",
+      "Nombre": "Jazmin Lissette Gomez Barrera",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2005-MA-105",
+      "Nombre": "Karla Patricia Mejia Artero",
+      "CarreraId": 14
+    },
+    {
+      "Codigo": "2007-MM-107",
+      "Nombre": "Diana Rebeca Moran Mejia",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "2000-AM-801",
+      "Nombre": "Veronica Marisol Anaya Marin",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2001-AN-601",
+      "Nombre": "Karen Yesenia Alvarez Nolasco",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2006-GP-102",
+      "Nombre": "Elvia Gabriela Guerra Polanco",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2014-VP-104",
+      "Nombre": "Yolanda Maria Velasquez Paez",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2013-VG-602",
+      "Nombre": "Israel Jose Vides Garcia",
+      "CarreraId": 31
+    },
+    {
+      "Codigo": "2013-UH-801",
+      "Nombre": "Christian Francisco Urquiza Henriquez",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "1997-QM-601",
+      "Nombre": "Jose Alfredo Qui¤onez Marroquin",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2014-VC-501",
+      "Nombre": "Brenda Carolina Valencia Castro",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2011-PD-601",
+      "Nombre": "Julio Alfonso Paredes Damean",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2004-CC-801",
+      "Nombre": "Roxana Carolina Castro Cordova",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2015-SC-806",
+      "Nombre": "Roberto Jose Soto Carranza",
+      "CarreraId": 42
+    },
+    {
+      "Codigo": "1999-GH-401",
+      "Nombre": "Claudia Maricely Guerra Henriquez",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2000-OP-801",
+      "Nombre": "Walter Isaac Ortiz Pineda",
+      "CarreraId": 43
+    },
+    {
+      "Codigo": "2011-LA-602",
+      "Nombre": "Mauricio Oswaldo Linares Arevalo",
+      "CarreraId": 32
+    },
+    {
+      "Codigo": "1999-GM-603",
+      "Nombre": "Josue Elias Galan Morales",
+      "CarreraId": 33
+    },
+    {
+      "Codigo": "1997-LN-501",
+      "Nombre": "Douglas Eduardo Larin Nuñez",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2009-SR-101",
+      "Nombre": "Elfida Elisa Santos Romero",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "2002-RQ-801",
+      "Nombre": "Celia Areli Rivera Quijano",
+      "CarreraId": 43
+    },
+    {
+      "Codigo": "2009-SD-101",
+      "Nombre": "Idvin Israel Segura Dolores",
+      "CarreraId": 10
+    },
+    {
+      "Codigo": "2014-OL-101",
+      "Nombre": "Patricia Guadalupe Orantes Lopez",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "1997-BB-801",
+      "Nombre": "Rosa Armida Barrera",
+      "CarreraId": 40
+    },
+    {
+      "Codigo": "2012-OV-601",
+      "Nombre": "Edgar Francisco Orozco Villa",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2010-SR-102",
+      "Nombre": "Evila Yaran Dina Sanchez Recinos",
+      "CarreraId": 16
+    },
+    {
+      "Codigo": "1999-MC-605",
+      "Nombre": "Billie Vladimir Moran Campos",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2008-AO-101",
+      "Nombre": "Alexis Giovanni Agreda Ortiz",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "2011-MC-101",
+      "Nombre": "Gabriela Beatriz Martinez Corleto",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2006-DP-101",
+      "Nombre": "Katherine Alexia Deleon Palomo",
+      "CarreraId": 5
+    },
+    {
+      "Codigo": "2014-TC-601",
+      "Nombre": "Rene Mauricio Toledo Cea",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "1999-FR-602",
+      "Nombre": "Jose Luis Flores Robles",
+      "CarreraId": 32
+    },
+    {
+      "Codigo": "2012-HL-103",
+      "Nombre": "Saul Alonso Herrera Lopez",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "2009-LE-601",
+      "Nombre": "Efrain Antonio Lopez Emestica",
+      "CarreraId": 32
+    },
+    {
+      "Codigo": "2003-SS-101",
+      "Nombre": "Francisco Efrain Salinas Sermeño",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "1997-HG-601",
+      "Nombre": "Iris Marisol Hernandez Guerra",
+      "CarreraId": 30
+    },
+    {
+      "Codigo": "2008-GP-102",
+      "Nombre": "Andrea Patricia Garrizano Patiño",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2015-VR-603",
+      "Nombre": "Jose Amilcar Vasquez Rivera",
+      "CarreraId": 35
+    },
+    {
+      "Codigo": "2000-LM-801",
+      "Nombre": "Tania Ivanova Linares Miranda",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2013-LL-602",
+      "Nombre": "Irmina Veronica Lopez Lopez",
+      "CarreraId": 35
+    },
+    {
+      "Codigo": "2004-EA-603",
+      "Nombre": "Manuel De Jesus Escobar Avelar",
+      "CarreraId": 34
+    },
+    {
+      "Codigo": "2003-PG-301",
+      "Nombre": "Jose Roberto Polanco Guerra",
+      "CarreraId": 26
+    },
+    {
+      "Codigo": "2004-RE-801",
+      "Nombre": "Melvin Jose Rivera Escobar",
+      "CarreraId": 29
+    },
+    {
+      "Codigo": "2011-MM-105",
+      "Nombre": "Katya Jeamileth Matamoros",
+      "CarreraId": 16
+    },
+    {
+      "Codigo": "2012-GM-805",
+      "Nombre": "Brenda Seleny Gutierrez Martinez",
+      "CarreraId": 43
+    },
+    {
+      "Codigo": "2013-VH-101",
+      "Nombre": "Katherinne Julissa Vanegas Hernandez",
+      "CarreraId": 6
+    },
+    {
+      "Codigo": "2005-ML-103",
+      "Nombre": "William Gustavo Muñoz Leonor",
+      "CarreraId": 13
+    },
+    {
+      "Codigo": "2017-AC-551",
+      "Nombre": "Isabel Estefania Alvarado Carranza",
+      "CarreraId": 9
+    },
+    {
+      "Codigo": "2014-DC-101",
+      "Nombre": "Raquel Eunice Diaz Chavez",
+      "CarreraId": 8
+    },
+    {
+      "Codigo": "2013-VG-102",
+      "Nombre": "Claudia Jeanmillette Valencia Guerrero De Lemus",
+      "CarreraId": 7
+    },
+    {
+      "Codigo": "2005-CC-603",
+      "Nombre": "Raul Guillermo Chavez Castillo",
+      "CarreraId": 34
+    }
+  ]
+}

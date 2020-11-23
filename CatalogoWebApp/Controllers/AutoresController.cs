@@ -6,17 +6,20 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
 
 namespace CatalogoWebApp.Controllers
 {
     public class AutoresController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IHostEnvironment _environment;
         private readonly IList<Carrera> _carreras;
 
-        public AutoresController(AppDbContext context)
+        public AutoresController(AppDbContext context,IHostEnvironment environment)
         {
             _context = context;
+            _environment = environment;
             _carreras = _context.Carreras.OrderBy(c => c.Nombre).ToList();
 
         }

@@ -33,60 +33,58 @@
 
     <script type="text/javascript">
 
-        $(function() {
-            var barChartCanvas = $('#chart').get(0).getContext('2d');
-            var chartData = {
-                labels: @Html.Raw(xLabels),
-                datasets: [{
-                    label: "Trabajos de Graduacion",
-                    backgroundColor: [
-                        '#d50000',
-                        '#00796b',
-                        '#ff3d00',
-                        '#4fc3f7',
-                        '#ffff00',
-                        '#DF4CDC',
-                        '#3d5afe',
-                        '#388e3c',
-                        '#8F2343',
-                        '#EBE0AC',
-                        '#d4e157',
-                        '#795548',
-                        '#78909c',
-                        '#43A3F0',
-                        '#311b92'
-                    ],
-                    borderWidth: 1,
-                    data: @Html.Raw(yValues) }]
-            };
-
-            var chartOptions = {
-                maintainAspectRatio     : false,
-                datasetFill             : false,
-                legend: {
-                    display: true,
-                    position: 'top',
-                    labels: {
-                        boxWidth: 80,
-                        fontColor: 'black'
-                    }
-                }
-            };
-
-            var barChart = new Chart(barChartCanvas,
-                {
-                    type: 'pie',
-                    data: chartData,
-                    options: chartOptions
-                });
-
-
             $(document).ready(function () {
+                @*var barChartCanvas = $('#chart').get(0).getContext('2d');
+                var chartData = {
+                    labels: @Html.Raw(xLabels),
+                    datasets: [{
+                        label: "Trabajos de Graduacion",
+                        backgroundColor: [
+                            '#d50000',
+                            '#00796b',
+                            '#ff3d00',
+                            '#4fc3f7',
+                            '#ffff00',
+                            '#DF4CDC',
+                            '#3d5afe',
+                            '#388e3c',
+                            '#8F2343',
+                            '#EBE0AC',
+                            '#d4e157',
+                            '#795548',
+                            '#78909c',
+                            '#43A3F0',
+                            '#311b92'
+                        ],
+                        borderWidth: 1,
+                        data: @Html.Raw(yValues) }]
+                };
+
+                var chartOptions = {
+                    maintainAspectRatio     : false,
+                    datasetFill             : false,
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            boxWidth: 80,
+                            fontColor: 'black'
+                        }
+                    }
+                };
+
+                var barChart = new Chart(barChartCanvas,
+                    {
+                        type: 'pie',
+                        data: chartData,
+                        options: chartOptions
+                    });*@
                 $("#facultadId").change(function () {
-                    console.log($("#facultadId").val());
                     $.get("/estadisticas/facultadcarrera", { facultadId: $("#facultadId").val() }, function (data) {
 
+                        var canvas = document.getElementById("chart");
                         var barChartCanvas = $('#chart').get(0).getContext('2d');
+                        barChartCanvas.clearRect(0, 0, canvas.width, canvas.height);
                         var chartData = {
                             labels: data.carreras,
                             datasets: [{
@@ -134,7 +132,6 @@
                     });
                 });
             });
-        });
 
     </script>
 }
