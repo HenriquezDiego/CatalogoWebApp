@@ -6,72 +6,71 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h2 class="text-center">Trabajos de graduacion</h2>
 
 <div class="container-fluid">
+    <p class="text-right">
+        <a class="btn btn-primary" asp-action="Create">Agregar</a>
+    </p>
     <table id="trabajos" class="table table-striped table-bordered">
         <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Titulo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Autor)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tipo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Autor.Carrera)
-                </th>
-                <th></th>
-            </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor.Carrera)
+            </th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Titulo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Autor.Nombres)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Tipo.Nombre)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Autor.Carrera.Nombre)
-                    </td>
-                    <td class="text-center">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor.Nombres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor.Carrera.Nombre)
+                </td>
+                <td class="text-center">
 
-                        <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-edit"></i><span></span></a>
-                        <a class="btn btn-success" asp-action="Details" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-list"></i><span></span></a>
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-remove"></i><span></span></a>
-                    </td>
-                </tr>
-            }
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-edit"></i><span></span></a>
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-list"></i><span></span></a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.TrabajoDeGraduacionId"><i class="fa fa-remove"></i><span></span></a>
+                </td>
+            </tr>
+        }
         </tbody>
         <tfoot>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Titulo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Autor)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tipo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Autor.Carrera)
-                </th>
-                <th></th>
-            </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor.Carrera)
+            </th>
+            <th></th>
+        </tr>
         </tfoot>
     </table>
 </div>

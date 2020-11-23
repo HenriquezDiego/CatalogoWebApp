@@ -79,7 +79,7 @@ namespace CatalogoWebApp.Controllers
             if (ModelState.IsValid)
             {
                 var trabajoDeGraduacion = _mapper.Map<TrabajoDeGraduacion>(model);
-                var fileName = string.Empty;
+                var fileName = @"/img/portada.png";
                 if (model.Imagen != null)
                 {
                     fileName = await _file.Upload(model.Imagen, model.Titulo);

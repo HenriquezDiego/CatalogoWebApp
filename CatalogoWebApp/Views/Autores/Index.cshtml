@@ -6,12 +6,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="text-center">Autores</h2>
 
-<p>
-    <a asp-action="Create">Agregar</a>
-</p>
 <div class="container-fluid">
+    <p>
+        <a asp-action="Create">Agregar</a>
+    </p>
     <table id="autores" class="table table-striped table-bordered">
         <thead>
         <tr>
@@ -31,7 +31,8 @@
         </tr>
         </thead>
         <tbody>
-        @foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Codigo)
@@ -46,9 +47,9 @@
                     @Html.DisplayFor(modelItem => item.Carrera.Nombre)
                 </td>
                 <td>
-                
-                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.AutorId"><i class="fa fa-edit"></i><span></span></a> 
-                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.AutorId"><i class="fa fa-list"></i><span></span></a> 
+
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.AutorId"><i class="fa fa-edit"></i><span></span></a>
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.AutorId"><i class="fa fa-list"></i><span></span></a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.AutorId"><i class="fa fa-remove"></i><span></span></a>
                 </td>
             </tr>

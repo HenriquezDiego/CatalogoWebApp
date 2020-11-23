@@ -7,6 +7,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    .abs-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
 <h2 class="text-center">Catalogo</h2>
 <br />
 <div class="row">
@@ -15,7 +23,7 @@
 
         <div class="col-md-3">
             <div class="panel panel-default">
-                <div class="panel-heading"><img src="@PathResolver.GetUrl(item.PathImagen)" alt="puntofijo" class="img-responsive" /></div>
+                <div class="panel-heading abs-center"><img src="@PathResolver.GetUrl(item.PathImagen)" alt="puntofijo" class="img-responsive" /></div>
                 <div class="panel-body">
                     <h5 class="text-center">@item.Titulo</h5>
                     <dl>

@@ -84,7 +84,7 @@ namespace CatalogoWebApp.Controllers
                     DimensionOne = x.Key.ToString(),
                     Quantity = x.Count(t=>t.Fecha.Year == x.Key)
                 }).ToList();
-            return Ok(report);
+            return View(report);
         }
 
     }
