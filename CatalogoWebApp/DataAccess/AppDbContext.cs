@@ -26,10 +26,6 @@ namespace CatalogoWebApp.DataAccess
             modelBuilder.Entity<Facultad>().HasData(DataSeeder.GetFacultades(_hostEnvironment));
             modelBuilder.Entity<Carrera>().HasData(DataSeeder.GetCarreras(_hostEnvironment));
             modelBuilder.Entity<Tipo>().HasData(DataSeeder.Tipos);
-            modelBuilder.Entity<Facultad>()
-                .HasQueryFilter(f => f.FacultadId != 1
-                && f.FacultadId != 906
-                && f.FacultadId != 900);
             modelBuilder.Entity<Autor>().HasData(DataSeeder.GetAutores(_hostEnvironment));
 
             base.OnModelCreating(modelBuilder);

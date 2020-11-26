@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using CatalogoWebApp.DataAccess;
 using CatalogoWebApp.Inputs;
 using CatalogoWebApp.Models;
@@ -28,8 +29,9 @@ namespace CatalogoWebApp.Controllers
             _mapper = mapper;
             _file = file;
             _autores = mapper.Map<List<AutorViewModel>>(_context.Autores.ToList());
-            _years =  Enumerable.Repeat(0, 20).ToList();
+            var totalYear = DateTime.Today.Year;
             var init = 1995;
+            _years =  Enumerable.Repeat(0, totalYear-init).ToList();
             _years = _years.Select(x =>
             {
                 init += 1;

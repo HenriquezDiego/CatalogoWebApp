@@ -1,268 +1,267 @@
 {
   "Carreras": [
     {
-      "CarreraId": 1,
-      "Codigo": "000",
-      "Nombre": "GENERAL",
-      "FacultadId": 1
-    },
-    {
       "CarreraId": 5,
       "Codigo": "101",
-      "Nombre": "LICENCIATURA EN PERIODISMO Y COMUNICACIÓN AUDIOVISUAL",
+      "Nombre": "Licenciatura en periodismo y comunicación audiovisual",
       "FacultadId": 100
     },
     {
       "CarreraId": 6,
       "Codigo": "102",
-      "Nombre": "LICENCIATURA EN ENFERMERIA",
+      "Nombre": "Licenciatura en enfermeria",
       "FacultadId": 500
     },
     {
       "CarreraId": 7,
       "Codigo": "103",
-      "Nombre": "TECNICO EN ENFERMERIA",
+      "Nombre": "Tecnico en enfermeria",
       "FacultadId": 500
     },
     {
       "CarreraId": 8,
       "Codigo": "104",
-      "Nombre": "LICENCIATURA EN CIENCIAS DE LA EDUCACION CON ESPECIALIDAD EN IDIOMA INGLÉS",
+      "Nombre": "Licenciatura en ciencias de la educacion con especialidad en idioma inglés",
       "FacultadId": 100
     },
     {
       "CarreraId": 9,
       "Codigo": "110",
-      "Nombre": "DOCTORADO EN MEDICINA",
+      "Nombre": "Doctorado en medicina",
       "FacultadId": 500
     },
     {
       "CarreraId": 10,
       "Codigo": "119",
-      "Nombre": "LICENCIATURA EN CIENCIAS DE LA EDUCACION CON ESPECIALIDAD EN EDUCACION BASICA",
+      "Nombre": "Licenciatura en ciencias de la educacion con especialidad en educacion basica",
       "FacultadId": 100
     },
     {
       "CarreraId": 11,
       "Codigo": "120",
-      "Nombre": "PROFESORADO EN EDUCACION BASICA PARA PRIMERO Y SEGUNDO CICLO",
+      "Nombre": "Profesorado en educacion basica para primero y segundo ciclo",
       "FacultadId": 100
     },
     {
       "CarreraId": 12,
       "Codigo": "127",
-      "Nombre": "PROFESORADO EN EDUCACIÓN PARVULARIA",
+      "Nombre": "Profesorado en educación parvularia",
       "FacultadId": 100
     },
     {
       "CarreraId": 13,
       "Codigo": "128",
-      "Nombre": "LICENCIATURA EN CIENCIAS RELIGIOSAS",
+      "Nombre": "Licenciatura en ciencias religiosas",
       "FacultadId": 100
     },
     {
       "CarreraId": 14,
       "Codigo": "129",
-      "Nombre": "LICENCIATURA EN CIENCIAS DE LA EDUCACION CON ESPECIALIDAD EN EDUCACION PARVULARIA",
+      "Nombre": "Licenciatura en ciencias de la educacion con especialidad en educacion parvularia",
       "FacultadId": 100
     },
     {
       "CarreraId": 15,
       "Codigo": "130",
-      "Nombre": "LICENCIATURA EN EDUCACION INICIAL Y  PARVULARIA",
+      "Nombre": "Licenciatura en educacion inicial y  parvularia",
       "FacultadId": 100
     },
     {
       "CarreraId": 16,
       "Codigo": "131",
-      "Nombre": "LICENCIATURA EN CIENCIAS DE LA EDUCACION ESPECIALIDAD EN MATEMATICA SEMIPRESENCIAL",
+      "Nombre": "Licenciatura en ciencias de la educacion especialidad en matematica semipresencial",
       "FacultadId": 100
     },
     {
       "CarreraId": 17,
       "Codigo": "132",
-      "Nombre":
-        "LICENCIATURA EN CIENCIAS DE LA EDUCACION ESPECIALIDAD EN DIRECCION Y ADMINISTRACION ESCOLAR - SEMIPRESENCIAL",
+      "Nombre": "Licenciatura en ciencias de la educacion especialidad en direccion y administracion escolar - semipresencial",
       "FacultadId": 100
     },
     {
       "CarreraId": 18,
       "Codigo": "133",
-      "Nombre": "LICENCIATURA EN CIENCIAS DE LA EDUCACION ESPECIALIDAD EN EDUCACION BASICA SEMIPRESENCIAL",
+      "Nombre": "Licenciatura en ciencias de la educacion especialidad en educacion basica semipresencial",
       "FacultadId": 100
     },
     {
       "CarreraId": 19,
       "Codigo": "135",
-      "Nombre": "LICENCIATURA EN IDIOMA INGLES (SEMIPRESENCIAL)",
+      "Nombre": "Licenciatura en idioma ingles (semipresencial)",
       "FacultadId": 100
     },
     {
       "CarreraId": 20,
       "Codigo": "140",
-      "Nombre": "PROFESORADO EN EDUCACION  BASICA PARA PRIMERO Y SEGUNDO CICLOS",
+      "Nombre": "Profesorado en educacion  basica para primero y segundo ciclos",
       "FacultadId": 100
     },
     {
       "CarreraId": 21,
       "Codigo": "144",
-      "Nombre": "PROFESORADO Y LICENCIATURA EN EDUCACION INICIAL Y PARVULARIA",
+      "Nombre": "Profesorado y licenciatura en educacion inicial y parvularia",
       "FacultadId": 100
     },
     {
       "CarreraId": 22,
       "Codigo": "145",
-      "Nombre": "LICENCIATURA EN IDIOMA INGLES",
+      "Nombre": "Licenciatura en idioma ingles",
       "FacultadId": 100
     },
     {
       "CarreraId": 23,
       "Codigo": "160",
-      "Nombre": "LICENCIATURA EN DISEÑO GRAFICO PUBLICITARIO",
+      "Nombre": "Licenciatura en diseño grafico publicitario",
       "FacultadId": 100
     },
     {
       "CarreraId": 25,
       "Codigo": "209",
-      "Nombre": "INGENIERIA EN TECNOLOGIA Y PROCESAMIENTO DE ALIMENTOS",
+      "Nombre": "Ingenieria en tecnologia y procesamiento de alimentos",
       "FacultadId": 600
     },
     {
       "CarreraId": 26,
       "Codigo": "301",
-      "Nombre": "LICENCIATURA EN CIENCIAS JURIDICAS",
+      "Nombre": "Licenciatura en ciencias juridicas",
       "FacultadId": 100
     },
     {
       "CarreraId": 29,
       "Codigo": "410",
-      "Nombre": "LICENCIATURA EN SISTEMAS INFORMATICOS ADMINISTRATIVOS",
+      "Nombre": "Licenciatura en sistemas informaticos administrativos",
       "FacultadId": 800
     },
     {
       "CarreraId": 30,
       "Codigo": "601",
-      "Nombre": "INGENIERIA INDUSTRIAL",
+      "Nombre": "Ingenieria industrial",
       "FacultadId": 600
     },
     {
       "CarreraId": 31,
       "Codigo": "602",
-      "Nombre": "ARQUITECTURA",
+      "Nombre": "Arquitectura",
       "FacultadId": 600
     },
     {
       "CarreraId": 32,
       "Codigo": "603",
-      "Nombre": "INGENIERIA CIVIL",
+      "Nombre": "Ingenieria civil",
       "FacultadId": 600
     },
     {
       "CarreraId": 33,
       "Codigo": "604",
-      "Nombre": "INGENIERIA CIVIL SANEAMIENTO AMBIENTAL",
+      "Nombre": "Ingenieria civil saneamiento ambiental",
       "FacultadId": 600
     },
     {
       "CarreraId": 34,
       "Codigo": "605",
-      "Nombre": "INGENIERIA EN SISTEMAS INFORMATICOS",
+      "Nombre": "Ingenieria en sistemas informaticos",
       "FacultadId": 600
     },
     {
       "CarreraId": 35,
       "Codigo": "606",
-      "Nombre": "INGENIERIA AGRONOMICA",
+      "Nombre": "Ingenieria agronomica",
       "FacultadId": 600
     },
     {
       "CarreraId": 36,
       "Codigo": "607",
-      "Nombre": "INGENIERIA EN TELECOMUNICACIONES Y REDES",
+      "Nombre": "Ingenieria en telecomunicaciones y redes",
       "FacultadId": 600
     },
     {
       "CarreraId": 37,
       "Codigo": "608",
-      "Nombre": "INGENIERIA EN DESARROLLO DE SOFTWARE",
+      "Nombre": "Ingenieria en desarrollo de software",
+      "FacultadId": 600
+    },
+    {
+      "CarreraId": 38,
+      "Codigo": "698",
+      "Nombre": "Curso ccna academia de redes cisco unicaes",
+      "FacultadId": 600
+    },
+    {
+      "CarreraId": 39,
+      "Codigo": "699",
+      "Nombre": "Curso ccna academia de redes cisco unicaes",
       "FacultadId": 600
     },
     {
       "CarreraId": 40,
       "Codigo": "801",
-      "Nombre": "LICENCIATURA EN ADMINISTRACION DE EMPRESAS",
+      "Nombre": "Licenciatura en administracion de empresas",
       "FacultadId": 800
     },
     {
       "CarreraId": 41,
       "Codigo": "802",
-      "Nombre": "LICENCIATURA EN MERCADEO Y NEGOCIOS INTERNACIONALES",
+      "Nombre": "Licenciatura en mercadeo y negocios internacionales",
       "FacultadId": 800
     },
     {
       "CarreraId": 42,
       "Codigo": "803",
-      "Nombre": "LICENCIATURA EN GESTION Y DESARROLLO TURISTICO",
+      "Nombre": "Licenciatura en gestion y desarrollo turistico",
       "FacultadId": 800
     },
     {
       "CarreraId": 43,
       "Codigo": "812",
-      "Nombre": "LICENCIATURA EN CONTADURIA PUBLICA",
+      "Nombre": "Licenciatura en contaduria publica",
       "FacultadId": 800
     },
     {
       "CarreraId": 44,
       "Codigo": "890",
-      "Nombre": "POSTGRADO EN ESTRATEGIAS PARA LA COMPETITIVIDAD",
+      "Nombre": "Postgrado en estrategias para la competitividad",
       "FacultadId": 800
-    },
-    {
-      "CarreraId": 45,
-      "Codigo": "900",
-      "Nombre": "DEPARTAMENTO DE IDIOMAS",
-      "FacultadId": 900
     },
     {
       "CarreraId": 46,
       "Codigo": "901",
-      "Nombre": "MAESTRIA EN DIRECCION ESTRATEGICA DE EMPRESAS",
+      "Nombre": "Maestria en direccion estrategica de empresas",
       "FacultadId": 800
     },
     {
       "CarreraId": 47,
       "Codigo": "902",
-      "Nombre": "MAESTRIA EN ASESORIA EDUCATIVA",
+      "Nombre": "Maestria en asesoria educativa",
       "FacultadId": 100
     },
     {
       "CarreraId": 49,
       "Codigo": "904",
-      "Nombre": "MAESTRIA EN ATENCION INTEGRAL DE LA PRIMERA INFANCIA",
+      "Nombre": "Maestria en atencion integral de la primera infancia",
       "FacultadId": 100
     },
     {
       "CarreraId": 50,
       "Codigo": "905",
-      "Nombre": "MAESTRIA EN GERENCIA Y GESTION AMBIENTAL",
+      "Nombre": "Maestria en gerencia y gestion ambiental",
       "FacultadId": 600
     },
     {
       "CarreraId": 51,
       "Codigo": "906",
-      "Nombre": "MAESTRIA EN GESTION Y DESARROLLO TURISTICO",
+      "Nombre": "Maestria en gestion y desarrollo turistico",
       "FacultadId": 800
     },
     {
       "CarreraId": 52,
       "Codigo": "982",
-      "Nombre": "CURSO DE FORMACION PEDAGOGICA PARA PROFESIONALES",
+      "Nombre": "Curso de formacion pedagogica para profesionales",
       "FacultadId": 100
     },
     {
       "CarreraId": 56,
       "Codigo": "805",
-      "Nombre": "LICENCIATURA EN ADMINISTRACION DE EMPRESAS - SEMIPRESENCIAL",
+      "Nombre": "Licenciatura en administracion de empresas - semipresencial",
       "FacultadId": 800
     }
   ]

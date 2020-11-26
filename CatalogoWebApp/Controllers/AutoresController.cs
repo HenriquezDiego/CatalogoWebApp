@@ -24,6 +24,14 @@ namespace CatalogoWebApp.Controllers
 
         }
 
+        [HttpGet("api/autores")]
+        public IActionResult GetAll()
+        {
+            var autores = _context.Autores.ToList();
+            if (!autores.Any()) return BadRequest();
+            return Ok(autores);
+        }
+
         // GET: Autores
         public async Task<IActionResult> Index()
         {

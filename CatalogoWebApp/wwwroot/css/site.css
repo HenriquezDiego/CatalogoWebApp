@@ -80,32 +80,31 @@ table.dataTable.compact tbody td {
 /*Pagination Style*/
 
 
-.pgtable > li > a,
-.pgtable > li > span {
+.pagination > li > a,
+.pagination > li > span {
     position: relative;
     float: left;
     padding: 6px 12px;
     margin-left: -1px;
     line-height: 1.42857143;
-    /*cambio de color #b11502*/
-    color: #337ab7;
+    color: #212121 !important;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
 }
 
-.pgtable > .active > a,
-.pgtable > .active > span,
-.pgtable > .active > a:hover,
-.pgtable > .active > span:hover,
-.pgtable > .active > a:focus,
-.pgtable > .active > span:focus {
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
     z-index: 3;
-    color: #fff;
+    color: #fff !important;
     cursor: default;
-    /*cambio de color #b11502*/
-    background-color: #0fb4ff;
-    border-color: #0fb4ff;
+    /*cambio de color #A00402*/
+    background-color: #A00402 !important;
+    border-color: #A00402 !important;
 }
 
 /*Glyphicons*/

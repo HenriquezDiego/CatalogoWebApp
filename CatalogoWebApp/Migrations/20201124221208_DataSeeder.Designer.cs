@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CatalogoWebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201123034745_AddDataSeeder")]
-    partial class AddDataSeeder
+    [Migration("20201124221208_DataSeeder")]
+    partial class DataSeeder
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,7 +49,15 @@ namespace CatalogoWebApp.Migrations
                     b.HasData(
                         new
                         {
-                            AutorId = 3,
+                            AutorId = 1,
+                            Apellidos = "Henriquez Hernandez",
+                            CarreraId = 34,
+                            Codigo = "2013-HH-601",
+                            Nombres = "Diego Fernando"
+                        },
+                        new
+                        {
+                            AutorId = 2,
                             Apellidos = "Castillo Ramos",
                             CarreraId = 30,
                             Codigo = "2000-CR-602",
@@ -57,7 +65,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 4,
+                            AutorId = 3,
                             Apellidos = "Gonzalez Velasquez",
                             CarreraId = 29,
                             Codigo = "1995-GV-401",
@@ -65,7 +73,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 5,
+                            AutorId = 4,
                             Apellidos = "Vega Dueñas",
                             CarreraId = 10,
                             Codigo = "2011-VD-101",
@@ -73,7 +81,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 6,
+                            AutorId = 5,
                             Apellidos = "Torres Gonzalez",
                             CarreraId = 34,
                             Codigo = "1998-TG-601",
@@ -81,7 +89,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 7,
+                            AutorId = 6,
                             Apellidos = "Calderon Sarmiento",
                             CarreraId = 26,
                             Codigo = "1999-CS-302",
@@ -89,7 +97,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 8,
+                            AutorId = 7,
                             Apellidos = "Rivas Ascencio",
                             CarreraId = 6,
                             Codigo = "2014-RA-502",
@@ -97,7 +105,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 9,
+                            AutorId = 8,
                             Apellidos = "Sermeño Ortiz",
                             CarreraId = 42,
                             Codigo = "2012-SO-801",
@@ -105,7 +113,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 10,
+                            AutorId = 9,
                             Apellidos = "Salguero",
                             CarreraId = 30,
                             Codigo = "1996-SS-602",
@@ -113,7 +121,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 11,
+                            AutorId = 10,
                             Apellidos = "Martinez Godinez",
                             CarreraId = 30,
                             Codigo = "2005-MG-605",
@@ -121,7 +129,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 12,
+                            AutorId = 11,
                             Apellidos = "Aguilar Moran",
                             CarreraId = 20,
                             Codigo = "2012-AM-102",
@@ -129,7 +137,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 13,
+                            AutorId = 12,
                             Apellidos = "Miranda",
                             CarreraId = 31,
                             Codigo = "2005-MM-610",
@@ -137,7 +145,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 14,
+                            AutorId = 13,
                             Apellidos = "Roman Ortiz",
                             CarreraId = 26,
                             Codigo = "2014-RO-102",
@@ -145,7 +153,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 15,
+                            AutorId = 14,
                             Apellidos = "Perez Moran",
                             CarreraId = 34,
                             Codigo = "2002-PM-603",
@@ -153,7 +161,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 16,
+                            AutorId = 15,
                             Apellidos = "Trinidad Espino",
                             CarreraId = 14,
                             Codigo = "2006-TE-101",
@@ -161,7 +169,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 17,
+                            AutorId = 16,
                             Apellidos = "Sandoval Alvarado",
                             CarreraId = 26,
                             Codigo = "2006-SA-302",
@@ -169,7 +177,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 18,
+                            AutorId = 17,
                             Apellidos = "España Canalez",
                             CarreraId = 34,
                             Codigo = "2005-EC-603",
@@ -177,7 +185,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 19,
+                            AutorId = 18,
                             Apellidos = "Cabrera Orantes",
                             CarreraId = 14,
                             Codigo = "2004-CO-101",
@@ -185,7 +193,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 20,
+                            AutorId = 19,
                             Apellidos = "Escobar Hernandez",
                             CarreraId = 5,
                             Codigo = "2007-EH-101",
@@ -193,7 +201,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 21,
+                            AutorId = 20,
                             Apellidos = "Martinez Arce",
                             CarreraId = 40,
                             Codigo = "2000-MA-802",
@@ -201,7 +209,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 22,
+                            AutorId = 21,
                             Apellidos = "Chilin Duran",
                             CarreraId = 11,
                             Codigo = "2007-CD-101",
@@ -209,7 +217,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 23,
+                            AutorId = 22,
                             Apellidos = "Andaluz Guzman",
                             CarreraId = 30,
                             Codigo = "1994-AG-602",
@@ -217,7 +225,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 24,
+                            AutorId = 23,
                             Apellidos = "Sierra Fuentes",
                             CarreraId = 40,
                             Codigo = "1997-SF-401",
@@ -225,7 +233,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 25,
+                            AutorId = 24,
                             Apellidos = "Alvarado Pintin",
                             CarreraId = 7,
                             Codigo = "2007-AP-103",
@@ -233,7 +241,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 26,
+                            AutorId = 25,
                             Apellidos = "Melendez Mojica",
                             CarreraId = 13,
                             Codigo = "2005-MM-108",
@@ -241,7 +249,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 27,
+                            AutorId = 26,
                             Apellidos = "Bolaños Rivas",
                             CarreraId = 30,
                             Codigo = "2005-BR-601",
@@ -249,7 +257,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 28,
+                            AutorId = 27,
                             Apellidos = "Quijano Rodriguez",
                             CarreraId = 26,
                             Codigo = "2014-QR-101",
@@ -257,7 +265,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 29,
+                            AutorId = 28,
                             Apellidos = "Lemus Caballero",
                             CarreraId = 5,
                             Codigo = "2005-LC-101",
@@ -265,7 +273,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 30,
+                            AutorId = 29,
                             Apellidos = "Flores Zaldaña",
                             CarreraId = 43,
                             Codigo = "2013-FZ-801",
@@ -273,7 +281,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 31,
+                            AutorId = 30,
                             Apellidos = "Tenas Perez",
                             CarreraId = 41,
                             Codigo = "2012-TP-801",
@@ -281,7 +289,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 32,
+                            AutorId = 31,
                             Apellidos = "Calles Sanchez",
                             CarreraId = 43,
                             Codigo = "2015-CS-804",
@@ -289,7 +297,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 33,
+                            AutorId = 32,
                             Apellidos = "Jimenez Romero",
                             CarreraId = 10,
                             Codigo = "2008-JR-101",
@@ -297,7 +305,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 34,
+                            AutorId = 33,
                             Apellidos = "Martinez Lopez",
                             CarreraId = 35,
                             Codigo = "2015-ML-607",
@@ -305,7 +313,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 35,
+                            AutorId = 34,
                             Apellidos = "Martinez Pineda",
                             CarreraId = 29,
                             Codigo = "2008-MP-802",
@@ -313,7 +321,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 36,
+                            AutorId = 35,
                             Apellidos = "Ramos Acu¥a",
                             CarreraId = 26,
                             Codigo = "1995-RA-301",
@@ -321,7 +329,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 37,
+                            AutorId = 36,
                             Apellidos = "Cienfuegos Hernandez",
                             CarreraId = 5,
                             Codigo = "2005-CH-101",
@@ -329,7 +337,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 38,
+                            AutorId = 37,
                             Apellidos = "Ramirez Santamaria",
                             CarreraId = 16,
                             Codigo = "2016-RS-151",
@@ -337,7 +345,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 39,
+                            AutorId = 38,
                             Apellidos = "Duran Tobar",
                             CarreraId = 5,
                             Codigo = "2009-DT-101",
@@ -345,7 +353,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 40,
+                            AutorId = 39,
                             Apellidos = "Orellana Recinos",
                             CarreraId = 34,
                             Codigo = "2005-OR-601",
@@ -353,7 +361,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 41,
+                            AutorId = 40,
                             Apellidos = "Mancia Cabrera",
                             CarreraId = 26,
                             Codigo = "2004-MC-302",
@@ -361,7 +369,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 42,
+                            AutorId = 41,
                             Apellidos = "Herrera Noches",
                             CarreraId = 8,
                             Codigo = "2007-HN-101",
@@ -369,7 +377,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 43,
+                            AutorId = 42,
                             Apellidos = "Perez Orellana",
                             CarreraId = 6,
                             Codigo = "2011-PO-101",
@@ -377,7 +385,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 44,
+                            AutorId = 43,
                             Apellidos = "Moreno Rodriguez",
                             CarreraId = 35,
                             Codigo = "1998-MR-202",
@@ -385,7 +393,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 45,
+                            AutorId = 44,
                             Apellidos = "Chicas",
                             CarreraId = 10,
                             Codigo = "2015-LC-101",
@@ -393,7 +401,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 46,
+                            AutorId = 45,
                             Apellidos = "Barrera Hernandez",
                             CarreraId = 40,
                             Codigo = "1993-BH-801",
@@ -401,7 +409,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 47,
+                            AutorId = 46,
                             Apellidos = "Mancia Abrego De Esquivel",
                             CarreraId = 26,
                             Codigo = "2006-ME-303",
@@ -409,7 +417,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 48,
+                            AutorId = 47,
                             Apellidos = "Caballero Vidal",
                             CarreraId = 29,
                             Codigo = "2009-CV-801",
@@ -417,7 +425,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 49,
+                            AutorId = 48,
                             Apellidos = "Guzman Moran",
                             CarreraId = 40,
                             Codigo = "1993-GM-802",
@@ -425,7 +433,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 50,
+                            AutorId = 49,
                             Apellidos = "Cruz Hernandez",
                             CarreraId = 26,
                             Codigo = "1995-CH-301",
@@ -433,7 +441,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 51,
+                            AutorId = 50,
                             Apellidos = "Pop Teni",
                             CarreraId = 13,
                             Codigo = "2016-PT-151",
@@ -441,7 +449,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 52,
+                            AutorId = 51,
                             Apellidos = "Dueñas Marroquin",
                             CarreraId = 34,
                             Codigo = "1999-DM-601",
@@ -449,7 +457,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 53,
+                            AutorId = 52,
                             Apellidos = "Marquez Beltran",
                             CarreraId = 29,
                             Codigo = "1989-MB-402",
@@ -457,7 +465,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 54,
+                            AutorId = 53,
                             Apellidos = "Castro Muñoz",
                             CarreraId = 13,
                             Codigo = "2004-CM-101",
@@ -465,7 +473,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 55,
+                            AutorId = 54,
                             Apellidos = "Sicilia Avila",
                             CarreraId = 26,
                             Codigo = "1999-SA-301",
@@ -473,7 +481,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 56,
+                            AutorId = 55,
                             Apellidos = "Garcia Mendez",
                             CarreraId = 26,
                             Codigo = "1996-GM-301",
@@ -481,7 +489,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 57,
+                            AutorId = 56,
                             Apellidos = "Mejia Zeceña",
                             CarreraId = 6,
                             Codigo = "2009-MZ-102",
@@ -489,7 +497,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 58,
+                            AutorId = 57,
                             Apellidos = "Garcia Medina",
                             CarreraId = 11,
                             Codigo = "2009-GM-107",
@@ -497,7 +505,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 59,
+                            AutorId = 58,
                             Apellidos = "Acuña Sandoval",
                             CarreraId = 31,
                             Codigo = "2000-AS-602",
@@ -505,7 +513,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 60,
+                            AutorId = 59,
                             Apellidos = "Paz Romero",
                             CarreraId = 40,
                             Codigo = "2005-PR-803",
@@ -513,7 +521,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 61,
+                            AutorId = 60,
                             Apellidos = "Alabi Quinteros",
                             CarreraId = 34,
                             Codigo = "2000-AQ-604",
@@ -521,7 +529,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 62,
+                            AutorId = 61,
                             Apellidos = "Aguilar Peñate",
                             CarreraId = 30,
                             Codigo = "2001-AP-602",
@@ -529,7 +537,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 63,
+                            AutorId = 62,
                             Apellidos = "Bonilla Portillo",
                             CarreraId = 40,
                             Codigo = "1997-BP-801",
@@ -537,7 +545,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 64,
+                            AutorId = 63,
                             Apellidos = "Aviles De Perez",
                             CarreraId = 9,
                             Codigo = "2014-AP-502",
@@ -545,7 +553,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 65,
+                            AutorId = 64,
                             Apellidos = "Lopez Vasquez",
                             CarreraId = 10,
                             Codigo = "2015-LV-101",
@@ -553,7 +561,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 66,
+                            AutorId = 65,
                             Apellidos = "Martinez Orellana",
                             CarreraId = 34,
                             Codigo = "2015-MO-601",
@@ -561,7 +569,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 67,
+                            AutorId = 66,
                             Apellidos = "Burgos Garcia De Lopez",
                             CarreraId = 11,
                             Codigo = "2000-BL-101",
@@ -569,7 +577,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 68,
+                            AutorId = 67,
                             Apellidos = "Ramos Perez",
                             CarreraId = 30,
                             Codigo = "2013-RP-601",
@@ -577,7 +585,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 69,
+                            AutorId = 68,
                             Apellidos = "Molina Luna",
                             CarreraId = 42,
                             Codigo = "2015-ML-802",
@@ -585,7 +593,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 70,
+                            AutorId = 69,
                             Apellidos = "Gonzalez Magaña",
                             CarreraId = 34,
                             Codigo = "2013-GM-603",
@@ -593,7 +601,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 71,
+                            AutorId = 70,
                             Apellidos = "Mendoza Flores",
                             CarreraId = 40,
                             Codigo = "1999-MF-801",
@@ -601,7 +609,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 72,
+                            AutorId = 71,
                             Apellidos = "Lopez Fuentes",
                             CarreraId = 26,
                             Codigo = "1998-LF-802",
@@ -609,7 +617,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 73,
+                            AutorId = 72,
                             Apellidos = "Martinez",
                             CarreraId = 30,
                             Codigo = "1999-CM-607",
@@ -617,7 +625,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 74,
+                            AutorId = 73,
                             Apellidos = "Majico Blanco",
                             CarreraId = 5,
                             Codigo = "2007-MB-103",
@@ -625,7 +633,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 75,
+                            AutorId = 74,
                             Apellidos = "Guzman Rosales",
                             CarreraId = 15,
                             Codigo = "2014-GR-104",
@@ -633,7 +641,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 76,
+                            AutorId = 75,
                             Apellidos = "Chavez Sandoval",
                             CarreraId = 31,
                             Codigo = "1998-CS-601",
@@ -641,7 +649,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 77,
+                            AutorId = 76,
                             Apellidos = "Cañas Velasquez",
                             CarreraId = 29,
                             Codigo = "2000-CV-802",
@@ -649,7 +657,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 78,
+                            AutorId = 77,
                             Apellidos = "Santana Quintanilla",
                             CarreraId = 30,
                             Codigo = "2013-SQ-601",
@@ -657,7 +665,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 79,
+                            AutorId = 78,
                             Apellidos = "Leiva",
                             CarreraId = 26,
                             Codigo = "2003-LL-301",
@@ -665,7 +673,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 80,
+                            AutorId = 79,
                             Apellidos = "Acu Muñoz",
                             CarreraId = 13,
                             Codigo = "2005-AM-103",
@@ -673,7 +681,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 81,
+                            AutorId = 80,
                             Apellidos = "Magaña Lopez",
                             CarreraId = 42,
                             Codigo = "2013-ML-803",
@@ -681,7 +689,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 82,
+                            AutorId = 81,
                             Apellidos = "Soriano Zelaya",
                             CarreraId = 14,
                             Codigo = "2006-SZ-101",
@@ -689,7 +697,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 83,
+                            AutorId = 82,
                             Apellidos = "Aragon Romero De Suarez",
                             CarreraId = 20,
                             Codigo = "2012-AS-106",
@@ -697,7 +705,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 84,
+                            AutorId = 83,
                             Apellidos = "Batres De Torres",
                             CarreraId = 6,
                             Codigo = "2005-BB-101",
@@ -705,7 +713,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 85,
+                            AutorId = 84,
                             Apellidos = "Turcios Perez",
                             CarreraId = 32,
                             Codigo = "2004-TP-601",
@@ -713,7 +721,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 86,
+                            AutorId = 85,
                             Apellidos = "Sicilia Molina",
                             CarreraId = 19,
                             Codigo = "2017-SM-151",
@@ -721,7 +729,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 87,
+                            AutorId = 86,
                             Apellidos = "Espinoza De Paz",
                             CarreraId = 26,
                             Codigo = "2010-ED-301",
@@ -729,7 +737,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 88,
+                            AutorId = 87,
                             Apellidos = "Guerrero Azucena",
                             CarreraId = 35,
                             Codigo = "1997-GA-202",
@@ -737,7 +745,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 89,
+                            AutorId = 88,
                             Apellidos = "Cerna Castillo",
                             CarreraId = 41,
                             Codigo = "2012-CC-809",
@@ -745,7 +753,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 90,
+                            AutorId = 89,
                             Apellidos = "Mejia Guevara",
                             CarreraId = 23,
                             Codigo = "2013-MG-109",
@@ -753,7 +761,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 91,
+                            AutorId = 90,
                             Apellidos = "Serrano Lopez",
                             CarreraId = 8,
                             Codigo = "2008-SL-101",
@@ -761,7 +769,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 92,
+                            AutorId = 91,
                             Apellidos = "Montes Fajardo",
                             CarreraId = 34,
                             Codigo = "2008-MF-603",
@@ -769,7 +777,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 93,
+                            AutorId = 92,
                             Apellidos = "Hernandez",
                             CarreraId = 29,
                             Codigo = "2008-HH-801",
@@ -777,7 +785,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 94,
+                            AutorId = 93,
                             Apellidos = "Portillo Arbues",
                             CarreraId = 13,
                             Codigo = "2011-PA-103",
@@ -785,7 +793,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 95,
+                            AutorId = 94,
                             Apellidos = "Yamileth Pineda Peña",
                             CarreraId = 34,
                             Codigo = "2003-PP-601",
@@ -793,7 +801,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 96,
+                            AutorId = 95,
                             Apellidos = "Avalos Ramos",
                             CarreraId = 31,
                             Codigo = "2012-AR-607",
@@ -801,7 +809,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 97,
+                            AutorId = 96,
                             Apellidos = "Flores Reyes",
                             CarreraId = 32,
                             Codigo = "2008-FR-601",
@@ -809,7 +817,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 98,
+                            AutorId = 97,
                             Apellidos = "Velasquez Flores",
                             CarreraId = 40,
                             Codigo = "2008-VF-801",
@@ -817,7 +825,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 99,
+                            AutorId = 98,
                             Apellidos = "Sandoval Ramirez",
                             CarreraId = 10,
                             Codigo = "2010-SR-101",
@@ -825,7 +833,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 100,
+                            AutorId = 99,
                             Apellidos = "Mejia Aguilar",
                             CarreraId = 8,
                             Codigo = "2008-MA-104",
@@ -833,7 +841,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 101,
+                            AutorId = 100,
                             Apellidos = "Marroquin Chavez",
                             CarreraId = 42,
                             Codigo = "2013-MC-806",
@@ -841,7 +849,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 102,
+                            AutorId = 101,
                             Apellidos = "Gomez Barrera",
                             CarreraId = 40,
                             Codigo = "1998-GB-801",
@@ -849,7 +857,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 103,
+                            AutorId = 102,
                             Apellidos = "Mejia Artero",
                             CarreraId = 14,
                             Codigo = "2005-MA-105",
@@ -857,7 +865,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 104,
+                            AutorId = 103,
                             Apellidos = "Moran Mejia",
                             CarreraId = 8,
                             Codigo = "2007-MM-107",
@@ -865,7 +873,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 105,
+                            AutorId = 104,
                             Apellidos = "Anaya Marin",
                             CarreraId = 40,
                             Codigo = "2000-AM-801",
@@ -873,7 +881,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 106,
+                            AutorId = 105,
                             Apellidos = "Alvarez Nolasco",
                             CarreraId = 34,
                             Codigo = "2001-AN-601",
@@ -881,7 +889,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 107,
+                            AutorId = 106,
                             Apellidos = "Guerra Polanco",
                             CarreraId = 6,
                             Codigo = "2006-GP-102",
@@ -889,7 +897,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 108,
+                            AutorId = 107,
                             Apellidos = "Velasquez Paez",
                             CarreraId = 5,
                             Codigo = "2014-VP-104",
@@ -897,7 +905,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 109,
+                            AutorId = 108,
                             Apellidos = "Vides Garcia",
                             CarreraId = 31,
                             Codigo = "2013-VG-602",
@@ -905,7 +913,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 110,
+                            AutorId = 109,
                             Apellidos = "Urquiza Henriquez",
                             CarreraId = 40,
                             Codigo = "2013-UH-801",
@@ -913,7 +921,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 111,
+                            AutorId = 110,
                             Apellidos = "Qui¤onez Marroquin",
                             CarreraId = 30,
                             Codigo = "1997-QM-601",
@@ -921,7 +929,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 112,
+                            AutorId = 111,
                             Apellidos = "Valencia Castro",
                             CarreraId = 6,
                             Codigo = "2014-VC-501",
@@ -929,7 +937,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 113,
+                            AutorId = 112,
                             Apellidos = "Paredes Damean",
                             CarreraId = 34,
                             Codigo = "2011-PD-601",
@@ -937,7 +945,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 114,
+                            AutorId = 113,
                             Apellidos = "Castro Cordova",
                             CarreraId = 40,
                             Codigo = "2004-CC-801",
@@ -945,7 +953,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 115,
+                            AutorId = 114,
                             Apellidos = "Soto Carranza",
                             CarreraId = 42,
                             Codigo = "2015-SC-806",
@@ -953,7 +961,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 116,
+                            AutorId = 115,
                             Apellidos = "Guerra Henriquez",
                             CarreraId = 29,
                             Codigo = "1999-GH-401",
@@ -961,7 +969,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 117,
+                            AutorId = 116,
                             Apellidos = "Ortiz Pineda",
                             CarreraId = 43,
                             Codigo = "2000-OP-801",
@@ -969,7 +977,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 118,
+                            AutorId = 117,
                             Apellidos = "Linares Arevalo",
                             CarreraId = 32,
                             Codigo = "2011-LA-602",
@@ -977,7 +985,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 119,
+                            AutorId = 118,
                             Apellidos = "Galan Morales",
                             CarreraId = 33,
                             Codigo = "1999-GM-603",
@@ -985,7 +993,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 120,
+                            AutorId = 119,
                             Apellidos = "Larin Nuñez",
                             CarreraId = 40,
                             Codigo = "1997-LN-501",
@@ -993,7 +1001,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 121,
+                            AutorId = 120,
                             Apellidos = "Santos Romero",
                             CarreraId = 8,
                             Codigo = "2009-SR-101",
@@ -1001,7 +1009,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 122,
+                            AutorId = 121,
                             Apellidos = "Rivera Quijano",
                             CarreraId = 43,
                             Codigo = "2002-RQ-801",
@@ -1009,7 +1017,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 123,
+                            AutorId = 122,
                             Apellidos = "Segura Dolores",
                             CarreraId = 10,
                             Codigo = "2009-SD-101",
@@ -1017,7 +1025,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 124,
+                            AutorId = 123,
                             Apellidos = "Orantes Lopez",
                             CarreraId = 8,
                             Codigo = "2014-OL-101",
@@ -1025,7 +1033,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 125,
+                            AutorId = 124,
                             Apellidos = "Barrera",
                             CarreraId = 40,
                             Codigo = "1997-BB-801",
@@ -1033,7 +1041,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 126,
+                            AutorId = 125,
                             Apellidos = "Orozco Villa",
                             CarreraId = 34,
                             Codigo = "2012-OV-601",
@@ -1041,7 +1049,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 127,
+                            AutorId = 126,
                             Apellidos = "Dina Sanchez Recinos",
                             CarreraId = 16,
                             Codigo = "2010-SR-102",
@@ -1049,7 +1057,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 128,
+                            AutorId = 127,
                             Apellidos = "Moran Campos",
                             CarreraId = 34,
                             Codigo = "1999-MC-605",
@@ -1057,7 +1065,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 129,
+                            AutorId = 128,
                             Apellidos = "Agreda Ortiz",
                             CarreraId = 13,
                             Codigo = "2008-AO-101",
@@ -1065,7 +1073,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 130,
+                            AutorId = 129,
                             Apellidos = "Martinez Corleto",
                             CarreraId = 5,
                             Codigo = "2011-MC-101",
@@ -1073,7 +1081,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 131,
+                            AutorId = 130,
                             Apellidos = "Deleon Palomo",
                             CarreraId = 5,
                             Codigo = "2006-DP-101",
@@ -1081,7 +1089,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 132,
+                            AutorId = 131,
                             Apellidos = "Toledo Cea",
                             CarreraId = 30,
                             Codigo = "2014-TC-601",
@@ -1089,7 +1097,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 133,
+                            AutorId = 132,
                             Apellidos = "Flores Robles",
                             CarreraId = 32,
                             Codigo = "1999-FR-602",
@@ -1097,7 +1105,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 134,
+                            AutorId = 133,
                             Apellidos = "Herrera Lopez",
                             CarreraId = 13,
                             Codigo = "2012-HL-103",
@@ -1105,7 +1113,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 135,
+                            AutorId = 134,
                             Apellidos = "Lopez Emestica",
                             CarreraId = 32,
                             Codigo = "2009-LE-601",
@@ -1113,7 +1121,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 136,
+                            AutorId = 135,
                             Apellidos = "Salinas Sermeño",
                             CarreraId = 13,
                             Codigo = "2003-SS-101",
@@ -1121,7 +1129,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 137,
+                            AutorId = 136,
                             Apellidos = "Hernandez Guerra",
                             CarreraId = 30,
                             Codigo = "1997-HG-601",
@@ -1129,7 +1137,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 138,
+                            AutorId = 137,
                             Apellidos = "Garrizano Patiño",
                             CarreraId = 6,
                             Codigo = "2008-GP-102",
@@ -1137,7 +1145,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 139,
+                            AutorId = 138,
                             Apellidos = "Vasquez Rivera",
                             CarreraId = 35,
                             Codigo = "2015-VR-603",
@@ -1145,7 +1153,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 140,
+                            AutorId = 139,
                             Apellidos = "Linares Miranda",
                             CarreraId = 29,
                             Codigo = "2000-LM-801",
@@ -1153,7 +1161,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 141,
+                            AutorId = 140,
                             Apellidos = "Lopez Lopez",
                             CarreraId = 35,
                             Codigo = "2013-LL-602",
@@ -1161,7 +1169,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 142,
+                            AutorId = 141,
                             Apellidos = "Jesus Escobar Avelar",
                             CarreraId = 34,
                             Codigo = "2004-EA-603",
@@ -1169,7 +1177,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 143,
+                            AutorId = 142,
                             Apellidos = "Polanco Guerra",
                             CarreraId = 26,
                             Codigo = "2003-PG-301",
@@ -1177,7 +1185,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 144,
+                            AutorId = 143,
                             Apellidos = "Rivera Escobar",
                             CarreraId = 29,
                             Codigo = "2004-RE-801",
@@ -1185,7 +1193,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 145,
+                            AutorId = 144,
                             Apellidos = "Matamoros",
                             CarreraId = 16,
                             Codigo = "2011-MM-105",
@@ -1193,7 +1201,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 146,
+                            AutorId = 145,
                             Apellidos = "Gutierrez Martinez",
                             CarreraId = 43,
                             Codigo = "2012-GM-805",
@@ -1201,7 +1209,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 147,
+                            AutorId = 146,
                             Apellidos = "Vanegas Hernandez",
                             CarreraId = 6,
                             Codigo = "2013-VH-101",
@@ -1209,7 +1217,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 148,
+                            AutorId = 147,
                             Apellidos = "Muñoz Leonor",
                             CarreraId = 13,
                             Codigo = "2005-ML-103",
@@ -1217,7 +1225,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 149,
+                            AutorId = 148,
                             Apellidos = "Alvarado Carranza",
                             CarreraId = 9,
                             Codigo = "2017-AC-551",
@@ -1225,7 +1233,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 150,
+                            AutorId = 149,
                             Apellidos = "Diaz Chavez",
                             CarreraId = 8,
                             Codigo = "2014-DC-101",
@@ -1233,7 +1241,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 151,
+                            AutorId = 150,
                             Apellidos = "Valencia Guerrero De Lemus",
                             CarreraId = 7,
                             Codigo = "2013-VG-102",
@@ -1241,7 +1249,7 @@ namespace CatalogoWebApp.Migrations
                         },
                         new
                         {
-                            AutorId = 152,
+                            AutorId = 151,
                             Apellidos = "Chavez Castillo",
                             CarreraId = 34,
                             Codigo = "2005-CC-603",
@@ -1274,311 +1282,311 @@ namespace CatalogoWebApp.Migrations
                     b.HasData(
                         new
                         {
-                            CarreraId = 1,
-                            Codigo = "000",
-                            FacultadId = 1,
-                            Nombre = "GENERAL"
-                        },
-                        new
-                        {
                             CarreraId = 5,
                             Codigo = "101",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN PERIODISMO Y COMUNICACIÓN AUDIOVISUAL"
+                            Nombre = "Licenciatura en periodismo y comunicación audiovisual"
                         },
                         new
                         {
                             CarreraId = 6,
                             Codigo = "102",
                             FacultadId = 500,
-                            Nombre = "LICENCIATURA EN ENFERMERIA"
+                            Nombre = "Licenciatura en enfermeria"
                         },
                         new
                         {
                             CarreraId = 7,
                             Codigo = "103",
                             FacultadId = 500,
-                            Nombre = "TECNICO EN ENFERMERIA"
+                            Nombre = "Tecnico en enfermeria"
                         },
                         new
                         {
                             CarreraId = 8,
                             Codigo = "104",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS DE LA EDUCACION CON ESPECIALIDAD EN IDIOMA INGLÉS"
+                            Nombre = "Licenciatura en ciencias de la educacion con especialidad en idioma inglés"
                         },
                         new
                         {
                             CarreraId = 9,
                             Codigo = "110",
                             FacultadId = 500,
-                            Nombre = "DOCTORADO EN MEDICINA"
+                            Nombre = "Doctorado en medicina"
                         },
                         new
                         {
                             CarreraId = 10,
                             Codigo = "119",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS DE LA EDUCACION CON ESPECIALIDAD EN EDUCACION BASICA"
+                            Nombre = "Licenciatura en ciencias de la educacion con especialidad en educacion basica"
                         },
                         new
                         {
                             CarreraId = 11,
                             Codigo = "120",
                             FacultadId = 100,
-                            Nombre = "PROFESORADO EN EDUCACION BASICA PARA PRIMERO Y SEGUNDO CICLO"
+                            Nombre = "Profesorado en educacion basica para primero y segundo ciclo"
                         },
                         new
                         {
                             CarreraId = 12,
                             Codigo = "127",
                             FacultadId = 100,
-                            Nombre = "PROFESORADO EN EDUCACIÓN PARVULARIA"
+                            Nombre = "Profesorado en educación parvularia"
                         },
                         new
                         {
                             CarreraId = 13,
                             Codigo = "128",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS RELIGIOSAS"
+                            Nombre = "Licenciatura en ciencias religiosas"
                         },
                         new
                         {
                             CarreraId = 14,
                             Codigo = "129",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS DE LA EDUCACION CON ESPECIALIDAD EN EDUCACION PARVULARIA"
+                            Nombre = "Licenciatura en ciencias de la educacion con especialidad en educacion parvularia"
                         },
                         new
                         {
                             CarreraId = 15,
                             Codigo = "130",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN EDUCACION INICIAL Y  PARVULARIA"
+                            Nombre = "Licenciatura en educacion inicial y  parvularia"
                         },
                         new
                         {
                             CarreraId = 16,
                             Codigo = "131",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS DE LA EDUCACION ESPECIALIDAD EN MATEMATICA SEMIPRESENCIAL"
+                            Nombre = "Licenciatura en ciencias de la educacion especialidad en matematica semipresencial"
                         },
                         new
                         {
                             CarreraId = 17,
                             Codigo = "132",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS DE LA EDUCACION ESPECIALIDAD EN DIRECCION Y ADMINISTRACION ESCOLAR - SEMIPRESENCIAL"
+                            Nombre = "Licenciatura en ciencias de la educacion especialidad en direccion y administracion escolar - semipresencial"
                         },
                         new
                         {
                             CarreraId = 18,
                             Codigo = "133",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS DE LA EDUCACION ESPECIALIDAD EN EDUCACION BASICA SEMIPRESENCIAL"
+                            Nombre = "Licenciatura en ciencias de la educacion especialidad en educacion basica semipresencial"
                         },
                         new
                         {
                             CarreraId = 19,
                             Codigo = "135",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN IDIOMA INGLES (SEMIPRESENCIAL)"
+                            Nombre = "Licenciatura en idioma ingles (semipresencial)"
                         },
                         new
                         {
                             CarreraId = 20,
                             Codigo = "140",
                             FacultadId = 100,
-                            Nombre = "PROFESORADO EN EDUCACION  BASICA PARA PRIMERO Y SEGUNDO CICLOS"
+                            Nombre = "Profesorado en educacion  basica para primero y segundo ciclos"
                         },
                         new
                         {
                             CarreraId = 21,
                             Codigo = "144",
                             FacultadId = 100,
-                            Nombre = "PROFESORADO Y LICENCIATURA EN EDUCACION INICIAL Y PARVULARIA"
+                            Nombre = "Profesorado y licenciatura en educacion inicial y parvularia"
                         },
                         new
                         {
                             CarreraId = 22,
                             Codigo = "145",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN IDIOMA INGLES"
+                            Nombre = "Licenciatura en idioma ingles"
                         },
                         new
                         {
                             CarreraId = 23,
                             Codigo = "160",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN DISEÑO GRAFICO PUBLICITARIO"
+                            Nombre = "Licenciatura en diseño grafico publicitario"
                         },
                         new
                         {
                             CarreraId = 25,
                             Codigo = "209",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA EN TECNOLOGIA Y PROCESAMIENTO DE ALIMENTOS"
+                            Nombre = "Ingenieria en tecnologia y procesamiento de alimentos"
                         },
                         new
                         {
                             CarreraId = 26,
                             Codigo = "301",
                             FacultadId = 100,
-                            Nombre = "LICENCIATURA EN CIENCIAS JURIDICAS"
+                            Nombre = "Licenciatura en ciencias juridicas"
                         },
                         new
                         {
                             CarreraId = 29,
                             Codigo = "410",
                             FacultadId = 800,
-                            Nombre = "LICENCIATURA EN SISTEMAS INFORMATICOS ADMINISTRATIVOS"
+                            Nombre = "Licenciatura en sistemas informaticos administrativos"
                         },
                         new
                         {
                             CarreraId = 30,
                             Codigo = "601",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA INDUSTRIAL"
+                            Nombre = "Ingenieria industrial"
                         },
                         new
                         {
                             CarreraId = 31,
                             Codigo = "602",
                             FacultadId = 600,
-                            Nombre = "ARQUITECTURA"
+                            Nombre = "Arquitectura"
                         },
                         new
                         {
                             CarreraId = 32,
                             Codigo = "603",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA CIVIL"
+                            Nombre = "Ingenieria civil"
                         },
                         new
                         {
                             CarreraId = 33,
                             Codigo = "604",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA CIVIL SANEAMIENTO AMBIENTAL"
+                            Nombre = "Ingenieria civil saneamiento ambiental"
                         },
                         new
                         {
                             CarreraId = 34,
                             Codigo = "605",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA EN SISTEMAS INFORMATICOS"
+                            Nombre = "Ingenieria en sistemas informaticos"
                         },
                         new
                         {
                             CarreraId = 35,
                             Codigo = "606",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA AGRONOMICA"
+                            Nombre = "Ingenieria agronomica"
                         },
                         new
                         {
                             CarreraId = 36,
                             Codigo = "607",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA EN TELECOMUNICACIONES Y REDES"
+                            Nombre = "Ingenieria en telecomunicaciones y redes"
                         },
                         new
                         {
                             CarreraId = 37,
                             Codigo = "608",
                             FacultadId = 600,
-                            Nombre = "INGENIERIA EN DESARROLLO DE SOFTWARE"
+                            Nombre = "Ingenieria en desarrollo de software"
+                        },
+                        new
+                        {
+                            CarreraId = 38,
+                            Codigo = "698",
+                            FacultadId = 600,
+                            Nombre = "Curso ccna academia de redes cisco unicaes"
+                        },
+                        new
+                        {
+                            CarreraId = 39,
+                            Codigo = "699",
+                            FacultadId = 600,
+                            Nombre = "Curso ccna academia de redes cisco unicaes"
                         },
                         new
                         {
                             CarreraId = 40,
                             Codigo = "801",
                             FacultadId = 800,
-                            Nombre = "LICENCIATURA EN ADMINISTRACION DE EMPRESAS"
+                            Nombre = "Licenciatura en administracion de empresas"
                         },
                         new
                         {
                             CarreraId = 41,
                             Codigo = "802",
                             FacultadId = 800,
-                            Nombre = "LICENCIATURA EN MERCADEO Y NEGOCIOS INTERNACIONALES"
+                            Nombre = "Licenciatura en mercadeo y negocios internacionales"
                         },
                         new
                         {
                             CarreraId = 42,
                             Codigo = "803",
                             FacultadId = 800,
-                            Nombre = "LICENCIATURA EN GESTION Y DESARROLLO TURISTICO"
+                            Nombre = "Licenciatura en gestion y desarrollo turistico"
                         },
                         new
                         {
                             CarreraId = 43,
                             Codigo = "812",
                             FacultadId = 800,
-                            Nombre = "LICENCIATURA EN CONTADURIA PUBLICA"
+                            Nombre = "Licenciatura en contaduria publica"
                         },
                         new
                         {
                             CarreraId = 44,
                             Codigo = "890",
                             FacultadId = 800,
-                            Nombre = "POSTGRADO EN ESTRATEGIAS PARA LA COMPETITIVIDAD"
-                        },
-                        new
-                        {
-                            CarreraId = 45,
-                            Codigo = "900",
-                            FacultadId = 900,
-                            Nombre = "DEPARTAMENTO DE IDIOMAS"
+                            Nombre = "Postgrado en estrategias para la competitividad"
                         },
                         new
                         {
                             CarreraId = 46,
                             Codigo = "901",
                             FacultadId = 800,
-                            Nombre = "MAESTRIA EN DIRECCION ESTRATEGICA DE EMPRESAS"
+                            Nombre = "Maestria en direccion estrategica de empresas"
                         },
                         new
                         {
                             CarreraId = 47,
                             Codigo = "902",
                             FacultadId = 100,
-                            Nombre = "MAESTRIA EN ASESORIA EDUCATIVA"
+                            Nombre = "Maestria en asesoria educativa"
                         },
                         new
                         {
                             CarreraId = 49,
                             Codigo = "904",
                             FacultadId = 100,
-                            Nombre = "MAESTRIA EN ATENCION INTEGRAL DE LA PRIMERA INFANCIA"
+                            Nombre = "Maestria en atencion integral de la primera infancia"
                         },
                         new
                         {
                             CarreraId = 50,
                             Codigo = "905",
                             FacultadId = 600,
-                            Nombre = "MAESTRIA EN GERENCIA Y GESTION AMBIENTAL"
+                            Nombre = "Maestria en gerencia y gestion ambiental"
                         },
                         new
                         {
                             CarreraId = 51,
                             Codigo = "906",
                             FacultadId = 800,
-                            Nombre = "MAESTRIA EN GESTION Y DESARROLLO TURISTICO"
+                            Nombre = "Maestria en gestion y desarrollo turistico"
                         },
                         new
                         {
                             CarreraId = 52,
                             Codigo = "982",
                             FacultadId = 100,
-                            Nombre = "CURSO DE FORMACION PEDAGOGICA PARA PROFESIONALES"
+                            Nombre = "Curso de formacion pedagogica para profesionales"
                         },
                         new
                         {
                             CarreraId = 56,
                             Codigo = "805",
                             FacultadId = 800,
-                            Nombre = "LICENCIATURA EN ADMINISTRACION DE EMPRESAS - SEMIPRESENCIAL"
+                            Nombre = "Licenciatura en administracion de empresas - semipresencial"
                         });
                 });
 
@@ -1602,44 +1610,27 @@ namespace CatalogoWebApp.Migrations
                     b.HasData(
                         new
                         {
-                            FacultadId = 1,
-                            Codigo = "NA",
-                            Nombre = "NO ASIGNADA"
-                        },
-                        new
-                        {
                             FacultadId = 100,
                             Codigo = "100",
-                            Nombre = "CIENCIAS  Y HUMANIDADES"
+                            Nombre = "Ciencias  y humanidades"
                         },
                         new
                         {
                             FacultadId = 500,
                             Codigo = "500",
-                            Nombre = "FACULTAD DE CIENCIAS DE LA SALUD"
+                            Nombre = "Facultad de ciencias de la salud"
                         },
                         new
                         {
                             FacultadId = 600,
                             Codigo = "600",
-                            Nombre = "INGENIERIA Y ARQUITECTURA"
+                            Nombre = "Ingenieria y arquitectura"
                         },
                         new
                         {
                             FacultadId = 800,
                             Codigo = "800",
-                            Nombre = "CIENCIAS EMPRESARIALES"
-                        },
-                        new
-                        {
-                            FacultadId = 900,
-                            Codigo = "900",
-                            Nombre = "DEPARTAMENTO DE IDIOMAS"
-                        },
-                        new
-                        {
-                            FacultadId = 906,
-                            Nombre = "BIBLIOTECA"
+                            Nombre = "Ciencias empresariales"
                         });
                 });
 

@@ -1,6 +1,11 @@
 {
   "Autores": [
     {
+      "Codigo": "2013-HH-601",
+      "Nombre": "Diego Fernando Henriquez Hernandez",
+      "CarreraId": 34
+    },
+    {
       "Codigo": "2000-CR-602",
       "Nombre": "Karla Iliana Castillo Ramos",
       "CarreraId": 30

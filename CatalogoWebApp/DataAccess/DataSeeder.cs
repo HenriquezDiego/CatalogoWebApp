@@ -39,7 +39,7 @@ namespace CatalogoWebApp.DataAccess
             var jsonResult = JsonConvert.DeserializeObject<IEnumerable<AutorJson>>(json["Autores"]
                 .ToString(Formatting.None));
 
-            var id = 2;
+            var id = 0;
             return jsonResult.Select(x =>
             {
                 var nombreCompleto = x.Nombre;
