@@ -1206,3 +1206,23 @@ table.dataTable.compact tbody td {
     background-color: #A00402;
     color: #ffffff;
 }
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #A00402 !important;
+    border-color: #A00402 !important;
+}
+
+    .btn-primary:focus,
+    .btn-primary.focus {
+        color: #fff;
+        background-color: #A00402 !important;
+        border-color: #A00402 !important;
+    }
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #A00402 !important;
+        border-color: #A00402 !important;
+    }

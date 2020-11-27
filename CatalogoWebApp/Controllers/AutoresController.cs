@@ -29,7 +29,13 @@ namespace CatalogoWebApp.Controllers
         {
             var autores = _context.Autores.ToList();
             if (!autores.Any()) return BadRequest();
-            return Ok(autores);
+            return Ok(autores.Select(x => new
+            {
+                x.Codigo,
+                x.Nombres,
+                x.Apellidos,
+                Carrera = x.Carrera.Nombre,
+            }));
         }
 
         // GET: Autores
@@ -137,20 +143,25 @@ namespace CatalogoWebApp.Controllers
         // GET: Autores/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
             if (id == null)
             {
                 return NotFound();
             }
 
-            var autor = await _context.Autores
-                .Include(a => a.Carrera)
-                .FirstOrDefaultAsync(m => m.AutorId == id);
-            if (autor == null)
-            {
-                return NotFound();
-            }
+            //var autor = await _context.Autores
+            //    .Include(a => a.Carrera)
+            //    .FirstOrDefaultAsync(m => m.AutorId == id);
+            //if (autor == null)
+            //{
+            //    return NotFound();
+            
+            //return View(autor);
+            var autor = await _context.Autores.FindAsync(id);
+            _context.Autores.Remove(autor);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
-            return View(autor);
         }
 
         // POST: Autores/Delete/5
