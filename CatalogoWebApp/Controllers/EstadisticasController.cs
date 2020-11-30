@@ -31,48 +31,6 @@ namespace CatalogoWebApp.Controllers
             return View(lstModel);
         }
 
-        public IActionResult FacultadCarrera(int facultadId)
-        {
-            if (facultadId > 0)
-            {
-                var carreras = _appDbContext.Carreras.Where(c => c.FacultadId == facultadId)
-                    .OrderBy(t=>t.Nombre)
-                    .ToList();
-
-                var trabajoss = _appDbContext.TrabajosDeGraduacion
-                    .Include(t=>t.Autor)
-                    .ThenInclude(t=>t.Carrera)
-                    .Where(t=>t.Autor.Carrera.FacultadId == facultadId)
-                    .OrderBy(t => t.Autor.Carrera.Nombre)
-                    .ToList();
-
-                var cantidades = carreras.Select(c => trabajoss.Count(t => t.Autor.CarreraId == c.CarreraId)).ToList();
-
-                
-                return Json(new {carreras = carreras.Select(c => c.Nombre).ToList(),cantidades});
-            }
-            var trabajos = _appDbContext.TrabajosDeGraduacion
-                .Include(t => t.Autor)
-                .ThenInclude(t => t.Carrera)
-                .ToList();
-
-            var lstModel = _appDbContext.Carreras
-                .Where(c => c.FacultadId == 600)
-                .ToList()
-                .Select(x => new SimpleReportViewModel()
-                {
-                    DimensionOne = x.Nombre,
-                    Quantity = trabajos.Count(t => t.Autor.CarreraId == x.CarreraId)
-                })
-                .OrderBy(f => f.DimensionOne)
-                .ToList();
-
-            var facultades = _appDbContext.Facultades.ToList().OrderBy(f => f.Nombre);
-
-            ViewData["FacultadId"] = new SelectList(facultades, "FacultadId", "Nombre",600);
-            return View(lstModel);
-        }
-
         public IActionResult Year()
         {
             var report = _appDbContext.TrabajosDeGraduacion
@@ -85,6 +43,23 @@ namespace CatalogoWebApp.Controllers
                     Quantity = x.Count(t=>t.Fecha.Year == x.Key)
                 }).ToList();
             return View(report);
+        }
+
+        public IActionResult Tipo()
+        {
+            var report = _appDbContext.TrabajosDeGraduacion
+                .Include(t => t.Tipo)
+                .OrderBy(t => t.Tipo.Nombre)
+                .ToList()
+                .GroupBy(t => t.Tipo.Nombre)
+                .Select(x => new SimpleReportViewModel
+                {
+                    DimensionOne = x.Key,
+                    Quantity = x.Count(t => t.Tipo.Nombre == x.Key)
+                }).ToList();
+
+            return View(report);
+
         }
 
     }

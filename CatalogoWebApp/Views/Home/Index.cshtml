@@ -48,14 +48,12 @@
                         <dd>
                             @item.Autor.Carrera?.Nombre
                         </dd>
-                        <dt class="justify-content-center">
-                            <br />
-                            <a class="btn btn-default" asp-controller="TrabajosDeGraduacion"
-                               asp-action="Details"
-                               asp-route-id="@item.AutorId"> <i class="fa fa-list"></i><span> Detalles</span></a>
-
-                        </dt>
                     </dl>
+                </div>
+                <div class="panel-footer text-center">
+                <a class="btn btn-primary" asp-controller="TrabajosDeGraduacion"
+                           asp-action="Details"
+                           asp-route-id="@item.TrabajoDeGraduacionId"> <i class="fa fa-list"></i><span> Detalles</span></a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,11 @@
 [
   {
+    "outputFileName": "wwwroot/css/lib/admin-lte/css/skins/skin-unicaes.min.css",
+    "inputFiles": [
+      "wwwroot/css/lib/admin-lte/css/skins/skin-unicaes.css"
+    ]
+  },
+  {
     "outputFileName": "wwwroot/css/lib/admin-lte/css/skins/skin-black.min.css",
     "inputFiles": [
       "wwwroot/css/lib/admin-lte/css/skins/skin-black.css"
