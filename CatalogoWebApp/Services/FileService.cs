@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using TransaccionesWebApi.Services;
 
 namespace ContaWebApi.Api.Infrastructure
@@ -12,12 +13,14 @@ namespace ContaWebApi.Api.Infrastructure
    public class FileService : IFileService
     {
         private readonly IWebHostEnvironment _hosting;
+        private readonly ILogger<FileService> _logger;
         public string RootDirectory { get; set; } = @"files";
         public string MediaType { get; set; } = MediaTypesExtension.Application.Pdf;
 
-        public FileService(IWebHostEnvironment hosting)
+        public FileService(IWebHostEnvironment hosting,ILogger<FileService> logger)
         {
             _hosting = hosting;
+            _logger = logger;
         }
         public Task<string> Upload(IFormFile file, string name)
         {
@@ -27,6 +30,7 @@ namespace ContaWebApi.Api.Infrastructure
 
         public async Task<string> Upload(IList<IFormFile> files, string name)
         {
+            _logger.LogInformation("Iniciando..."+nameof(Upload));
             var filesPath = string.Empty;
             var namefile = name;
             if (files.Count != 0)
@@ -54,7 +58,7 @@ namespace ContaWebApi.Api.Infrastructure
 
                 filesPath = filesPath.Remove((filesPath.Length-1));
             }
-
+            _logger.LogInformation("Finalizando..."+nameof(Upload));
             return filesPath;
         }
 

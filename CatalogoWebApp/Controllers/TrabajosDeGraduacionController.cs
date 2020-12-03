@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using TransaccionesWebApi.Services;
 
 namespace CatalogoWebApp.Controllers
@@ -19,15 +20,18 @@ namespace CatalogoWebApp.Controllers
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly IFileService _file;
+        private readonly ILogger<TrabajosDeGraduacionController> _logger;
         private readonly List<AutorViewModel> _autores;
         private readonly List<int> _years;
         public TrabajosDeGraduacionController(AppDbContext context, 
             IMapper mapper,
-            IFileService file)
+            IFileService file,
+            ILogger<TrabajosDeGraduacionController> logger)
         {
             _context = context;
             _mapper = mapper;
             _file = file;
+            _logger = logger;
             _autores = mapper.Map<List<AutorViewModel>>(_context.Autores.ToList());
             var totalYear = DateTime.Today.Year;
             var init = 1995;
@@ -87,6 +91,7 @@ namespace CatalogoWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(TrabajoDeGraduacionInput model)
         {
+            _logger.LogInformation("Iniciado..."+ nameof(Create));
             if (ModelState.IsValid)
             {
                 var trabajoDeGraduacion = _mapper.Map<TrabajoDeGraduacion>(model);

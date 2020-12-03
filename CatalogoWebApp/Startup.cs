@@ -1,14 +1,15 @@
 ﻿using AutoMapper;
 using CatalogoWebApp.DataAccess;
+using CatalogoWebApp.Services;
 using ContaWebApi.Api.Infrastructure;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
-using CatalogoWebApp.Services;
-using FluentValidation.AspNetCore;
 using TransaccionesWebApi.Services;
 
 namespace AdminLTE
@@ -42,8 +43,13 @@ namespace AdminLTE
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostEnvironment env)
+        public void Configure(IApplicationBuilder app, 
+            IHostEnvironment env,
+            ILoggerFactory logger)
         {
+
+            //var path = Directory.GetCurrentDirectory();  
+            logger.AddFile($"C:\\Logs\\Log.txt");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
