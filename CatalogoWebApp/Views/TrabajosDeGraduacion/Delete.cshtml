@@ -5,45 +5,50 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h3>Estas seguro de eliminar este registro ?</h3>
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Autor)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Autor.AutorId)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Tipo.TipoId)
-        </dd>
-    </dl>
+<h3 class="text-center">Estas seguro de eliminar este registro ?</h3>
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 align-content-center">
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Titulo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Autor)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Autor.AutorId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Descripcion)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Tipo.TipoId)
+            </dd>
+        </dl>
     
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="TrabajoDeGraduacionId" />
-        <input type="submit" value="Borrar" class="btn btn-danger" /> |
-        <a asp-action="Index">Regresar</a>
-    </form>
+        <form asp-action="Delete" class="text-center">
+            <input type="hidden" asp-for="TrabajoDeGraduacionId" />
+            <input type="submit" value="Borrar" class="btn btn-primary" /> 
+            <a asp-action="Index" class="btn btn-primary"><i class="fa fa-undo"></i><span> Regresar</span></a>
+        </form>
+    </div>
 </div>
