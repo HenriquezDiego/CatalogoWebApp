@@ -17,7 +17,7 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="~/lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
-    <link href="~/lib/admin-lte/css/skins/skin-unicaes.css" rel="stylesheet" />
+    <link id="tema" href="~/lib/admin-lte/css/skins/skin-unicaes-blue.css" rel="stylesheet" />
     <link href="~/lib/admin-lte/css/AdminLTECustom.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
     <!-- Google Font -->
@@ -26,8 +26,8 @@
     <script src="~/lib/jquery/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/lib/admin-lte/js/adminlte.js"></script>
-    
-    
+
+
     <style type="text/css">
         #login-dp {
             min-width: 250px;
@@ -35,200 +35,222 @@
             overflow: hidden;
         }
 
-        #login-dp .help-block {
-            font-size: 12px
-        }
+            #login-dp .help-block {
+                font-size: 12px
+            }
 
-        #login-dp .bottom {
-            border-top: 1px solid #ddd;
-            clear: both;
-            padding: 14px;
-        }
+            #login-dp .bottom {
+                border-top: 1px solid #ddd;
+                clear: both;
+                padding: 14px;
+            }
 
-        #login-dp .social-buttons {
-            margin: 12px 0
-        }
+            #login-dp .social-buttons {
+                margin: 12px 0
+            }
 
-        #login-dp .social-buttons a {
-            width: 49%;
-        }
+                #login-dp .social-buttons a {
+                    width: 49%;
+                }
 
-        #login-dp .form-group {
-            margin-bottom: 10px;
-        }
+            #login-dp .form-group {
+                margin-bottom: 10px;
+            }
 
         .btn-fb {
             color: #fff;
             background-color: #3b5998;
         }
 
-        .btn-fb:hover {
-            color: #fff;
-            background-color: #496ebc
-        }
+            .btn-fb:hover {
+                color: #fff;
+                background-color: #496ebc
+            }
 
         .btn-tw {
             color: #fff;
             background-color: #55acee;
         }
 
-        .btn-tw:hover {
-            color: #fff;
-            background-color: #59b5fa;
-        }
+            .btn-tw:hover {
+                color: #fff;
+                background-color: #59b5fa;
+            }
     </style>
 </head>
 <body id="body" class="hold-transition skin-unicaes fixed sidebar-mini sidebar-mini-expand-feature">
-    <div class="wrapper">
-        <!-- Main Header -->
-        <header class="main-header">
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <div class="logo-mini text-vertical"><b>UNICAES</b></div>
-                <span class="logo-lg"><img src="~/img/logo144.png" alt="LogoUnicaes" /></span>
+<div class="wrapper">
+    <!-- Main Header -->
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <div class="logo-mini text-vertical"><b>UNICAES</b></div>
+            <span class="logo-lg"><img src="~/img/logo144.png" alt="LogoUnicaes" /></span>
 
+        </a>
+
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
             </a>
 
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
+                <li style="margin-top: 15px; margin-right: 30px">
+                    <div class="material-switch pull-right">
+                        <input id="someSwitchOptionDanger" name="someSwitchOption001" onchange="switchTema()" type="checkbox" />
+                        <label for="someSwitchOptionDanger" class="label-danger"></label>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        @if (!string.IsNullOrEmpty(user))
+                        {
+                            <b>@user</b>
+                        }
+                        else
+                        {
+                            <b>Login</b>
+                        }
+                        <span class="caret">
+                        </span>
+                    </a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @if (!string.IsNullOrEmpty(user))
+                                    {
+                                        <form asp-controller="Manager"
+                                              asp-action="Logout"
+                                              role="form" method="post"
+                                              accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <button type="submit"
+                                                        class="btn btn-primary btn-block">
+                                                    Logout
+                                                </button>
+                                            </div>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form asp-controller="Manager" asp-action="Login" role="form" method="post"
+                                              accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only">Username</label>
+                                                <input type="text" class="form-control" name="user" placeholder="Username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only">Password</label>
+                                                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </div>
+                                        </form>
+                                    }
 
-            <!-- Header Navbar -->
-            <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-
-                <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            @if (!string.IsNullOrEmpty(user))
-                            {
-                                <b>@user</b>
-                            }
-                            else
-                            {
-                                <b>Login</b>
-                            }
-                            <span class="caret">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- search form (Optional) -->
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <!-- /.search form -->
+            <!-- Sidebar Menu -->
+            <ul id="myDIV" class="sidebar-menu" data-widget="tree">
+                <li class="header">Menu</li>
+                <!-- Optionally, you can add icons to the links -->
+                <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
+                @if (!string.IsNullOrEmpty(user))
+                {
+                    <li><a asp-action="Index" asp-controller="TrabajosDeGraduacion"><i class="fa fa-book"></i> <span>Catalogo</span></a></li>
+                    <li><a asp-action="Index" asp-controller="Autores"><i class="fa fa-id-badge"></i><span>Autores</span></a></li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-line-chart"></i> <span>Estadisticas</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul id="login-dp" class="dropdown-menu">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        @if (!string.IsNullOrEmpty(user))
-                                        {
-                                            <form asp-controller="Manager" 
-                                                  asp-action="Logout" 
-                                                  role="form" method="post"
-                                                  accept-charset="UTF-8" id="login-nav">
-                                                <div class="form-group">
-                                                    <button type="submit"
-                                                            class="btn btn-primary btn-block">
-                                                        Logout
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        }
-                                        else
-                                        {
-                                            <form asp-controller="Manager" asp-action="Login" role="form" method="post"
-                                                  accept-charset="UTF-8" id="login-nav">
-                                                <div class="form-group">
-                                                    <label class="sr-only">Username</label>
-                                                    <input type="text" class="form-control" name="user" placeholder="Username" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="sr-only">Password</label>
-                                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                                </div>
-                                            </form>
-                                        }
-
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="treeview-menu">
+                            <li><a asp-controller="Estadisticas" asp-action="Facultad">Por Facultad</a></li>
+                            <li><a asp-controller="Estadisticas" asp-action="Tipo">Por Tipos</a></li>
+                            <li><a asp-controller="Estadisticas" asp-action="Year">Por Años</a></li>
                         </ul>
                     </li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- search form (Optional) -->
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-                <!-- /.search form -->
-                <!-- Sidebar Menu -->
-                <ul id="myDIV" class="sidebar-menu" data-widget="tree">
-                    <li class="header">Menu</li>
-                    <!-- Optionally, you can add icons to the links -->
-                    <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
-                    @if (!string.IsNullOrEmpty(user))
-                    {
-                        <li><a asp-action="Index" asp-controller="TrabajosDeGraduacion"><i class="fa fa-book"></i> <span>Catalogo</span></a></li>
-                        <li><a asp-action="Index" asp-controller="Autores"><i class="fa fa-id-badge"></i><span>Autores</span></a></li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-line-chart"></i> <span>Estadisticas</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a asp-controller="Estadisticas" asp-action="Facultad">Por Facultad</a></li>
-                                <li><a asp-controller="Estadisticas" asp-action="Tipo">Por Tipos</a></li>
-                                <li><a asp-controller="Estadisticas" asp-action="Year">Por Años</a></li>
-                            </ul>
-                        </li>
-                    }
-                </ul>
-                <!-- /.sidebar-menu -->
-            </section>
-            <!-- /.sidebar -->
-        </aside>
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper" style="background-color: #ffffff !important">
-            <!-- Content Header (Page header) -->
-            <section class="content-header" style="background-color: #ffffff !important">
-            </section>
-            <!-- Main content -->
-            <section class="content container-fluid" style="background-color: #ffffff !important">
-                <!--------------------------
-                  | Your Page Content Here |
-                  -------------------------->
-                @RenderBody()
-            </section>
-            <!-- /.content -->
-        </div>
-        <!-- /.content-wrapper -->
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <!-- To the right -->
-            <div class="pull-right hidden-xs">
-                <b>AV</b>
-            </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2021 <a href="#">UNICAES</a>.</strong> Todo los derechos reservados
-        </footer>
-        <!-- Add the sidebar's background. This div must be placed
-        immediately after the control sidebar -->
-        <div class="control-sidebar-bg"></div>
+                }
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" style="background-color: #ffffff !important">
+        <!-- Content Header (Page header) -->
+        <section class="content-header" style="background-color: #ffffff !important">
+        </section>
+        <!-- Main content -->
+        <section class="content container-fluid" style="background-color: #ffffff !important">
+            <!--------------------------
+            | Your Page Content Here |
+            -------------------------->
+            @RenderBody()
+        </section>
+        <!-- /.content -->
     </div>
+    <!-- /.content-wrapper -->
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            <b>AV</b>
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2021 <a href="#">UNICAES</a>.</strong> Todo los derechos reservados
+    </footer>
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>
 
+<script type="text/javascript">
+    function switchTema()
+    {
+        let $check = document.getElementById("someSwitchOptionDanger");
+        let cssstyle = document.getElementById("tema");
+        if ($check.checked)
+        {
+            cssstyle.href = "lib/admin-lte/css/skins/skin-unicaes.css";
+        }
+        else
+        {
+            cssstyle.href = "lib/admin-lte/css/skins/skin-unicaes-blue.css";
+        }
+       
+    }
+</script>
 
     @await RenderSectionAsync("script", false)
 

@@ -1,11 +1,11 @@
 /*
- * Skin: unicaes
+ * Skin: unicaes - Blue
  * ---------
- * #A00402
+ * #292961
  * #880C09
  */
 .skin-unicaes .main-header .navbar {
-    background-color: #A00402;
+    background-color: #292961;
 }
 .skin-unicaes .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -26,13 +26,13 @@
 }
     .skin-unicaes .main-header .navbar .sidebar-toggle:hover {
         color: #f6f6f6;
-        background: #A00402;
+        background: #292961;
     }
 .skin-unicaes .main-header .navbar .sidebar-toggle {
   color: #fff;
 }
     .skin-unicaes .main-header .navbar .sidebar-toggle:hover {
-        background-color: #A00402;
+        background-color: #292961;
     }
 @media (max-width: 767px) {
   .skin-unicaes .main-header .navbar .dropdown-menu li.divider {
@@ -42,19 +42,19 @@
     color: #fff;
   }
     .skin-unicaes .main-header .navbar .dropdown-menu li a:hover {
-        background: #A00402;
+        background: #292961;
     }
 }
 .skin-unicaes .main-header .logo {
-    background-color: #A00402;
+    background-color: #292961;
     color: #ffffff;
     border-bottom: 0 solid transparent;
 }
     .skin-unicaes .main-header .logo:hover {
-        background-color: #A00402;
+        background-color: #292961;
     }
 .skin-unicaes .main-header li.user-header {
-    background-color: #A00402;
+    background-color: #292961;
 }
 .skin-unicaes .content-header {
   background: transparent;
@@ -71,7 +71,7 @@
 }
 .skin-unicaes .sidebar-menu > li.header {
     color: #ffffff;
-    background: #A00402;
+    background: #292961;
 }
 .skin-unicaes .sidebar-menu > li > a {
   border-left: 3px solid transparent;
@@ -81,14 +81,14 @@
 .skin-unicaes .sidebar-menu > li.active > a,
 .skin-unicaes .sidebar-menu > li.menu-open > a {
     color: #ffffff;
-    background: #A00402;
+    background: #292961;
 }
 .skin-unicaes .sidebar-menu > li.active > a {
     border-left-color: #dab85e;
 }
 .skin-unicaes .sidebar-menu > li > .treeview-menu {
     margin: 0 1px;
-    background: #A00402;
+    background: #292961;
 }
 .skin-unicaes .sidebar a {
     /*color font*/
@@ -143,28 +143,28 @@
 
 .main-footer {
     margin-bottom: 0;
-    background-color: #A00402 !important;
+    background-color: #292961 !important;
     color: #ffffff !important;
 }
 
 
 .btn-primary {
     color: #fff;
-    background-color: #A00402 !important;
-    border-color: #A00402 !important;
+    background-color: #292961 !important;
+    border-color: #292961 !important;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-    background-color: #A00402 !important;
-    border-color: #A00402 !important;
+    background-color: #292961 !important;
+    border-color: #292961 !important;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #A00402 !important;
-    border-color: #A00402 !important;
+    background-color: #292961 !important;
+    border-color: #292961 !important;
 }
 
 .pagination > .active > a,
@@ -176,6 +176,6 @@
     z-index: 3;
     color: #fff !important;
     cursor: default;
-    background-color: #A00402 !important;
-    border-color: #A00402 !important;
+    background-color: #292961 !important;
+    border-color: #292961 !important;
 }

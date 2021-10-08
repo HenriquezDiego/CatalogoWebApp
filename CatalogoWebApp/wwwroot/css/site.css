@@ -93,26 +93,12 @@ table.dataTable.compact tbody td {
     border: 1px solid #ddd;
 }
 
-.pagination > .active > a,
-.pagination > .active > span,
-.pagination > .active > a:hover,
-.pagination > .active > span:hover,
-.pagination > .active > a:focus,
-.pagination > .active > span:focus {
-    z-index: 3;
-    color: #fff !important;
-    cursor: default;
-    /*cambio de color #A00402*/
-    background-color: #A00402 !important;
-    border-color: #A00402 !important;
-}
-
 /*Glyphicons*/
 
 @font-face {
     font-family: 'Glyphicons Halflings';
-    src: url('../fonts/glyphicons-halflings-regular.eot');
-    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+    src: url('../lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('../lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 .glyphicon {
@@ -1201,28 +1187,53 @@ table.dataTable.compact tbody td {
     height: 410px
 }
 
-.main-footer {
-    margin-bottom: 0;
-    background-color: #A00402;
-    color: #ffffff;
+
+.material-switch > input[type="checkbox"] {
+    display: none;
 }
 
-
-.btn-primary {
-    color: #fff;
-    background-color: #A00402 !important;
-    border-color: #A00402 !important;
+.material-switch > label {
+    cursor: pointer;
+    height: 0;
+    position: relative;
+    width: 25px;
 }
 
-    .btn-primary:focus,
-    .btn-primary.focus {
-        color: #fff;
-        background-color: #A00402 !important;
-        border-color: #A00402 !important;
-    }
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position: absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
 
-    .btn-primary:hover {
-        color: #fff;
-        background-color: #A00402 !important;
-        border-color: #A00402 !important;
-    }
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
