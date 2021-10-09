@@ -95,7 +95,7 @@ namespace CatalogoWebApp.Controllers
             if (ModelState.IsValid)
             {
                 var trabajoDeGraduacion = _mapper.Map<TrabajoDeGraduacion>(model);
-                var fileName = @"/img/portada.png";
+                var fileName = "/img/thesis.png";
                 if (model.Imagen != null)
                 {
                     fileName = await _file.Upload(model.Imagen, model.Titulo);
@@ -148,10 +148,9 @@ namespace CatalogoWebApp.Controllers
             {
                 
                 _mapper.Map(model, trabajoDeGraduacionOld);
-                var fileName = string.Empty;
                 if (model.Imagen != null)
                 {
-                    fileName = await _file.Upload(model.Imagen, model.Titulo);
+                    var fileName = await _file.Upload(model.Imagen, model.Titulo);
                     trabajoDeGraduacionOld.PathImagen = fileName;
                 }
                 await _context.SaveChangesAsync();
