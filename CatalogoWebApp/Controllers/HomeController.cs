@@ -18,8 +18,7 @@ namespace AdminLTE.Controllers
         {
             var trabajosDeGraduacion = await _appDbContext.TrabajosDeGraduacion
                 .Include(t => t.Autor)
-                .ThenInclude(t=>t.Carrera)
-                .OrderBy(t=>t.Titulo)
+                .ThenInclude(t => t.Carrera)
                 .ToListAsync();
 
             search = search?.ToLower().Trim();
@@ -31,7 +30,10 @@ namespace AdminLTE.Controllers
                     t.Autor.NombreCompleto.ToLower().Contains(search) || 
                     t.Autor.Carrera.Nombre.Contains(search)).ToList();
             }
-            return View(trabajosDeGraduacion);
+            return View(trabajosDeGraduacion
+                .OrderBy(t=>t.Autor.NombreCompleto)
+                .ThenBy(t=>t.Fecha.Year)
+                .ToList());
         }
 
         public IActionResult Table()
