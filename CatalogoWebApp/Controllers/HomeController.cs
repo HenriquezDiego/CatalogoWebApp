@@ -21,12 +21,15 @@ namespace AdminLTE.Controllers
                 .ThenInclude(t=>t.Carrera)
                 .OrderBy(t=>t.Titulo)
                 .ToListAsync();
-            search = search?.ToLower();
+
+            search = search?.ToLower().Trim();
             if (!string.IsNullOrEmpty(search))
             {
                 trabajosDeGraduacion = trabajosDeGraduacion.Where(t =>
-                    t.Descripcion.ToLower().Contains(search) || t.Autor.Nombres.ToLower().Contains(search) ||
-                    t.Autor.Apellidos.ToLower().Contains(search)||t.Fecha.Year.ToString() == search).ToList();
+                    t.Titulo.ToLower().Contains(search) ||
+                    t.Descripcion.ToLower().Contains(search) ||
+                    t.Autor.NombreCompleto.ToLower().Contains(search) || 
+                    t.Autor.Carrera.Nombre.Contains(search)).ToList();
             }
             return View(trabajosDeGraduacion);
         }

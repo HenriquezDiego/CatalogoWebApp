@@ -26,9 +26,11 @@ namespace CatalogoWebApp.DataAccess
             modelBuilder.Entity<Facultad>().HasData(DataSeeder.GetFacultades(_hostEnvironment));
             modelBuilder.Entity<Carrera>().HasData(DataSeeder.GetCarreras(_hostEnvironment));
             modelBuilder.Entity<Tipo>().HasData(DataSeeder.Tipos);
-            modelBuilder.Entity<Autor>().HasData(DataSeeder.GetAutores(_hostEnvironment));
+            modelBuilder.Entity<Autor>()
+                .HasData(DataSeeder.GetAutores(_hostEnvironment));
+            modelBuilder.Entity<Autor>().Ignore(x=>x.NombreCompleto);
 
-            base.OnModelCreating(modelBuilder);
+        base.OnModelCreating(modelBuilder);
         }
     }
 }
