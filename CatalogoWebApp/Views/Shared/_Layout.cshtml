@@ -3,7 +3,7 @@
 
 @{
     var user = _httpContextAccessor.HttpContext.Session.GetString("_Name");
-
+    var isAdmin = !string.IsNullOrEmpty(user);
 }
 
 <!DOCTYPE html>
@@ -76,6 +76,7 @@
                 color: #fff;
                 background-color: #59b5fa;
             }
+
     </style>
 </head>
 <body id="body" class="hold-transition skin-unicaes fixed sidebar-mini sidebar-mini-expand-feature">
@@ -98,7 +99,7 @@
                 <span class="sr-only">Toggle navigation</span>
             </a>
 
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
+            <ul id="navbar-r" class="nav navbar-nav navbar-right" style="margin-right: 10px">
                 <li style="margin-top: 15px; margin-right: 30px">
                     <div class="material-switch pull-right">
                         <input id="someSwitchOptionDanger" name="someSwitchOption001" onchange="switchTema()" type="checkbox" />
@@ -107,7 +108,7 @@
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        @if (!string.IsNullOrEmpty(user))
+                        @if (isAdmin)
                         {
                             <b>@user</b>
                         }
@@ -122,7 +123,7 @@
                         <li>
                             <div class="row">
                                 <div class="col-md-12">
-                                    @if (!string.IsNullOrEmpty(user))
+                                    @if (isAdmin)
                                     {
                                         <form asp-controller="Manager"
                                               asp-action="Logout"
@@ -183,7 +184,7 @@
                 <li class="header">Menu</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
-                @if (!string.IsNullOrEmpty(user))
+                @if (isAdmin)
                 {
                     <li><a asp-action="Index" asp-controller="TrabajosDeGraduacion"><i class="fa fa-book"></i> <span>Catalogo</span></a></li>
                     <li><a asp-action="Index" asp-controller="Autores"><i class="fa fa-id-badge"></i><span>Autores</span></a></li>

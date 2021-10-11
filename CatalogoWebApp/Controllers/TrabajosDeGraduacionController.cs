@@ -171,15 +171,13 @@ namespace CatalogoWebApp.Controllers
             }
 
             var trabajoDeGraduacion = await _context.TrabajosDeGraduacion
-                .Include(t => t.Autor)
-                .Include(t => t.Tipo)
                 .FirstOrDefaultAsync(m => m.TrabajoDeGraduacionId == id);
-            if (trabajoDeGraduacion == null)
-            {
-                return NotFound();
-            }
+            if (trabajoDeGraduacion == null)return NotFound();
+            
+            _context.TrabajosDeGraduacion.Remove(trabajoDeGraduacion);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
-            return View(trabajoDeGraduacion);
         }
 
         // POST: TrabajosDeGraduacion/Delete/5
