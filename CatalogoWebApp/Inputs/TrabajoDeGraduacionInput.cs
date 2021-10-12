@@ -9,6 +9,7 @@ namespace CatalogoWebApp.Inputs
         public int AutorId { get; set; }
         public string Descripcion { get; set; }
         public IFormFile Imagen { get; set; }
+        public IFormFile File { get; set; }
         public int Year { get; set; }
         public TipoId TipoId { get; set; }
     }

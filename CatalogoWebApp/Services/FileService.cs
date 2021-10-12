@@ -14,7 +14,7 @@ namespace ContaWebApi.Api.Infrastructure
     {
         private readonly IWebHostEnvironment _hosting;
         private readonly ILogger<FileService> _logger;
-        public string RootDirectory { get; set; } = @"files";
+        public string RootDirectory { get; set; } = "files";
         public string MediaType { get; set; } = MediaTypesExtension.Application.Pdf;
 
         public FileService(IWebHostEnvironment hosting,ILogger<FileService> logger)
@@ -35,7 +35,7 @@ namespace ContaWebApi.Api.Infrastructure
             var namefile = name;
             if (files.Count != 0)
             {
-                var directory = @$"{RootDirectory}/{namefile}";
+                var directory = $"{RootDirectory}/{namefile}";
                 var fullPath = Path.Combine(_hosting.WebRootPath, directory);
                 if (!Directory.Exists(fullPath))
                 {
@@ -44,16 +44,14 @@ namespace ContaWebApi.Api.Infrastructure
                 var count = Directory.GetFiles(fullPath)?.Length;
                 foreach (var file in files)
                 {
-                    if (file.Length > 0)
-                    {
-                        var extension = Path.GetExtension(file.FileName);
-                        namefile =$"{name}-{count}";
-                        var filePath = @$"{namefile}{extension}";
-                        await using var stream = File.Create(Path.Combine(fullPath,filePath));
-                        filesPath += $"{directory}/{filePath};";
-                        await file.CopyToAsync(stream);
-                        count++;
-                    }
+                    if (file.Length <= 0) continue;
+                    var extension = Path.GetExtension(file.FileName);
+                    namefile =$"{name}-{count}";
+                    var filePath = $"{namefile}{extension}";
+                    await using var stream = File.Create(Path.Combine(fullPath,filePath));
+                    filesPath += $"{directory}/{filePath};";
+                    await file.CopyToAsync(stream);
+                    count++;
                 }
 
                 filesPath = filesPath.Remove((filesPath.Length-1));

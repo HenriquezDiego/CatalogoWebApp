@@ -1,11 +1,11 @@
 ﻿@using CatalogoWebApp.Controllers
 @using Microsoft.Extensions.Logging
 @model CatalogoWebApp.Inputs.TrabajoDeGraduacionInput
-@inject ILogger<TrabajosDeGraduacionController> Logger
+@inject ILogger<TrabajosDeGraduacionController> _logger
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    Logger.LogInformation("Test");
+    _logger.LogInformation("Test");
 }
 
 <h3 class="text-center">Nuevo trabajo de graduacion </h3>
@@ -33,6 +33,11 @@
                 <label asp-for="Imagen" class="control-label"></label>
                 <input asp-for="Imagen" class="form-control" />
                 <span asp-validation-for="Imagen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="File" class="control-label"></label>
+                <input asp-for="File" class="form-control" accept="application/pdf" />
+                <span asp-validation-for="File" class="text-danger"></span>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">

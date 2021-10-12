@@ -20,7 +20,13 @@ namespace CatalogoWebApp.ViewModels
                 {
                     opt.PreCondition(x=>x.Imagen==null);
                     opt.UseDestinationValue();
+                })
+                .ForMember(i=>i.PathFile, opt =>
+                {
+                    opt.PreCondition(x=>x.File==null);
+                    opt.UseDestinationValue();
                 });
+
         }
     }
 }

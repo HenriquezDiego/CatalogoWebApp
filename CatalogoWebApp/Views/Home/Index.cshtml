@@ -74,6 +74,7 @@
                             <a class="btn btn-primary" asp-controller="TrabajosDeGraduacion"
                                asp-action="Details"
                                asp-route-id="@item.TrabajoDeGraduacionId"> <i class="fa fa-list"></i><span> Detalles</span></a>
+                            <a class="btn btn-success" href="@_pathResolver.GetUrl(item.PathFile)"><i class="fa fa-list"></i><span> Ver</span></a>
                         </div>
                     </div>
                 </div>

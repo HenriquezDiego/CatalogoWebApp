@@ -100,6 +100,11 @@ namespace CatalogoWebApp.Controllers
                 {
                     fileName = await _file.Upload(model.Imagen, model.Titulo);
                 }
+
+                if (model.File != null)
+                {
+                    trabajoDeGraduacion.PathFile = await _file.Upload(model.File, model.Titulo);
+                }
                 trabajoDeGraduacion.PathImagen = fileName;
                 _context.Add(trabajoDeGraduacion);
                 await _context.SaveChangesAsync();
