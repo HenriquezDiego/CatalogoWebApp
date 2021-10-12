@@ -10,6 +10,7 @@ namespace CatalogoWebApp.Models
         public Autor Autor { get; set; }
         public string Descripcion { get; set; }
         public string PathImagen { get; set; }
+        public string PathFile { get; set; }
         public DateTime Fecha { get; set; }
         public TipoId TipoId { get; set; }
         public Tipo Tipo { get; set; }
