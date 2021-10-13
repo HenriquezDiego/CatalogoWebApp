@@ -6,6 +6,7 @@ namespace CatalogoWebApp.Controllers
     public class ManagerController : Controller
     {
         public const string SessionKeyName = "_Name";
+        public const string Error = "_Error";
 
 
         [HttpPost]
@@ -16,6 +17,10 @@ namespace CatalogoWebApp.Controllers
             {
                 HttpContext.Session.SetString(SessionKeyName, "Admin");
             }
+            else
+            {
+                HttpContext.Session.SetString(Error,"Usuario o contraseña incorrecta");
+            }
 
             return Redirect("/Home/Index");
 
@@ -24,6 +29,7 @@ namespace CatalogoWebApp.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Remove(SessionKeyName);
+            HttpContext.Session.Remove(Error);
             return Redirect("/Home/Index");
 
         }
