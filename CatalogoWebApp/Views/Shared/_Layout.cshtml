@@ -1,4 +1,6 @@
-﻿@using Microsoft.AspNetCore.Http
+﻿@using FluentValidation.TestHelper
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @inject IHttpContextAccessor _httpContextAccessor
 
 @{
@@ -150,7 +152,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">Username</label>
-                                        <input type="text" class="form-control" name="user" placeholder="Username" required>
+                                        <input type="text" class="form-control" name="user" placeholder="Username" required
+                                               autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">Password</label>
@@ -256,7 +259,6 @@
         {
             cssstyle.href = "/lib/admin-lte/css/skins/skin-unicaes-blue.css";
         }
-       
     }
 </script>
 
