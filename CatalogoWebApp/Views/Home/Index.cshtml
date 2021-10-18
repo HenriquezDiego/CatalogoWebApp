@@ -1,10 +1,12 @@
 ﻿@using CatalogoWebApp.Services
+@using Microsoft.AspNetCore.Http
 @model IList<CatalogoWebApp.Models.TrabajoDeGraduacion>
 @inject IPathResolver _pathResolver
-
+@inject IHttpContextAccessor _httpContextAccessor
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <style>

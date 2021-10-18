@@ -179,3 +179,23 @@
     background-color: #A00402 !important;
     border-color: #A00402 !important;
 }
+
+.btn-success {
+    color: #000000;
+    background-color: #f4f4f4 !important;
+    border-color: #ddd !important;
+}
+
+
+    .btn-success:focus,
+    .btn-success.focus {
+        color: #000000;
+        background-color: #f4f4f4 !important;
+        border-color: #ddd !important;
+    }
+
+    .btn-success:hover {
+        color: #000000;
+        background-color: #f4f4f4 !important;
+        border-color: #ddd !important;
+    }
