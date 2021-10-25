@@ -148,15 +148,6 @@ namespace CatalogoWebApp.Controllers
             {
                 return NotFound();
             }
-
-            //var autor = await _context.Autores
-            //    .Include(a => a.Carrera)
-            //    .FirstOrDefaultAsync(m => m.AutorId == id);
-            //if (autor == null)
-            //{
-            //    return NotFound();
-            
-            //return View(autor);
             var autor = await _context.Autores.FindAsync(id);
             _context.Autores.Remove(autor);
             await _context.SaveChangesAsync();
