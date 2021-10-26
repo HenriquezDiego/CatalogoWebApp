@@ -28,7 +28,8 @@ namespace AdminLTE.Controllers
                     t.Titulo.ToLower().Contains(search) ||
                     t.Descripcion.ToLower().Contains(search) ||
                     t.Autor.NombreCompleto.ToLower().Contains(search) || 
-                    t.Autor.Carrera.Nombre.ToLower().Contains(search)).ToList();
+                    t.Autor.Carrera.Nombre.ToLower().Contains(search) ||
+                    t.Fecha.Year.ToString() == search).ToList();
             }
             return View(trabajosDeGraduacion
                 .OrderBy(t=>t.Autor.NombreCompleto)
