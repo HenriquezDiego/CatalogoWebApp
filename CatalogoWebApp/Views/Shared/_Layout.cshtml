@@ -248,15 +248,15 @@
 <script type="text/javascript">
     function switchTema()
     {
-        let $check = document.getElementById("someSwitchOptionDanger");
-        let cssstyle = document.getElementById("tema");
+        const $check = document.getElementById("someSwitchOptionDanger");
+        const $cssstyle = document.getElementById("tema");
         if ($check.checked)
         {
-            cssstyle.href = "/lib/admin-lte/css/skins/skin-unicaes.css";
+            $cssstyle.href = "/lib/admin-lte/css/skins/skin-unicaes.css";
         }
         else
         {
-            cssstyle.href = "/lib/admin-lte/css/skins/skin-unicaes-blue.css";
+            $cssstyle.href = "/lib/admin-lte/css/skins/skin-unicaes-blue.css";
         }
     }
 </script>
