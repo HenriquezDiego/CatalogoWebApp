@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
+using CatalogoWebApp.Models;
 using TransaccionesWebApi.Services;
 
 namespace AdminLTE
@@ -47,6 +48,8 @@ namespace AdminLTE
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(500);
             });
+            services.Configure<StoreDatabaseSettings>(_configuration.GetSection("BookStoreDatabase"));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
