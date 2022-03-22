@@ -48,8 +48,8 @@ namespace AdminLTE
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(500);
             });
-            services.Configure<StoreDatabaseSettings>(_configuration.GetSection("BookStoreDatabase"));
-            
+            services.Configure<StoreDatabaseSettings>(_configuration.GetSection("StoreDatabase"));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
