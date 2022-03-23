@@ -5,8 +5,8 @@ namespace CatalogoWebApp.Controllers
 {
     public class ManagerController : Controller
     {
-        public const string SessionKeyName = "_Name";
-        public const string Error = "_Error";
+        private const string SessionKeyName = "_Name";
+        private const string Error = "_Error";
 
 
         [HttpPost]
