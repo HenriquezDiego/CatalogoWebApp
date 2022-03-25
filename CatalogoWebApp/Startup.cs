@@ -49,6 +49,7 @@ namespace AdminLTE
                 options.IdleTimeout = TimeSpan.FromSeconds(500);
             });
             services.Configure<StoreDatabaseSettings>(_configuration.GetSection("StoreDatabase"));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
         }
 
