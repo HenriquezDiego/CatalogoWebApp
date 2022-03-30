@@ -25,7 +25,7 @@ namespace CatalogoWebApp.Controllers
         [HttpGet("tipos")]
         public async Task<IActionResult> GetAll()
         {
-          var result = await _services.GetAsync();
+          var result = await _services.GetAllAsync();
           return Ok(result);
         }
 

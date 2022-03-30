@@ -23,8 +23,10 @@ namespace CatalogoWebApp.Services
                 settings.Value.CollectionName);
             
         }
-        public async Task<List<T>> GetAsync() =>
+        public async Task<List<T>> GetAllAsync() =>
             await _collection.Find(_ => true).ToListAsync();
+
+        public List<T> GetAll() => _collection.Find(_ => true).ToList();
 
         public async Task<T> GetAsync(string id) =>
             await _collection.Find(x => x.Id == id).FirstOrDefaultAsync();

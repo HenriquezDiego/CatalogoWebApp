@@ -6,18 +6,22 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CatalogoWebApp.Services;
 
 namespace CatalogoWebApp.Controllers
 {
     public class AutoresController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IList<Carrera> _carreras;
 
-        public AutoresController(AppDbContext context)
+        public AutoresController(AppDbContext context, 
+            IUnitOfWork unitOfWork)
         {
             _context = context;
-            _carreras = _context.Carreras.OrderBy(c => c.Nombre).ToList();
+            _unitOfWork = unitOfWork;
+            //_carreras = _context.Carreras.OrderBy(c => c.Nombre).ToList();
 
         }
 

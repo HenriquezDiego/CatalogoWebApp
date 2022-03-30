@@ -5,7 +5,8 @@ namespace CatalogoWebApp.Services
 {
     public interface IStoreServices<T>
     {
-        Task<List<T>> GetAsync();
+        List<T> GetAll();
+        Task<List<T>> GetAllAsync();
         Task<T> GetAsync(string id);
         Task CreateAsync(T value);
         Task UpdateAsync(string id, T value);
