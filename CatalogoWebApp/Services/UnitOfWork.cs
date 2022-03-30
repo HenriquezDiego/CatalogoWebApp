@@ -18,11 +18,11 @@ namespace CatalogoWebApp.Services
 
         public UnitOfWork(IOptions<StoreDatabaseSettings> settings)
         {
-            Autores = new StoreService<Autor>(settings);
-            TrabajosDeGraduacion = new StoreService<TrabajoDeGraduacion>(settings);
-            Tipos = new StoreService<Tipo>(settings);
-            Carreras = new StoreService<Carrera>(settings);
-            Facultades = new StoreService<Facultad>(settings);
+            Autores = new StoreService<Autor>(settings,"Autores");
+            TrabajosDeGraduacion = new StoreService<TrabajoDeGraduacion>(settings,"TrabajosDeGraduacion");
+            Tipos = new StoreService<Tipo>(settings,"Tipos");
+            Carreras = new StoreService<Carrera>(settings,"Carreras");
+            Facultades = new StoreService<Facultad>(settings,"Facultades");
         }
     }
 }

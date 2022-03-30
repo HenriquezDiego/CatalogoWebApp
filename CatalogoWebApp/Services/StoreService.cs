@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using CatalogoWebApp.Models;
 using CatalogoWebApp.Models.NoSQL;
@@ -11,7 +12,7 @@ namespace CatalogoWebApp.Services
     public class StoreService<T> : IStoreServices<T> where T : Documento
     {
         private readonly IMongoCollection<T> _collection;
-        public StoreService(IOptions<StoreDatabaseSettings> settings)
+        public StoreService(IOptions<StoreDatabaseSettings> settings, string collection)
         {
             var mongoClient = new MongoClient(
                 settings.Value.ConnectionString);
@@ -19,8 +20,7 @@ namespace CatalogoWebApp.Services
             var mongoDatabase = mongoClient.GetDatabase(
                 settings.Value.DatabaseName);
 
-            _collection = mongoDatabase.GetCollection<T>(
-                settings.Value.CollectionName);
+            _collection = mongoDatabase.GetCollection<T>(collection);
             
         }
         public async Task<List<T>> GetAllAsync() =>

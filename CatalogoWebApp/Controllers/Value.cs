@@ -19,7 +19,7 @@ namespace CatalogoWebApp.Controllers
         public Value(IOptions<StoreDatabaseSettings> settings,AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
-            _services = new StoreService<Tipo>(settings);
+            _services = new StoreService<Tipo>(settings,"Tipos");
         }
 
         [HttpGet("tipos")]

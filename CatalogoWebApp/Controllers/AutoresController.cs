@@ -1,12 +1,12 @@
 ﻿using CatalogoWebApp.DataAccess;
 using CatalogoWebApp.Models;
+using CatalogoWebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CatalogoWebApp.Services;
 
 namespace CatalogoWebApp.Controllers
 {
@@ -14,7 +14,7 @@ namespace CatalogoWebApp.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IList<Carrera> _carreras;
+        private readonly IList<Models.NoSQL.Carrera> _carreras;
 
         public AutoresController(AppDbContext context, 
             IUnitOfWork unitOfWork)
@@ -22,7 +22,7 @@ namespace CatalogoWebApp.Controllers
             _context = context;
             _unitOfWork = unitOfWork;
             //_carreras = _context.Carreras.OrderBy(c => c.Nombre).ToList();
-
+            _carreras = _unitOfWork.Carreras.GetAll()?.OrderBy(c => c.Nombre).ToList();
         }
 
         [HttpGet("api/autores")]
@@ -42,8 +42,22 @@ namespace CatalogoWebApp.Controllers
         // GET: Autores
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Autores.Include(a => a.Carrera);
-            return View(await appDbContext.ToListAsync());
+            //var appDbContext = _context.Autores.Include(a => a.Carrera);
+            //return View(await appDbContext.ToListAsync());
+            var autores = await _unitOfWork.Autores.GetAllAsync();
+            var query = from a in autores
+                join c in _carreras on a.CarreraId equals c.Id
+                select new Models.NoSQL.Autor
+                {
+                    Id = a.Id,
+                    Nombres = a.Nombres,
+                    Codigo = a.Codigo,
+                    Apellidos = a.Apellidos,
+                    CarreraId = a.CarreraId,
+                    Carrera = c
+                };
+            return View(query);
+
         }
 
         // GET: Autores/Details/5

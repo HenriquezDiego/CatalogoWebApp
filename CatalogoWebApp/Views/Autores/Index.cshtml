@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CatalogoWebApp.Models.Autor>
+﻿@model IEnumerable<CatalogoWebApp.Models.NoSQL.Autor>
 
 @{
     ViewData["Title"] = "Index";
@@ -48,9 +48,9 @@
                 </td>
                 <td>
 
-                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.AutorId"><i class="fa fa-edit"></i><span></span></a>
-                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.AutorId"><i class="fa fa-list"></i><span></span></a>
-                    <a class="btn btn-danger" onclick="openModal(@item.AutorId)"><i class="fa fa-trash"></i><span></span></a>
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i><span></span></a>
+                    <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-list"></i><span></span></a>
+                    <a class="btn btn-danger" onclick="openModal(@item.Id)"><i class="fa fa-trash"></i><span></span></a>
                 </td>
             </tr>
         }
@@ -120,7 +120,7 @@
 
         function funcion() {
             $.ajax({
-                url: "autores/delete/" + autorId,
+                url: `autores/delete/${autorId}`,
                 success: function(result) {
                     console.log(result);
                     console.log("success");

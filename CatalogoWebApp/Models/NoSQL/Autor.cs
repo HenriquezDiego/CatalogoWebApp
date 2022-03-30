@@ -4,7 +4,6 @@
     {
         private string _nombres;
         private string _apellidos;
-        public int AutorId { get; set; }
         public string Codigo { get; set; }
 
         public string Nombres
@@ -21,5 +20,6 @@
 
         public string NombreCompleto => _nombres + " " + _apellidos;
         public string CarreraId { get; set; }
+        public Carrera Carrera { get; set; }
     }
 }
