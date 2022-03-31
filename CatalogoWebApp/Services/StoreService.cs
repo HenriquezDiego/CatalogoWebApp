@@ -1,8 +1,6 @@
 ﻿
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using CatalogoWebApp.Models;
 using CatalogoWebApp.Models.NoSQL;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -21,7 +19,7 @@ namespace CatalogoWebApp.Services
                 settings.Value.DatabaseName);
 
             _collection = mongoDatabase.GetCollection<T>(collection);
-            
+
         }
         public async Task<List<T>> GetAllAsync() =>
             await _collection.Find(_ => true).ToListAsync();

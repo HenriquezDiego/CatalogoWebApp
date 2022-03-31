@@ -1,4 +1,4 @@
-﻿namespace CatalogoWebApp.Models
+﻿namespace CatalogoWebApp.Models.NoSQL
 {
     public class StoreDatabaseSettings
     {

@@ -46,7 +46,7 @@ namespace CatalogoWebApp.Controllers
             //return View(await appDbContext.ToListAsync());
             var autores = await _unitOfWork.Autores.GetAllAsync();
             var query = from a in autores
-                join c in _carreras on a.CarreraId equals c.Id
+                join c in _carreras on a.CarreraId equals c.Codigo
                 select new Models.NoSQL.Autor
                 {
                     Id = a.Id,

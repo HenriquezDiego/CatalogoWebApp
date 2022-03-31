@@ -1,12 +1,11 @@
 ﻿using CatalogoWebApp.DataAccess;
-using CatalogoWebApp.Models;
 using CatalogoWebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Threading.Tasks;
-using Tipo = CatalogoWebApp.Models.NoSQL.Tipo;
+using CatalogoWebApp.Models.NoSQL;
 
 namespace CatalogoWebApp.Controllers
 {

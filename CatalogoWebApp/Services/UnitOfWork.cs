@@ -1,10 +1,6 @@
-﻿using CatalogoWebApp.Models;
+﻿using CatalogoWebApp.Models.NoSQL;
 using Microsoft.Extensions.Options;
-using Autor = CatalogoWebApp.Models.NoSQL.Autor;
-using Carrera = CatalogoWebApp.Models.NoSQL.Carrera;
-using Facultad = CatalogoWebApp.Models.NoSQL.Facultad;
-using Tipo = CatalogoWebApp.Models.NoSQL.Tipo;
-using TrabajoDeGraduacion = CatalogoWebApp.Models.NoSQL.TrabajoDeGraduacion;
+
 
 namespace CatalogoWebApp.Services
 {
