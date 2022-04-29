@@ -1,0 +1,204 @@
+[
+  {
+    "Codigo": "101",
+    "Nombre": "Licenciatura en periodismo y comunicación audiovisual",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "102",
+    "Nombre": "Licenciatura en enfermeria",
+    "Facultad": "500"
+  },
+  {
+    "Codigo": "103",
+    "Nombre": "Tecnico en enfermeria", 
+    "Facultad": "500" },
+  {
+    "Codigo": "104",
+    "Nombre": "Licenciatura en ciencias de la educacion con especialidad en idioma inglés",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "110",
+    "Nombre": "Doctorado en medicina", 
+    "Facultad": "500" },
+  {
+    "Codigo": "119",
+    "Nombre": "Licenciatura en ciencias de la educacion con especialidad en educacion basica",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "120",
+    "Nombre": "Profesorado en educacion basica para primero y segundo ciclo",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "127",
+    "Nombre": "Profesorado en educación parvularia",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "128",
+    "Nombre": "Licenciatura en ciencias religiosas",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "129",
+    "Nombre": "Licenciatura en ciencias de la educacion con especialidad en educacion parvularia",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "130",
+    "Nombre": "Licenciatura en educacion inicial y  parvularia",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "131",
+    "Nombre": "Licenciatura en ciencias de la educacion especialidad en matematica semipresencial",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "132",
+    "Nombre": "Licenciatura en ciencias de la educacion especialidad en direccion y administracion escolar - semipresencial",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "133",
+    "Nombre": "Licenciatura en ciencias de la educacion especialidad en educacion basica semipresencial",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "135",
+    "Nombre": "Licenciatura en idioma ingles (semipresencial)",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "140",
+    "Nombre": "Profesorado en educacion  basica para primero y segundo ciclos",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "144",
+    "Nombre": "Profesorado y licenciatura en educacion inicial y parvularia",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "145",
+    "Nombre": "Licenciatura en idioma ingles",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "160",
+    "Nombre": "Licenciatura en diseño grafico publicitario",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "209",
+    "Nombre": "Ingenieria en tecnologia y procesamiento de alimentos",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "301",
+    "Nombre": "Licenciatura en ciencias juridicas",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "410",
+    "Nombre": "Licenciatura en sistemas informaticos administrativos",
+    "Facultad": "800"
+  },
+  { "Codigo": "601", "Nombre": "Ingenieria industrial", "Facultad": "600" },
+  { "Codigo": "602", "Nombre": "Arquitectura", "Facultad": "600" },
+  { "Codigo": "603", "Nombre": "Ingenieria civil", "Facultad": "600" },
+  {
+    "Codigo": "604",
+    "Nombre": "Ingenieria civil saneamiento ambiental",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "605",
+    "Nombre": "Ingenieria en sistemas informaticos",
+    "Facultad": "600"
+  },
+  { "Codigo": "606", "Nombre": "Ingenieria agronomica", "Facultad": "600" },
+  {
+    "Codigo": "607",
+    "Nombre": "Ingenieria en telecomunicaciones y redes",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "608",
+    "Nombre": "Ingenieria en desarrollo de software",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "698",
+    "Nombre": "Curso ccna academia de redes cisco unicaes",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "699",
+    "Nombre": "Curso ccna academia de redes cisco unicaes",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "801",
+    "Nombre": "Licenciatura en administracion de empresas",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "802",
+    "Nombre": "Licenciatura en mercadeo y negocios internacionales",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "803",
+    "Nombre": "Licenciatura en gestion y desarrollo turistico",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "812",
+    "Nombre": "Licenciatura en contaduria publica",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "890",
+    "Nombre": "Postgrado en estrategias para la competitividad",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "901",
+    "Nombre": "Maestria en direccion estrategica de empresas",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "902",
+    "Nombre": "Maestria en asesoria educativa",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "904",
+    "Nombre": "Maestria en atencion integral de la primera infancia",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "905",
+    "Nombre": "Maestria en gerencia y gestion ambiental",
+    "Facultad": "600"
+  },
+  {
+    "Codigo": "906",
+    "Nombre": "Maestria en gestion y desarrollo turistico",
+    "Facultad": "800"
+  },
+  {
+    "Codigo": "982",
+    "Nombre": "Curso de formacion pedagogica para profesionales",
+    "Facultad": "100"
+  },
+  {
+    "Codigo": "805",
+    "Nombre": "Licenciatura en administracion de empresas - semipresencial",
+    "Facultad": "800"
+  }
+]

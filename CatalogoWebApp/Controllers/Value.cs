@@ -37,7 +37,7 @@ namespace CatalogoWebApp.Controllers
                 {
                     a.Codigo,
                     a.Nombres,
-                    a.NombreCompleto,
+                    a.Apellidos,
                     CarreraCodigo = a.Carrera.Codigo
 
                 });

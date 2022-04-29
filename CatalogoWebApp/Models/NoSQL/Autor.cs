@@ -22,8 +22,7 @@ namespace CatalogoWebApp.Models.NoSQL
             get => _apellidos?.Trim();
             set => _apellidos = value;
         }
-        [BsonElement("nombreCompleto")]
-        public string NombreCompleto { get; set; }
+        public string NombreCompleto => Nombres + " " + Apellidos;
         [BsonElement("carreraCodigo")]
         public string CarreraId { get; set; }
         public Carrera Carrera { get; set; }

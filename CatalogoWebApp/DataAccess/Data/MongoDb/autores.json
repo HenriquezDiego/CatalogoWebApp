@@ -1,0 +1,908 @@
+[
+  {
+    "Codigo": "2007-EH-101",
+    "Nombres": "Manuel Gonzalo",
+    "Apellidos": "Escobar Hernandez",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2005-LC-101",
+    "Nombres": "Raquel Esmeralda",
+    "Apellidos": "Lemus Caballero",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2005-CH-101",
+    "Nombres": "Jorge Ernesto",
+    "Apellidos": "Cienfuegos Hernandez",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2009-DT-101",
+    "Nombres": "Joselin Yanira",
+    "Apellidos": "Duran Tobar",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2007-MB-103",
+    "Nombres": "Gustavo Adolfo",
+    "Apellidos": "Majico Blanco",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2014-VP-104",
+    "Nombres": "Yolanda Maria",
+    "Apellidos": "Velasquez Paez",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2011-MC-101",
+    "Nombres": "Gabriela Beatriz",
+    "Apellidos": "Martinez Corleto",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2006-DP-101",
+    "Nombres": "Katherine Alexia",
+    "Apellidos": "Deleon Palomo",
+    "CarreraCodigo": "101"
+  },
+  {
+    "Codigo": "2008-GP-102",
+    "Nombres": "Andrea Patricia",
+    "Apellidos": "Garrizano Patiño",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2006-GP-102",
+    "Nombres": "Elvia Gabriela",
+    "Apellidos": "Guerra Polanco",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2014-VC-501",
+    "Nombres": "Brenda Carolina",
+    "Apellidos": "Valencia Castro",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2005-BB-101",
+    "Nombres": "Sandra Rubidia",
+    "Apellidos": "Batres De Torres",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2011-PO-101",
+    "Nombres": "Brenda Lizeth",
+    "Apellidos": "Perez Orellana",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2009-MZ-102",
+    "Nombres": "Karla Veronica",
+    "Apellidos": "Mejia Zeceña",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2014-RA-502",
+    "Nombres": "Sonia Irene",
+    "Apellidos": "Rivas Ascencio",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2013-VH-101",
+    "Nombres": "Katherinne Julissa",
+    "Apellidos": "Vanegas Hernandez",
+    "CarreraCodigo": "102"
+  },
+  {
+    "Codigo": "2013-VG-102",
+    "Nombres": "Claudia Jeanmillette",
+    "Apellidos": "Valencia Guerrero De Lemus",
+    "CarreraCodigo": "103"
+  },
+  {
+    "Codigo": "2007-AP-103",
+    "Nombres": "Jose Alejandro",
+    "Apellidos": "Alvarado Pintin",
+    "CarreraCodigo": "103"
+  },
+  {
+    "Codigo": "2007-HN-101",
+    "Nombres": "Rosa Maria",
+    "Apellidos": "Herrera Noches",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2008-SL-101",
+    "Nombres": "Karla Maria",
+    "Apellidos": "Serrano Lopez",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2008-MA-104",
+    "Nombres": "Marvin Alfonso",
+    "Apellidos": "Mejia Aguilar",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2007-MM-107",
+    "Nombres": "Diana Rebeca",
+    "Apellidos": "Moran Mejia",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2009-SR-101",
+    "Nombres": "Elfida Elisa",
+    "Apellidos": "Santos Romero",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2014-OL-101",
+    "Nombres": "Patricia Guadalupe",
+    "Apellidos": "Orantes Lopez",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2014-DC-101",
+    "Nombres": "Raquel Eunice",
+    "Apellidos": "Diaz Chavez",
+    "CarreraCodigo": "104"
+  },
+  {
+    "Codigo": "2017-AC-551",
+    "Nombres": "Isabel Estefania",
+    "Apellidos": "Alvarado Carranza",
+    "CarreraCodigo": "110"
+  },
+  {
+    "Codigo": "2014-AP-502",
+    "Nombres": "Liliana Beatriz",
+    "Apellidos": "Aviles De Perez",
+    "CarreraCodigo": "110"
+  },
+  {
+    "Codigo": "2015-LV-101",
+    "Nombres": "Jacqueline Guadalupe",
+    "Apellidos": "Lopez Vasquez",
+    "CarreraCodigo": "119"
+  },
+  {
+    "Codigo": "2015-LC-101",
+    "Nombres": "Adan Lopez",
+    "Apellidos": "Chicas",
+    "CarreraCodigo": "119"
+  },
+  {
+    "Codigo": "2008-JR-101",
+    "Nombres": "Adriana Margarita",
+    "Apellidos": "Jimenez Romero",
+    "CarreraCodigo": "119"
+  },
+  {
+    "Codigo": "2011-VD-101",
+    "Nombres": "Joel Ernesto",
+    "Apellidos": "Vega Dueñas",
+    "CarreraCodigo": "119"
+  },
+  {
+    "Codigo": "2009-SD-101",
+    "Nombres": "Idvin Israel",
+    "Apellidos": "Segura Dolores",
+    "CarreraCodigo": "119"
+  },
+  {
+    "Codigo": "2010-SR-101",
+    "Nombres": "Luis Miguel",
+    "Apellidos": "Sandoval Ramirez",
+    "CarreraCodigo": "119"
+  },
+  {
+    "Codigo": "2007-CD-101",
+    "Nombres": "Claribel Yasmin",
+    "Apellidos": "Chilin Duran",
+    "CarreraCodigo": "120"
+  },
+  {
+    "Codigo": "2000-BL-101",
+    "Nombres": "Daysi Eugenia",
+    "Apellidos": "Burgos Garcia De Lopez",
+    "CarreraCodigo": "120"
+  },
+  {
+    "Codigo": "2009-GM-107",
+    "Nombres": "Maritza Janeth",
+    "Apellidos": "Garcia Medina",
+    "CarreraCodigo": "120"
+  },
+  {
+    "Codigo": "2004-CM-101",
+    "Nombres": "Julio Ruben",
+    "Apellidos": "Castro Muñoz",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2016-PT-151",
+    "Nombres": "Jefferson Oswaldo",
+    "Apellidos": "Pop Teni",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2005-MM-108",
+    "Nombres": "Jose Rainiero",
+    "Apellidos": "Melendez Mojica",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2011-PA-103",
+    "Nombres": "Jose Amilcar",
+    "Apellidos": "Portillo Arbues",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2005-AM-103",
+    "Nombres": "Marvin Daniel",
+    "Apellidos": "Acu Muñoz",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2012-HL-103",
+    "Nombres": "Saul Alonso",
+    "Apellidos": "Herrera Lopez",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2003-SS-101",
+    "Nombres": "Francisco Efrain",
+    "Apellidos": "Salinas Sermeño",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2005-ML-103",
+    "Nombres": "William Gustavo",
+    "Apellidos": "Muñoz Leonor",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2008-AO-101",
+    "Nombres": "Alexis Giovanni",
+    "Apellidos": "Agreda Ortiz",
+    "CarreraCodigo": "128"
+  },
+  {
+    "Codigo": "2006-SZ-101",
+    "Nombres": "Evelyn Xiomara",
+    "Apellidos": "Soriano Zelaya",
+    "CarreraCodigo": "129"
+  },
+  {
+    "Codigo": "2005-MA-105",
+    "Nombres": "Karla Patricia",
+    "Apellidos": "Mejia Artero",
+    "CarreraCodigo": "129"
+  },
+  {
+    "Codigo": "2004-CO-101",
+    "Nombres": "Kenia Magdalena",
+    "Apellidos": "Cabrera Orantes",
+    "CarreraCodigo": "129"
+  },
+  {
+    "Codigo": "2006-TE-101",
+    "Nombres": "Xinia Liliana",
+    "Apellidos": "Trinidad Espino",
+    "CarreraCodigo": "129"
+  },
+  {
+    "Codigo": "2014-GR-104",
+    "Nombres": "Tatiana Maribel",
+    "Apellidos": "Guzman Rosales",
+    "CarreraCodigo": "130"
+  },
+  {
+    "Codigo": "2010-SR-102",
+    "Nombres": "Evila Yaran",
+    "Apellidos": "Dina Sanchez Recinos",
+    "CarreraCodigo": "131"
+  },
+  {
+    "Codigo": "2016-RS-151",
+    "Nombres": "Marcos Alexander",
+    "Apellidos": "Ramirez Santamaria",
+    "CarreraCodigo": "131"
+  },
+  {
+    "Codigo": "2011-MM-105",
+    "Nombres": "Katya Jeamileth",
+    "Apellidos": "Matamoros",
+    "CarreraCodigo": "131"
+  },
+  {
+    "Codigo": "2017-SM-151",
+    "Nombres": "Manuel Antonio",
+    "Apellidos": "Sicilia Molina",
+    "CarreraCodigo": "135"
+  },
+  {
+    "Codigo": "2012-AS-106",
+    "Nombres": "Jancy Magali",
+    "Apellidos": "Aragon Romero De Suarez",
+    "CarreraCodigo": "140"
+  },
+  {
+    "Codigo": "2012-AM-102",
+    "Nombres": "Juan Ramon",
+    "Apellidos": "Aguilar Moran",
+    "CarreraCodigo": "140"
+  },
+  {
+    "Codigo": "2013-MG-109",
+    "Nombres": "Eylin Adriana",
+    "Apellidos": "Mejia Guevara",
+    "CarreraCodigo": "160"
+  },
+  {
+    "Codigo": "2010-ED-301",
+    "Nombres": "Jorge Alberto",
+    "Apellidos": "Espinoza De Paz",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2003-LL-301",
+    "Nombres": "Nelson Oliverio",
+    "Apellidos": "Leiva",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2006-SA-302",
+    "Nombres": "Ana Vilma",
+    "Apellidos": "Sandoval Alvarado",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2014-RO-102",
+    "Nombres": "Erika Magaly",
+    "Apellidos": "Roman Ortiz",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "1999-CS-302",
+    "Nombres": "Keveen Manolo",
+    "Apellidos": "Calderon Sarmiento",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2014-QR-101",
+    "Nombres": "Carlos Ernesto",
+    "Apellidos": "Quijano Rodriguez",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "1995-RA-301",
+    "Nombres": "Hugo Nelson",
+    "Apellidos": "Ramos Acu¥a",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2004-MC-302",
+    "Nombres": "Claudia Mariela",
+    "Apellidos": "Mancia Cabrera",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "1995-CH-301",
+    "Nombres": "Levy Davina",
+    "Apellidos": "Cruz Hernandez",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2006-ME-303",
+    "Nombres": "Lili Patricia",
+    "Apellidos": "Mancia Abrego De Esquivel",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "1999-SA-301",
+    "Nombres": "Gustavo Antonio",
+    "Apellidos": "Sicilia Avila",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "1996-GM-301",
+    "Nombres": "Rebeca Fernandina",
+    "Apellidos": "Garcia Mendez",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "1998-LF-802",
+    "Nombres": "Dalila Lissette",
+    "Apellidos": "Lopez Fuentes",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2003-PG-301",
+    "Nombres": "Jose Roberto",
+    "Apellidos": "Polanco Guerra",
+    "CarreraCodigo": "301"
+  },
+  {
+    "Codigo": "2004-RE-801",
+    "Nombres": "Melvin Jose",
+    "Apellidos": "Rivera Escobar",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "2009-CV-801",
+    "Nombres": "Veronica Yaneth",
+    "Apellidos": "Caballero Vidal",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "1989-MB-402",
+    "Nombres": "Sandra Lissette",
+    "Apellidos": "Marquez Beltran",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "2008-MP-802",
+    "Nombres": "Adriana Maria",
+    "Apellidos": "Martinez Pineda",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "1995-GV-401",
+    "Nombres": "Marco Tulio",
+    "Apellidos": "Gonzalez Velasquez",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "2000-CV-802",
+    "Nombres": "Brenda Maria",
+    "Apellidos": "Cañas Velasquez",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "2008-HH-801",
+    "Nombres": "Henry Arnoldo",
+    "Apellidos": "Hernandez",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "2000-LM-801",
+    "Nombres": "Tania Ivanova",
+    "Apellidos": "Linares Miranda",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "1999-GH-401",
+    "Nombres": "Claudia Maricely",
+    "Apellidos": "Guerra Henriquez",
+    "CarreraCodigo": "410"
+  },
+  {
+    "Codigo": "1997-QM-601",
+    "Nombres": "Jose Alfredo",
+    "Apellidos": "Qui¤onez Marroquin",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "1997-HG-601",
+    "Nombres": "Iris Marisol",
+    "Apellidos": "Hernandez Guerra",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2014-TC-601",
+    "Nombres": "Rene Mauricio",
+    "Apellidos": "Toledo Cea",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2013-SQ-601",
+    "Nombres": "Sandra Karina",
+    "Apellidos": "Santana Quintanilla",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2000-CR-602",
+    "Nombres": "Karla Iliana",
+    "Apellidos": "Castillo Ramos",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "1996-SS-602",
+    "Nombres": "Manrique Alonso",
+    "Apellidos": "Salguero",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2005-MG-605",
+    "Nombres": "Mario Ademir",
+    "Apellidos": "Martinez Godinez",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2005-BR-601",
+    "Nombres": "Joseias Armando",
+    "Apellidos": "Bolaños Rivas",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "1994-AG-602",
+    "Nombres": "Jose Francisco",
+    "Apellidos": "Andaluz Guzman",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "1999-CM-607",
+    "Nombres": "Camilo Canizalez",
+    "Apellidos": "Martinez",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2013-RP-601",
+    "Nombres": "Rene Antonio",
+    "Apellidos": "Ramos Perez",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2001-AP-602",
+    "Nombres": "Alvaro Ernesto",
+    "Apellidos": "Aguilar Peñate",
+    "CarreraCodigo": "601"
+  },
+  {
+    "Codigo": "2000-AS-602",
+    "Nombres": "Miguel Enrique",
+    "Apellidos": "Acuña Sandoval",
+    "CarreraCodigo": "602"
+  },
+  {
+    "Codigo": "2005-MM-610",
+    "Nombres": "Jimmy Patricia",
+    "Apellidos": "Miranda",
+    "CarreraCodigo": "602"
+  },
+  {
+    "Codigo": "1998-CS-601",
+    "Nombres": "Helen Jeamileth",
+    "Apellidos": "Chavez Sandoval",
+    "CarreraCodigo": "602"
+  },
+  {
+    "Codigo": "2012-AR-607",
+    "Nombres": "Jose Miguel",
+    "Apellidos": "Avalos Ramos",
+    "CarreraCodigo": "602"
+  },
+  {
+    "Codigo": "2013-VG-602",
+    "Nombres": "Israel Jose",
+    "Apellidos": "Vides Garcia",
+    "CarreraCodigo": "602"
+  },
+  {
+    "Codigo": "2011-LA-602",
+    "Nombres": "Mauricio Oswaldo",
+    "Apellidos": "Linares Arevalo",
+    "CarreraCodigo": "603"
+  },
+  {
+    "Codigo": "1999-FR-602",
+    "Nombres": "Jose Luis",
+    "Apellidos": "Flores Robles",
+    "CarreraCodigo": "603"
+  },
+  {
+    "Codigo": "2009-LE-601",
+    "Nombres": "Efrain Antonio",
+    "Apellidos": "Lopez Emestica",
+    "CarreraCodigo": "603"
+  },
+  {
+    "Codigo": "2008-FR-601",
+    "Nombres": "Salvador Alberto",
+    "Apellidos": "Flores Reyes",
+    "CarreraCodigo": "603"
+  },
+  {
+    "Codigo": "2004-TP-601",
+    "Nombres": "Carlos Antonio",
+    "Apellidos": "Turcios Perez",
+    "CarreraCodigo": "603"
+  },
+  {
+    "Codigo": "1999-GM-603",
+    "Nombres": "Josue Elias",
+    "Apellidos": "Galan Morales",
+    "CarreraCodigo": "604"
+  },
+  {
+    "Codigo": "2011-PD-601",
+    "Nombres": "Julio Alfonso",
+    "Apellidos": "Paredes Damean",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "1999-MC-605",
+    "Nombres": "Billie Vladimir",
+    "Apellidos": "Moran Campos",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2012-OV-601",
+    "Nombres": "Edgar Francisco",
+    "Apellidos": "Orozco Villa",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2000-AQ-604",
+    "Nombres": "Taufick Salvador",
+    "Apellidos": "Alabi Quinteros",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2003-PP-601",
+    "Nombres": "Rosa Agueda",
+    "Apellidos": "Yamileth Pineda Peña",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2008-MF-603",
+    "Nombres": "Carlos Raul",
+    "Apellidos": "Montes Fajardo",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2001-AN-601",
+    "Nombres": "Karen Yesenia",
+    "Apellidos": "Alvarez Nolasco",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2002-PM-603",
+    "Nombres": "Denice Beatriz",
+    "Apellidos": "Perez Moran",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2005-EC-603",
+    "Nombres": "Glenda Maritza",
+    "Apellidos": "España Canalez",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2013-HH-601",
+    "Nombres": "Diego Fernando",
+    "Apellidos": "Henriquez Hernandez",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "1998-TG-601",
+    "Nombres": "Mario Ernesto",
+    "Apellidos": "Torres Gonzalez",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2015-MO-601",
+    "Nombres": "William Alexander",
+    "Apellidos": "Martinez Orellana",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2013-GM-603",
+    "Nombres": "Francisco Gerardo",
+    "Apellidos": "Gonzalez Magaña",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "1999-DM-601",
+    "Nombres": "Idalia Elizabeth",
+    "Apellidos": "Dueñas Marroquin",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2005-OR-601",
+    "Nombres": "Marvin Ernesto",
+    "Apellidos": "Orellana Recinos",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2004-EA-603",
+    "Nombres": "Manuel De",
+    "Apellidos": "Jesus Escobar Avelar",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "2005-CC-603",
+    "Nombres": "Raul Guillermo",
+    "Apellidos": "Chavez Castillo",
+    "CarreraCodigo": "605"
+  },
+  {
+    "Codigo": "1998-MR-202",
+    "Nombres": "Julio Eduardo",
+    "Apellidos": "Moreno Rodriguez",
+    "CarreraCodigo": "606"
+  },
+  {
+    "Codigo": "2015-ML-607",
+    "Nombres": "William Enrique",
+    "Apellidos": "Martinez Lopez",
+    "CarreraCodigo": "606"
+  },
+  {
+    "Codigo": "1997-GA-202",
+    "Nombres": "Jose Mauricio",
+    "Apellidos": "Guerrero Azucena",
+    "CarreraCodigo": "606"
+  },
+  {
+    "Codigo": "2013-LL-602",
+    "Nombres": "Irmina Veronica",
+    "Apellidos": "Lopez Lopez",
+    "CarreraCodigo": "606"
+  },
+  {
+    "Codigo": "2015-VR-603",
+    "Nombres": "Jose Amilcar",
+    "Apellidos": "Vasquez Rivera",
+    "CarreraCodigo": "606"
+  },
+  {
+    "Codigo": "2004-CC-801",
+    "Nombres": "Roxana Carolina",
+    "Apellidos": "Castro Cordova",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "2013-UH-801",
+    "Nombres": "Christian Francisco",
+    "Apellidos": "Urquiza Henriquez",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1997-LN-501",
+    "Nombres": "Douglas Eduardo",
+    "Apellidos": "Larin Nuñez",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1997-BB-801",
+    "Nombres": "Rosa Armida",
+    "Apellidos": "Barrera",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "2000-AM-801",
+    "Nombres": "Veronica Marisol",
+    "Apellidos": "Anaya Marin",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1998-GB-801",
+    "Nombres": "Jazmin Lissette",
+    "Apellidos": "Gomez Barrera",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "2008-VF-801",
+    "Nombres": "Francisco Alfredo",
+    "Apellidos": "Velasquez Flores",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1997-SF-401",
+    "Nombres": "Maria Ladys",
+    "Apellidos": "Sierra Fuentes",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "2000-MA-802",
+    "Nombres": "Maria Emilia",
+    "Apellidos": "Martinez Arce",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1993-GM-802",
+    "Nombres": "Juan Carlos",
+    "Apellidos": "Guzman Moran",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1993-BH-801",
+    "Nombres": "Carmen Elena",
+    "Apellidos": "Barrera Hernandez",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1999-MF-801",
+    "Nombres": "Dinora Carolina",
+    "Apellidos": "Mendoza Flores",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "2005-PR-803",
+    "Nombres": "Jorge Alberto",
+    "Apellidos": "Paz Romero",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "1997-BP-801",
+    "Nombres": "Maria Ofelia",
+    "Apellidos": "Bonilla Portillo",
+    "CarreraCodigo": "801"
+  },
+  {
+    "Codigo": "2012-TP-801",
+    "Nombres": "Jose Francisco",
+    "Apellidos": "Tenas Perez",
+    "CarreraCodigo": "802"
+  },
+  {
+    "Codigo": "2012-CC-809",
+    "Nombres": "Jenifer Eugenia",
+    "Apellidos": "Cerna Castillo",
+    "CarreraCodigo": "802"
+  },
+  {
+    "Codigo": "2013-ML-803",
+    "Nombres": "Jose Mauricio",
+    "Apellidos": "Magaña Lopez",
+    "CarreraCodigo": "803"
+  },
+  {
+    "Codigo": "2013-MC-806",
+    "Nombres": "Ronald Edgardo",
+    "Apellidos": "Marroquin Chavez",
+    "CarreraCodigo": "803"
+  },
+  {
+    "Codigo": "2015-SC-806",
+    "Nombres": "Roberto Jose",
+    "Apellidos": "Soto Carranza",
+    "CarreraCodigo": "803"
+  },
+  {
+    "Codigo": "2012-SO-801",
+    "Nombres": "Karla Isamar",
+    "Apellidos": "Sermeño Ortiz",
+    "CarreraCodigo": "803"
+  },
+  {
+    "Codigo": "2015-ML-802",
+    "Nombres": "Jorge Armando",
+    "Apellidos": "Molina Luna",
+    "CarreraCodigo": "803"
+  },
+  {
+    "Codigo": "2015-CS-804",
+    "Nombres": "Elias Vladimir",
+    "Apellidos": "Calles Sanchez",
+    "CarreraCodigo": "812"
+  },
+  {
+    "Codigo": "2013-FZ-801",
+    "Nombres": "Stephanie Beatriz",
+    "Apellidos": "Flores Zaldaña",
+    "CarreraCodigo": "812"
+  },
+  {
+    "Codigo": "2002-RQ-801",
+    "Nombres": "Celia Areli",
+    "Apellidos": "Rivera Quijano",
+    "CarreraCodigo": "812"
+  },
+  {
+    "Codigo": "2000-OP-801",
+    "Nombres": "Walter Isaac",
+    "Apellidos": "Ortiz Pineda",
+    "CarreraCodigo": "812"
+  },
+  {
+    "Codigo": "2012-GM-805",
+    "Nombres": "Brenda Seleny",
+    "Apellidos": "Gutierrez Martinez",
+    "CarreraCodigo": "812"
+  }
+]

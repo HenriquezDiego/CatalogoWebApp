@@ -1,0 +1,18 @@
+[
+  {
+    "Codigo": "100",
+    "Nombre": "Ciencias  y humanidades"
+  },
+  {
+    "Codigo": "500", 
+    "Nombre": "Facultad de ciencias de la salud"
+  },
+  {
+    "Codigo": "600", 
+    "Nombre": "Ingenieria y arquitectura"
+  },
+  {
+    "Codigo": "800", 
+    "Nombre": "Ciencias empresariales"
+  }
+]
