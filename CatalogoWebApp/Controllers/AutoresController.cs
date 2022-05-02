@@ -1,5 +1,4 @@
 ﻿using CatalogoWebApp.DataAccess;
-using CatalogoWebApp.Models;
 using CatalogoWebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -21,7 +20,6 @@ namespace CatalogoWebApp.Controllers
         {
             _context = context;
             _unitOfWork = unitOfWork;
-            //_carreras = _context.Carreras.OrderBy(c => c.Nombre).ToList();
             _carreras = _unitOfWork.Carreras.GetAll()?.OrderBy(c => c.Nombre).ToList();
         }
 
@@ -46,14 +44,14 @@ namespace CatalogoWebApp.Controllers
             //return View(await appDbContext.ToListAsync());
             var autores = await _unitOfWork.Autores.GetAllAsync();
             var query = from a in autores
-                join c in _carreras on a.CarreraId equals c.Codigo
+                join c in _carreras on a.CarreraCodigo equals c.Codigo
                 select new Models.NoSQL.Autor
                 {
                     Id = a.Id,
                     Nombres = a.Nombres,
                     Codigo = a.Codigo,
                     Apellidos = a.Apellidos,
-                    CarreraId = a.CarreraId,
+                    CarreraCodigo = a.CarreraCodigo,
                     Carrera = c
                 };
             return View(query);
@@ -61,29 +59,17 @@ namespace CatalogoWebApp.Controllers
         }
 
         // GET: Autores/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autor = await _context.Autores
-                .Include(a => a.Carrera)
-                .ThenInclude(a=>a.Facultad)
-                .FirstOrDefaultAsync(m => m.AutorId == id);
-            if (autor == null)
-            {
-                return NotFound();
-            }
-
+            if (string.IsNullOrEmpty(id)) return NotFound();
+            var autor = await _unitOfWork.Autores.GetAsync(id);
             return View(autor);
         }
 
         // GET: Autores/Create
         public IActionResult Create()
         {
-            ViewData["CarreraId"] = new SelectList(_carreras, "CarreraId", "Nombre");
+            ViewData["CarreraId"] = new SelectList(_carreras, "Codigo", "Nombre");
             return View();
         }
 
@@ -92,7 +78,7 @@ namespace CatalogoWebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AutorId,Codigo,Nombres,Apellidos,CarreraId")] Autor autor)
+        public async Task<IActionResult> Create([Bind("AutorId,Codigo,Nombres,Apellidos,CarreraCodigo")] Models.NoSQL.Autor autor)
         {
             if (ModelState.IsValid)
             {
@@ -100,24 +86,17 @@ namespace CatalogoWebApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CarreraId"] = new SelectList(_carreras, "CarreraId", "Nombre", autor.CarreraId);
+            ViewData["CarreraId"] = new SelectList(_carreras, "Codigo", "Nombre", autor.CarreraCodigo);
             return View(autor);
         }
 
         // GET: Autores/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(string id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var autor = await _context.Autores.FindAsync(id);
-            if (autor == null)
-            {
-                return NotFound();
-            }
-            ViewData["CarreraId"] = new SelectList(_carreras, "CarreraId", "Nombre", autor.CarreraId);
+            if (string.IsNullOrEmpty(id)) return NotFound();
+            var autor = await _unitOfWork.Autores.GetAsync(id);
+            if (autor == null) return NotFound();
+            ViewData["CarreraId"] = new SelectList(_carreras, "Codigo", "Nombre", autor.Id);
             return View(autor);
         }
 
@@ -126,23 +105,20 @@ namespace CatalogoWebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AutorId,Codigo,Nombres,Apellidos,CarreraId")] Autor autor)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,Codigo,Nombres,Apellidos,CarreraCodigo")] Models.NoSQL.Autor autor)
         {
-            if (id != autor.AutorId)
-            {
-                return NotFound();
-            }
+            if (id != autor.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(autor);
-                    await _context.SaveChangesAsync();
+                    await _unitOfWork.Autores.UpdateAsync(id,autor);
+                 
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AutorExists(autor.AutorId))
+                    if (!AutorExists(autor.Id))
                     {
                         return NotFound();
                     }
@@ -151,39 +127,19 @@ namespace CatalogoWebApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CarreraId"] = new SelectList(_carreras, "CarreraId", "Nombre", autor.CarreraId);
+            ViewData["CarreraId"] = new SelectList(_carreras, "", "Nombre", autor.Id);
             return View(autor);
         }
 
-        // GET: Autores/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string id)
         {
-
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var autor = await _context.Autores.FindAsync(id);
-            _context.Autores.Remove(autor);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-
-        }
-
-        // POST: Autores/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var autor = await _context.Autores.FindAsync(id);
-            _context.Autores.Remove(autor);
-            await _context.SaveChangesAsync();
+            await _unitOfWork.Autores.RemoveAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AutorExists(int id)
+        private bool AutorExists(string id)
         {
-            return _context.Autores.Any(e => e.AutorId == id);
+            return  _unitOfWork.Autores.GetAsync(id).IsCompletedSuccessfully;
         }
     }
 }

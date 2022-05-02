@@ -50,7 +50,7 @@
 
                     <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i><span></span></a>
                     <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-list"></i><span></span></a>
-                    <a class="btn btn-danger" onclick="openModal(@item.Id)"><i class="fa fa-trash"></i><span></span></a>
+                    <a class="btn btn-danger" onclick="openModal('@item.Id')"><i class="fa fa-trash"></i><span></span></a>
                 </td>
             </tr>
         }
@@ -80,15 +80,12 @@
         <div class="modal-content">
             <div class="modal-header" style="height: 50%">
                 <h2 class="modal-title text-center">Borrar</h2>
-                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>*@
-            <div class="modal-body">
+                <div class="modal-body">
                 <h4>¿Esta seguro de que quieres eliminar este registro?</h4>
             </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="funcion(id)">Si</button>
+                <button type="button" class="btn btn-primary" onclick="remove()">Si</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
             </div>
         </div>
@@ -99,35 +96,37 @@
     <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
     <script src="~/lib/datatables/js/dataTables.bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#autores').DataTable({
-                'columnDefs': [
-                    {
-                        'targets': [4],
-                        'orderable': false
-                    }
-                ]
-            });
-        });
-
-        var autorId = 0;
-
-        function openModal(id) {
-            autorId = id;
-            $("#modal").modal("show");
-        }
-
-
-        function funcion() {
-            $.ajax({
-                url: `autores/delete/${autorId}`,
-                success: function(result) {
-                    console.log(result);
-                    console.log("success");
-                    $('#modal').modal("hide");
-                    location.reload();
+    $(document).ready(function() {
+        $('#autores').DataTable({
+            'columnDefs': [
+                {
+                    'targets': [4],
+                    'orderable': false
                 }
-            });
+            ]
+        });
+    });
+
+    let autorId = "";
+
+    function openModal(id) {
+        autorId = id;
+        $("#modal").modal("show");
+    }
+
+
+    function remove() {
+        console.log(autorId);
+        $.ajax({
+            url: `autores/delete/${autorId}`,
+            type: 'DELETE',
+            success: function(result) {
+                console.log(result);
+                console.log("success");
+                $('#modal').modal("hide");
+                location.reload();
+            }
+        });
         }
 
     </script>

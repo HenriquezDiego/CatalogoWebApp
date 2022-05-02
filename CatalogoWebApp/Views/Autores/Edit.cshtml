@@ -1,4 +1,4 @@
-﻿@model CatalogoWebApp.Models.Autor
+﻿@model CatalogoWebApp.Models.NoSQL.Autor
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,7 +13,7 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="AutorId" />
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Codigo" class="control-label"></label>
                 <input asp-for="Codigo" class="form-control" />
@@ -30,9 +30,9 @@
                 <span asp-validation-for="Apellidos" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CarreraId" class="control-label"></label>
-                <select asp-for="CarreraId" class="form-control" asp-items="ViewBag.CarreraId"></select>
-                <span asp-validation-for="CarreraId" class="text-danger"></span>
+                <label asp-for="CarreraCodigo" class="control-label"></label>
+                <select asp-for="CarreraCodigo" class="form-control" asp-items="ViewBag.CarreraId"></select>
+                <span asp-validation-for="CarreraCodigo" class="text-danger"></span>
             </div>
             <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary"> <i class="fa fa-save"></i><span> Guardar</span></button>
