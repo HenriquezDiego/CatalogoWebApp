@@ -4,12 +4,9 @@ namespace CatalogoWebApp.Models.NoSQL
 {
     public class Carrera : Documento
     {
-        [BsonElement("codigo")]
-
         public string Codigo { get; set; }
-        [BsonElement("nombre")]
         public string Nombre { get; set; }
-        [BsonElement("facultad")]
+        [BsonElement("Facultad")]
         public string FacultadId { get; set; }
     }
 }
