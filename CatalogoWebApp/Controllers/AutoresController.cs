@@ -62,8 +62,19 @@ namespace CatalogoWebApp.Controllers
         public async Task<IActionResult> Details(string id)
         {
             if (string.IsNullOrEmpty(id)) return NotFound();
-            var autor = await _unitOfWork.Autores.GetAsync(id);
-            return View(autor);
+            var autores = await _unitOfWork.Autores.GetAllAsync();
+            var query = from a in autores
+                join c in _carreras on a.CarreraCodigo equals c.Codigo
+                select new Models.NoSQL.Autor
+                {
+                    Id = a.Id,
+                    Nombres = a.Nombres,
+                    Codigo = a.Codigo,
+                    Apellidos = a.Apellidos,
+                    CarreraCodigo = a.CarreraCodigo,
+                    Carrera = c
+                };
+            return View(query.FirstOrDefault(a=>a.Id == id));
         }
 
         // GET: Autores/Create
