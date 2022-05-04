@@ -37,7 +37,7 @@ namespace CatalogoWebApp.Services
             join c in carreras on a.CarreraCodigo equals c.Codigo 
             select new TrabajoDeGraduacion
             {
-                Id = a.Id,
+                Id = t.Id,
                 Titulo = t.Titulo,
                 Descripcion = t.Descripcion,
                 Fecha = t.Fecha,
