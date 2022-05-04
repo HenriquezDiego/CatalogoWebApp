@@ -1,10 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Http
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@inject IHttpContextAccessor _httpContextAccessor
+@inject IHttpContextAccessor HttpContextAccessor
 
 @{
-    var user = _httpContextAccessor.HttpContext.Session.GetString("_Name");
-    var error = _httpContextAccessor.HttpContext.Session.GetString("_Error");
+    var user = HttpContextAccessor.HttpContext.Session.GetString("_Name");
+    var error = HttpContextAccessor.HttpContext.Session.GetString("_Error");
     var isAdmin = !string.IsNullOrEmpty(user);
 }
 

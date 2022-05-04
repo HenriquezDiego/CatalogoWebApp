@@ -40,8 +40,6 @@ namespace CatalogoWebApp.Controllers
         // GET: Autores
         public async Task<IActionResult> Index()
         {
-            //var appDbContext = _context.Autores.Include(a => a.Carrera);
-            //return View(await appDbContext.ToListAsync());
             var autores = await _unitOfWork.Autores.GetAllAsync();
             var query = from a in autores
                 join c in _carreras on a.CarreraCodigo equals c.Codigo

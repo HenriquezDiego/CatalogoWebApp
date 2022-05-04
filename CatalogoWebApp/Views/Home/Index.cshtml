@@ -1,8 +1,6 @@
 ﻿@using CatalogoWebApp.Services
-@using Microsoft.AspNetCore.Http
 @model IList<CatalogoWebApp.Models.TrabajoDeGraduacion>
-@inject IPathResolver _pathResolver
-@inject IHttpContextAccessor _httpContextAccessor
+@inject IPathResolver PathResolver
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -46,7 +44,7 @@
                 <div class="col-md-3">
                     <div class="panel panel-default" style="height: 500px;max-height: 500px">
                         <div class="panel-heading abs-center">
-                            <img src="@_pathResolver.GetUrl(item.PathImagen)" alt="puntofijo" class="img-responsive"
+                            <img src="@PathResolver.GetUrl(item.PathImagen)" alt="puntofijo" class="img-responsive"
                                  style="height: 175px" />
                         </div>
                         <div class="panel-body">
@@ -76,7 +74,7 @@
                             <a class="btn btn-primary" asp-controller="TrabajosDeGraduacion"
                                asp-action="Details"
                                asp-route-id="@item.TrabajoDeGraduacionId"> <i class="fa fa-list"></i><span> Detalles</span></a>
-                            <a class="btn btn-success" href="@_pathResolver.GetUrl(item.PathFile)"><i class="fa fa-download"></i><span> Ver</span></a>
+                            <a class="btn btn-success" href="@PathResolver.GetUrl(item.PathFile)"><i class="fa fa-download"></i><span> Ver</span></a>
                         </div>
                     </div>
                 </div>
