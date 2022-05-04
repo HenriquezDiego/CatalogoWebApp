@@ -1,4 +1,6 @@
-﻿using CatalogoWebApp.Models.NoSQL;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using CatalogoWebApp.Models.NoSQL;
 
 namespace CatalogoWebApp.Services
 {
@@ -9,5 +11,7 @@ namespace CatalogoWebApp.Services
         public IStoreServices<Tipo> Tipos { get; }
         public IStoreServices<Carrera> Carreras { get; }
         public IStoreServices<Facultad> Facultades { get; }
+        Task<List<TrabajoDeGraduacion>> GetTrabajosDeGraduacionIncludes();
+        Task<TrabajoDeGraduacion> GetTrabajoDeGraduacionIncludes(string id);
     }
 }

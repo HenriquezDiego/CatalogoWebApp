@@ -8,5 +8,7 @@ namespace CatalogoWebApp.Models.NoSQL
         public string Nombre { get; set; }
         [BsonElement("Facultad")]
         public string FacultadId { get; set; }
+        [BsonIgnore]
+        public Facultad Facultad { get; set; }
     }
 }

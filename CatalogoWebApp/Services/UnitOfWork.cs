@@ -1,4 +1,7 @@
-﻿using CatalogoWebApp.Models.NoSQL;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using CatalogoWebApp.Models.NoSQL;
 using Microsoft.Extensions.Options;
 
 
@@ -19,6 +22,46 @@ namespace CatalogoWebApp.Services
             Tipos = new StoreService<Tipo>(settings,"Tipos");
             Carreras = new StoreService<Carrera>(settings,"Carreras");
             Facultades = new StoreService<Facultad>(settings,"Facultades");
+        }
+
+        public async Task<List<TrabajoDeGraduacion>> GetTrabajosDeGraduacionIncludes()
+        {
+            var trabajos = await TrabajosDeGraduacion.GetAllAsync();
+            var autores = await Autores.GetAllAsync();
+            var carreras = await Carreras.GetAllAsync();
+            var tipos = await Tipos.GetAllAsync();
+
+            var query = from t in trabajos
+            join tp in tipos on t.TipoId equals tp.Id 
+            join a in autores on t.AutorId equals a.Id
+            join c in carreras on a.CarreraCodigo equals c.Codigo 
+            select new TrabajoDeGraduacion
+            {
+                Id = a.Id,
+                Titulo = t.Titulo,
+                Descripcion = t.Descripcion,
+                Fecha = t.Fecha,
+                PathFile = t.PathFile,
+                TipoId = t.TipoId,
+                Tipo = tp,
+                AutorId = a.Id,
+                Autor = a
+            };
+
+            return query.ToList();
+        }
+
+        public async Task<TrabajoDeGraduacion> GetTrabajoDeGraduacionIncludes(string id)
+        {
+            var trabajo = await TrabajosDeGraduacion.GetAsync(id);
+            if (trabajo == null) return null;
+            var autore = await Autores.GetAsync(trabajo.AutorId);
+            var carreras = await Carreras.GetAllAsync();
+            var tipo = await Tipos.GetAsync(trabajo.TipoId);
+            trabajo.Tipo = tipo;
+            autore.Carrera = carreras.FirstOrDefault(c => c.Codigo == autore.CarreraCodigo);
+            trabajo.Autor = autore;
+            return trabajo;
         }
     }
 }

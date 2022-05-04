@@ -27,6 +27,24 @@ namespace CatalogoWebApp.ViewModels
                     opt.UseDestinationValue();
                 });
 
+
+            CreateMap<Models.NoSQL.Autor, AutorViewModel>()
+                .ForMember(vm=> vm.NombreCompleto,opt=> opt.MapFrom(src=>$"{src.Nombres} {src.Apellidos}"))
+                .ForMember(vm=> vm.Info,opt=> opt.MapFrom(src=>$"{src.Codigo}-{src.Nombres} {src.Apellidos}"));
+
+            CreateMap<Models.NoSQL.TrabajoDeGraduacion, TrabajoDeGraduacionInput>()
+                .ReverseMap()
+                .ForMember(i=>i.Fecha,opt=> opt.MapFrom(src=>new DateTime(src.Year,1,1)))
+                .ForMember(i=>i.PathImagen, opt =>
+                {
+                    opt.PreCondition(x=>x.Imagen==null);
+                    opt.UseDestinationValue();
+                })
+                .ForMember(i=>i.PathFile, opt =>
+                {
+                    opt.PreCondition(x=>x.File==null);
+                    opt.UseDestinationValue();
+                });
         }
     }
 }
