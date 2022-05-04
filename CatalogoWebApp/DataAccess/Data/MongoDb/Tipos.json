@@ -1,0 +1,14 @@
+[
+  {
+    "TipoId": "1",
+    "Nombre": "Pasantia"
+  },
+  {
+    "TipoId": "2",
+    "Nombre": "Proyecto"
+  },
+  {
+    "TipoId": "3",
+    "Nombre": "Tesis"
+  }
+]

@@ -2,7 +2,7 @@
 {
     public class AutorViewModel
     {
-        public int AutorId { get; set; }
+        public string AutorId { get; set; }
         public string Codigo { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }

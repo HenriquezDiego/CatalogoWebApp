@@ -29,6 +29,7 @@ namespace CatalogoWebApp.ViewModels
 
 
             CreateMap<Models.NoSQL.Autor, AutorViewModel>()
+                .ForMember(vm=>vm.AutorId,opt=>opt.MapFrom(src=>src.Id))
                 .ForMember(vm=> vm.NombreCompleto,opt=> opt.MapFrom(src=>$"{src.Nombres} {src.Apellidos}"))
                 .ForMember(vm=> vm.Info,opt=> opt.MapFrom(src=>$"{src.Codigo}-{src.Nombres} {src.Apellidos}"));
 

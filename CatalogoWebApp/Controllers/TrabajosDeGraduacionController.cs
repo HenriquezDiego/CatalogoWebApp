@@ -63,7 +63,7 @@ namespace CatalogoWebApp.Controllers
         public IActionResult Create()
         {
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info");
-            ViewData["TipoId"] = new SelectList(_unitOfWork.Tipos.GetAll(), "TipoId", "Nombre");
+            ViewData["TipoId"] = new SelectList(_unitOfWork.Tipos.GetAll(), "Id", "Nombre");
             ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
             return View();
         }
@@ -94,7 +94,7 @@ namespace CatalogoWebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", model.AutorId);
-            ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "TipoId", "Nombre", model.TipoId);
+            ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "Id", "Nombre", model.TipoId);
             ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
             return View(model);
         }
@@ -109,7 +109,7 @@ namespace CatalogoWebApp.Controllers
                 return NotFound();
             }
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", trabajoDeGraduacion.AutorId);
-            ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "TipoId", "Nombre", trabajoDeGraduacion.TipoId);
+            ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "Id", "Nombre", trabajoDeGraduacion.TipoId);
             ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
             var value = _mapper.Map<TrabajoDeGraduacionInput>(trabajoDeGraduacion);
             return View(value);
@@ -135,7 +135,7 @@ namespace CatalogoWebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", model.AutorId);
-            ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "TipoId", "TipoId", model.TipoId);
+            ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "Id", "Nombre", model.TipoId);
             var value = _mapper.Map<TrabajoDeGraduacionInput>(model);
             return View(value);
         }

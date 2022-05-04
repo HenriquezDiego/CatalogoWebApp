@@ -42,11 +42,17 @@ namespace CatalogoWebApp.Services
                 Descripcion = t.Descripcion,
                 Fecha = t.Fecha,
                 PathFile = t.PathFile,
+                PathImagen = t.PathImagen,
                 TipoId = t.TipoId,
                 Tipo = tp,
                 AutorId = a.Id,
                 Autor = a
             };
+
+            foreach (var row in query)
+            {
+                row.Autor.Carrera = carreras.FirstOrDefault(c => c.Codigo == row.Autor.CarreraCodigo);
+            }
 
             return query.ToList();
         }
