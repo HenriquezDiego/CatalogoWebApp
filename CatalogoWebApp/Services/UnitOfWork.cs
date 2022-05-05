@@ -63,9 +63,11 @@ namespace CatalogoWebApp.Services
             if (trabajo == null) return null;
             var autore = await Autores.GetAsync(trabajo.AutorId);
             var carreras = await Carreras.GetAllAsync();
+            var facultades = await Facultades.GetAllAsync();
             var tipo = await Tipos.GetAsync(trabajo.TipoId);
             trabajo.Tipo = tipo;
             autore.Carrera = carreras.FirstOrDefault(c => c.Codigo == autore.CarreraCodigo);
+            autore.Carrera.Facultad = facultades.FirstOrDefault(f => f.Codigo == autore.Carrera.FacultadId);
             trabajo.Autor = autore;
             return trabajo;
         }

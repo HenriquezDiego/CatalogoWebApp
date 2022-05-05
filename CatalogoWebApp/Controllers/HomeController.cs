@@ -1,25 +1,21 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using CatalogoWebApp.DataAccess;
+﻿using CatalogoWebApp.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AdminLTE.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AppDbContext _appDbContext;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(AppDbContext appDbContext)
+        public HomeController(IUnitOfWork unitOfWork)
         {
-            _appDbContext = appDbContext;
+            _unitOfWork = unitOfWork;
         }
         public async Task<IActionResult> Index(string search)
         {
-            var trabajosDeGraduacion = await _appDbContext.TrabajosDeGraduacion
-                .Include(t => t.Autor)
-                .ThenInclude(t => t.Carrera)
-                .ToListAsync();
+            var trabajosDeGraduacion = await _unitOfWork.GetTrabajosDeGraduacionIncludes();
 
             search = search?.ToLower().Trim();
             if (!string.IsNullOrEmpty(search))

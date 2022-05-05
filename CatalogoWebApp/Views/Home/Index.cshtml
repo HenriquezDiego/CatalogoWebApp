@@ -1,5 +1,5 @@
 ﻿@using CatalogoWebApp.Services
-@model IList<CatalogoWebApp.Models.TrabajoDeGraduacion>
+@model IList<CatalogoWebApp.Models.NoSQL.TrabajoDeGraduacion>
 @inject IPathResolver PathResolver
 @{
     ViewData["Title"] = "Index";
@@ -73,7 +73,7 @@
                         <div class="panel-footer text-center">
                             <a class="btn btn-primary" asp-controller="TrabajosDeGraduacion"
                                asp-action="Details"
-                               asp-route-id="@item.TrabajoDeGraduacionId"> <i class="fa fa-list"></i><span> Detalles</span></a>
+                               asp-route-id="@item.Id"> <i class="fa fa-list"></i><span> Detalles</span></a>
                             <a class="btn btn-success" href="@PathResolver.GetUrl(item.PathFile)"><i class="fa fa-download"></i><span> Ver</span></a>
                         </div>
                     </div>
