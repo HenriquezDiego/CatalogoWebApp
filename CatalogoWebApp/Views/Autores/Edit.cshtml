@@ -10,23 +10,23 @@
 <h4>Autor</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-md-offset-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Id"/>
             <div class="form-group">
                 <label asp-for="Codigo" class="control-label"></label>
-                <input asp-for="Codigo" class="form-control" />
+                <input asp-for="Codigo" class="form-control"/>
                 <span asp-validation-for="Codigo" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Nombres" class="control-label"></label>
-                <input asp-for="Nombres" class="form-control" />
+                <input asp-for="Nombres" class="form-control"/>
                 <span asp-validation-for="Nombres" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Apellidos" class="control-label"></label>
-                <input asp-for="Apellidos" class="form-control" />
+                <input asp-for="Apellidos" class="form-control"/>
                 <span asp-validation-for="Apellidos" class="text-danger"></span>
             </div>
             <div class="form-group">
