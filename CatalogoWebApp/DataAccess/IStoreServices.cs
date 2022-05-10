@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CatalogoWebApp.Services
+namespace CatalogoWebApp.DataAccess
 {
     public interface IStoreServices<T>
     {

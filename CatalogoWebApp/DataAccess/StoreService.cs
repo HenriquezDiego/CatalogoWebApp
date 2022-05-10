@@ -5,7 +5,7 @@ using CatalogoWebApp.Models.NoSQL;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-namespace CatalogoWebApp.Services
+namespace CatalogoWebApp.DataAccess
 {
     public class StoreService<T> : IStoreServices<T> where T : Documento
     {

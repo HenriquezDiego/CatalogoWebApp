@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using CatalogoWebApp.DataAccess;
 using CatalogoWebApp.Models.NoSQL;
 
 namespace CatalogoWebApp.Services
