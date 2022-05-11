@@ -87,9 +87,9 @@ namespace CatalogoWebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AutorId,Codigo,Nombres,Apellidos,CarreraCodigo")] Models.NoSQL.Autor autor)
+        public async Task<IActionResult> Create([Bind("Id,Codigo,Nombres,Apellidos,CarreraCodigo")] Models.NoSQL.Autor autor)
         {
-            if (!ModelState.IsValid) 
+            if (ModelState.IsValid) 
             {
                 await _unitOfWork.Autores.CreateAsync(autor);
                 return RedirectToAction(nameof(Index));
