@@ -89,10 +89,9 @@ namespace CatalogoWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AutorId,Codigo,Nombres,Apellidos,CarreraCodigo")] Models.NoSQL.Autor autor)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) 
             {
-                _context.Add(autor);
-                await _context.SaveChangesAsync();
+                await _unitOfWork.Autores.CreateAsync(autor);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CarreraId"] = new SelectList(_carreras, "Codigo", "Nombre", autor.CarreraCodigo);
