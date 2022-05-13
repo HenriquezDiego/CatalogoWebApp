@@ -104,10 +104,8 @@ namespace CatalogoWebApp.Controllers
         {
             if (string.IsNullOrEmpty(id)) return NotFound();
             var trabajoDeGraduacion = await _unitOfWork.TrabajosDeGraduacion.GetAsync(id);
-            if (trabajoDeGraduacion == null)
-            {
-                return NotFound();
-            }
+            if (trabajoDeGraduacion == null) return NotFound();
+            
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", trabajoDeGraduacion.AutorId);
             ViewData["TipoId"] = new SelectList(await _unitOfWork.Tipos.GetAllAsync(), "Id", "Nombre", trabajoDeGraduacion.TipoId);
             ViewData["Years"] = new SelectList(_years,_years.FirstOrDefault());
@@ -131,7 +129,7 @@ namespace CatalogoWebApp.Controllers
                 if (model.Imagen == null) return RedirectToAction(nameof(Index));
                 var fileName = await _file.Upload(model.Imagen, model.Titulo);
                 trabajo.PathImagen = fileName;
-                await _unitOfWork.TrabajosDeGraduacion.UpdateAsync(id,trabajo);
+                await _unitOfWork.TrabajosDeGraduacion.UpdateAsync(trabajo.Id,trabajo);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AutorId"] = new SelectList(_autores, "AutorId", "Info", model.AutorId);
