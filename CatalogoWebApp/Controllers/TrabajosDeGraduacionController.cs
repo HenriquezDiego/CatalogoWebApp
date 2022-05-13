@@ -126,9 +126,11 @@ namespace CatalogoWebApp.Controllers
             {
                 
                 _mapper.Map(model, trabajo);
-                if (model.Imagen == null) return RedirectToAction(nameof(Index));
-                var fileName = await _file.Upload(model.Imagen, model.Titulo);
-                trabajo.PathImagen = fileName;
+                if (model.Imagen != null)
+                {
+                    var fileName = await _file.Upload(model.Imagen, model.Titulo);
+                    trabajo.PathImagen = fileName;
+                }
                 await _unitOfWork.TrabajosDeGraduacion.UpdateAsync(trabajo.Id,trabajo);
                 return RedirectToAction(nameof(Index));
             }
