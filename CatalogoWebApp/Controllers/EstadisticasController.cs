@@ -23,7 +23,7 @@ namespace CatalogoWebApp.Controllers
             var result = facultades.Select(x => new SimpleReportViewModel()
                 {
                     DimensionOne = x.Nombre,
-                    Quantity = trabajos.Count(t => t.Autor.Carrera.FacultadId == x.Id)
+                    Quantity = trabajos.Count(t => t.Autor.Carrera.FacultadId == x.Codigo)
                 }).ToList();
             return View(result);
         }

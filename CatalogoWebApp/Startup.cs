@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CatalogoWebApp.DataAccess;
+using CatalogoWebApp.Models.NoSQL;
 using CatalogoWebApp.Services;
 using ContaWebApi.Api.Infrastructure;
 using FluentValidation.AspNetCore;
@@ -10,8 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
-using CatalogoWebApp.Models.NoSQL;
-using MongoDB.Bson.Serialization;
 using TransaccionesWebApi.Services;
 
 namespace AdminLTE
